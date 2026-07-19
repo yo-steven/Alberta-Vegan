@@ -1,0 +1,337 @@
+/* Vegan Social Meetups Page Styles */
+
+.vsm-hero-section {
+    position: relative;
+    background: linear-gradient(135deg, #6a1b9a 0%, #8e24aa 100%);
+    padding: 180px 20px 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.vsm-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><circle cx="100" cy="100" r="80" fill="rgba(255,255,255,0.05)"/><circle cx="400" cy="150" r="100" fill="rgba(255,255,255,0.03)"/><circle cx="800" cy="80" r="90" fill="rgba(255,255,255,0.04)"/><circle cx="1100" cy="120" r="70" fill="rgba(255,255,255,0.05)"/></svg>');
+    background-size: cover;
+    opacity: 0.4;
+}
+
+.vsm-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vsm-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.vsm-hero-title i {
+    margin-right: 15px;
+    color: #ffd54f;
+}
+
+.vsm-hero-subtitle {
+    font-size: 1.3rem;
+    color: #f3e5f5;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.vsm-website-link {
+    display: inline-block;
+    padding: 15px 35px;
+    background: white;
+    color: #6a1b9a;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vsm-website-link:hover {
+    background: #ffd54f;
+    color: #4a148c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.vsm-website-link i {
+    margin-right: 10px;
+}
+
+.vsm-gallery-section {
+    padding: 80px 20px;
+    background: #fafafa;
+    min-height: 60vh;
+}
+
+.vsm-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.vsm-section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.vsm-section-title i {
+    margin-right: 15px;
+    color: #8e24aa;
+}
+
+.vsm-loading,
+.vsm-empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: #666;
+}
+
+.vsm-loading i,
+.vsm-empty i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #8e24aa;
+}
+
+.vsm-loading p,
+.vsm-empty p {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.vsm-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.vsm-photo-item {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.vsm-photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.vsm-photo-thumbnail-container {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.vsm-photo-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #e0e0e0;
+}
+
+.vsm-video-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.vsm-photo-content {
+    padding: 20px;
+}
+
+.vsm-photo-type {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.vsm-photo-type.video {
+    background: #e1bee7;
+    color: #6a1b9a;
+}
+
+.vsm-photo-type.photo {
+    background: #fff9c4;
+    color: #f57f17;
+}
+
+.vsm-photo-caption {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Media Modal */
+.vsm-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.vsm-modal.active {
+    display: flex;
+}
+
+.vsm-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+}
+
+.vsm-modal-content {
+    position: relative;
+    z-index: 10001;
+    max-width: 90%;
+    max-height: 90%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.vsm-modal-close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    z-index: 10002;
+}
+
+.vsm-modal-close-btn:hover {
+    background: white;
+}
+
+.vsm-modal-body {
+    max-width: 1200px;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vsm-modal-body img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+
+.vsm-modal-body iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+.vsm-modal-caption {
+    padding: 20px;
+    background: #f5f5f5;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vsm-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .vsm-hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .vsm-section-title {
+        font-size: 2rem;
+    }
+
+    .vsm-photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .vsm-modal-content {
+        max-width: 95%;
+        max-height: 85%;
+    }
+
+    .vsm-modal-body iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vsm-hero-section {
+        padding: 180px 0;
+    }
+    .vsm-hero-title {
+        font-size: 2rem;
+    }
+
+    .vsm-section-title {
+        font-size: 1.75rem;
+    }
+
+    .vsm-photo-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .vsm-modal-body iframe {
+        height: 250px;
+    }
+}

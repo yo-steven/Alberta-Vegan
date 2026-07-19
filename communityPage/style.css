@@ -1,0 +1,1544 @@
+body {
+    max-width: 100vw;
+    overflow-x: clip;
+}
+
+/* Community Events Section Container */
+.vvoa-community-events-main-section {
+  height: max-content;
+  padding: 120px 0 160px 0;
+  background: linear-gradient(145deg, #f8fff8 0%, #ffffff 20%, #fff8f0 40%, #f0f8ff 60%, #fff0f8 80%, #f8fff8 100%);
+  position: relative;
+}
+
+.vvoa-community-gathering-circle-network-one {
+  position: absolute;
+  top: 12%;
+  left: 0%;
+    width: 100%;
+  max-width: 380px;
+  height: 480px;
+    overflow-x: hidden;
+  background: 
+      /* Central potluck table arrangement hub */
+      radial-gradient(circle at 45% 35%, 
+          rgba(76, 175, 80, 0.15) 0%, 
+          transparent 12%, 
+          rgba(255, 152, 0, 0.12) 25%, 
+          transparent 35%, 
+          rgba(233, 30, 99, 0.08) 50%, 
+          transparent 65%, 
+          rgba(255, 193, 7, 0.06) 80%, 
+          transparent 100%
+      ),
+      /* Monthly potluck dish sharing constellation */
+      conic-gradient(from 30deg at 40% 40%, 
+          transparent 0deg, 
+          rgba(76, 175, 80, 0.1) 20deg, 
+          transparent 40deg, 
+          rgba(255, 193, 7, 0.08) 60deg, 
+          transparent 80deg, 
+          rgba(255, 152, 0, 0.09) 100deg, 
+          transparent 120deg, 
+          rgba(25, 118, 210, 0.07) 140deg, 
+          transparent 160deg, 
+          rgba(233, 30, 99, 0.08) 180deg, 
+          transparent 200deg, 
+          rgba(103, 58, 183, 0.06) 220deg, 
+          transparent 240deg, 
+          rgba(76, 175, 80, 0.07) 260deg, 
+          transparent 280deg, 
+          rgba(255, 193, 7, 0.06) 300deg, 
+          transparent 320deg, 
+          rgba(255, 152, 0, 0.05) 340deg, 
+          transparent 360deg
+      ),
+      /* Community dining table grid pattern */
+      repeating-radial-gradient(circle at 50% 50%, 
+          transparent 0px, 
+          rgba(76, 175, 80, 0.06) 18px, 
+          transparent 36px, 
+          rgba(255, 152, 0, 0.04) 54px, 
+          transparent 72px, 
+          rgba(233, 30, 99, 0.03) 90px, 
+          transparent 108px
+      ),
+      /* Potluck sharing spirit weaving */
+      repeating-linear-gradient(75deg, 
+          transparent 0px, 
+          rgba(76, 175, 80, 0.02) 4px, 
+          transparent 8px, 
+          transparent 32px
+      );
+  clip-path: polygon(
+      8% 5%, 
+      92% 12%, 
+      96% 38%, 
+      94% 65%, 
+      82% 88%, 
+      58% 96%, 
+      32% 92%, 
+      6% 75%, 
+      3% 48%, 
+      7% 22%
+  );
+  opacity: 0.9;
+  animation: vvoa-community-potluck-table-arrangement 26s ease-in-out infinite;
+}
+
+.vvoa-community-gathering-circle-network-one::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  width: 28%;
+  height: 28%;
+  background: 
+      /* Potluck centerpiece with rotating dish contributions */
+      conic-gradient(from 0deg, 
+          var(--primary-green) 0deg 45deg, 
+          var(--accent-yellow) 45deg 90deg, 
+          var(--accent-orange) 90deg 135deg, 
+          var(--primary-pink) 135deg 180deg, 
+          var(--primary-blue) 180deg 225deg, 
+          var(--accent-purple) 225deg 270deg, 
+          var(--accent-yellow) 270deg 315deg, 
+          var(--primary-green) 315deg 360deg
+      );
+  border-radius: 50%;
+  animation: vvoa-community-potluck-dish-sharing-carousel 26s linear infinite;
+  box-shadow: 
+      0 0 25px rgba(76, 175, 80, 0.5),
+      inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.vvoa-community-gathering-circle-network-one::after {
+  content: '';
+  position: absolute;
+  top: 22%;
+  left: 32%;
+  width: 36%;
+  height: 36%;
+  border: 6px double var(--primary-green);
+  border-radius: 50%;
+  animation: vvoa-community-welcoming-circle-expansion 26s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+/* VegFest Annual Event Celebration Flow - Representing Festival Energy & Community Joy */
+.vvoa-community-vegfest-celebration-flow {
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  width: 520px;
+  height: 300px;
+  background: 
+      /* Festival celebration energy streams radiating outward */
+      conic-gradient(from 120deg at 35% 55%, 
+          transparent 0deg, 
+          rgba(255, 193, 7, 0.12) 24deg, 
+          transparent 48deg, 
+          rgba(76, 175, 80, 0.09) 72deg, 
+          transparent 96deg, 
+          rgba(233, 30, 99, 0.1) 120deg, 
+          transparent 144deg, 
+          rgba(255, 152, 0, 0.08) 168deg, 
+          transparent 192deg, 
+          rgba(25, 118, 210, 0.07) 216deg, 
+          transparent 240deg, 
+          rgba(103, 58, 183, 0.06) 264deg, 
+          transparent 288deg, 
+          rgba(255, 193, 7, 0.05) 312deg, 
+          transparent 336deg, 
+          rgba(76, 175, 80, 0.04) 360deg
+      ),
+      /* Community festival unity radiating from center */
+      radial-gradient(ellipse 420px 220px at 65% 45%, 
+          rgba(255, 193, 7, 0.08) 0%, 
+          transparent 15%, 
+          rgba(76, 175, 80, 0.09) 30%, 
+          transparent 45%, 
+          rgba(233, 30, 99, 0.06) 60%, 
+          transparent 75%, 
+          rgba(255, 152, 0, 0.04) 90%, 
+          transparent 100%
+      ),
+      /* Festival celebration weaving patterns */
+      repeating-linear-gradient(55deg, 
+          transparent 0px, 
+          rgba(255, 193, 7, 0.05) 3px, 
+          transparent 6px, 
+          transparent 28px
+      ),
+      repeating-linear-gradient(-55deg, 
+          transparent 0px, 
+          rgba(76, 175, 80, 0.04) 3px, 
+          transparent 6px, 
+          transparent 28px
+      ),
+      /* VegFest vendor booth arrangement simulation */
+      repeating-conic-gradient(from 90deg at 50% 50%, 
+          rgba(255, 152, 0, 0.03) 0deg 15deg, 
+          transparent 15deg 30deg, 
+          rgba(76, 175, 80, 0.03) 30deg 45deg, 
+          transparent 45deg 60deg
+      );
+  clip-path: polygon(
+      20% 15%, 
+      80% 10%, 
+      88% 40%, 
+      85% 70%, 
+      65% 88%, 
+      35% 85%, 
+      12% 60%, 
+      15% 30%
+  );
+    overflow: hidden;
+  transform: translate(-50%, -50%) rotate(18deg);
+  opacity: 0.85;
+  animation: vvoa-community-vegfest-celebration-energy 32s ease-in-out infinite;
+}
+
+.vvoa-community-vegfest-celebration-flow::before {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  width: 35%;
+  height: 30%;
+  background: 
+      /* VegFest heart pulse with festival colors */
+      linear-gradient(90deg, 
+          var(--accent-yellow) 0%, 
+          var(--accent-orange) 15%, 
+          var(--primary-green) 30%, 
+          var(--primary-pink) 45%, 
+          var(--primary-blue) 60%, 
+          var(--accent-purple) 75%, 
+          var(--accent-yellow) 90%, 
+          var(--accent-orange) 100%
+      );
+  border-radius: 60px;
+  animation: vvoa-community-vegfest-heart-celebration-pulse 32s ease-in-out infinite;
+  opacity: 0.5;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+}
+
+.vvoa-community-vegfest-celebration-flow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  background: 
+      /* VegFest celebration star burst */
+      conic-gradient(from 0deg, 
+          var(--accent-yellow) 0deg 51deg, 
+          transparent 51deg 102deg, 
+          var(--accent-yellow) 102deg 153deg, 
+          transparent 153deg 204deg, 
+          var(--accent-yellow) 204deg 255deg, 
+          transparent 255deg 306deg, 
+          var(--accent-yellow) 306deg 360deg
+      );
+  clip-path: polygon(50% 0%, 65% 35%, 100% 35%, 73% 57%, 85% 91%, 50% 70%, 15% 91%, 27% 57%, 0% 35%, 35% 35%);
+  transform: translate(-50%, -50%) scale(1.8);
+  animation: vvoa-community-vegfest-star-celebration-twinkle 32s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+/* Diner's Club Restaurant Discovery Pattern - Representing Culinary Adventures & Restaurant Partnerships */
+.vvoa-community-diners-club-discovery-pattern {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  width: 350px;
+  height: 420px;
+  background: 
+      /* Restaurant exploration pathways with culinary diversity */
+      repeating-conic-gradient(from 45deg at 55% 60%, 
+          rgba(255, 152, 0, 0.1) 0deg 18deg, 
+          transparent 18deg 36deg, 
+          rgba(76, 175, 80, 0.08) 36deg 54deg, 
+          transparent 54deg 72deg, 
+          rgba(233, 30, 99, 0.07) 72deg 90deg, 
+          transparent 90deg 108deg, 
+          rgba(255, 193, 7, 0.06) 108deg 126deg, 
+          transparent 126deg 144deg
+      ),
+      /* Culinary adventure dining routes through Edmonton */
+      radial-gradient(ellipse 280px 200px at 45% 65%, 
+          rgba(255, 152, 0, 0.08) 0%, 
+          transparent 20%, 
+          rgba(76, 175, 80, 0.09) 40%, 
+          transparent 60%, 
+          rgba(255, 193, 7, 0.06) 80%, 
+          transparent 100%
+      ),
+      /* Featured restaurant connection network web */
+      linear-gradient(65deg, 
+          transparent 0%, 
+          rgba(255, 152, 0, 0.06) 10%, 
+          transparent 20%, 
+          rgba(76, 175, 80, 0.07) 35%, 
+          transparent 50%, 
+          rgba(233, 30, 99, 0.05) 65%, 
+          transparent 80%, 
+          rgba(255, 193, 7, 0.04) 95%, 
+          transparent 100%
+      ),
+      /* Monthly dining experience weaving */
+      repeating-linear-gradient(30deg, 
+          transparent 0px, 
+          rgba(255, 152, 0, 0.03) 5px, 
+          transparent 10px, 
+          transparent 35px
+      );
+  clip-path: polygon(
+      5% 18%, 
+      60% 3%, 
+      95% 22%, 
+      98% 52%, 
+      88% 82%, 
+      55% 97%, 
+      18% 85%, 
+      3% 58%, 
+      0% 32%
+  );
+  opacity: 0.8;
+  animation: vvoa-community-restaurant-culinary-exploration 30s ease-in-out infinite reverse;
+}
+
+.vvoa-community-diners-club-discovery-pattern::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  background: 
+      /* Culinary diversity celebration with restaurant variety */
+      repeating-radial-gradient(circle at 50% 50%, 
+          var(--accent-orange) 0px 8px, 
+          transparent 8px 24px, 
+          var(--primary-green) 24px 32px, 
+          transparent 32px 48px, 
+          var(--accent-yellow) 48px 56px, 
+          transparent 56px 72px, 
+          var(--primary-pink) 72px 80px, 
+          transparent 80px 96px
+      );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: vvoa-community-culinary-diversity-celebration 30s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.vvoa-community-diners-club-discovery-pattern::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  width: 50%;
+  height: 50%;
+  border: 5px solid var(--accent-orange);
+  border-radius: 50%;
+  border-style: solid dashed dotted double;
+  transform: translate(-50%, -50%);
+  animation: vvoa-community-restaurant-partnership-orbit 30s linear infinite reverse;
+  opacity: 0.7;
+}
+
+/* Community Event Animations */
+@keyframes vvoa-community-monthly-gathering-flow {
+  0% { transform: translateX(0px) translateY(0px) rotate(0deg) scale(1); opacity: 0.8; }
+  20% { transform: translateX(15px) translateY(-12px) rotate(2deg) scale(1.02); opacity: 0.85; }
+  40% { transform: translateX(8px) translateY(-20px) rotate(0deg) scale(1.05); opacity: 0.9; }
+  60% { transform: translateX(-5px) translateY(-15px) rotate(-1deg) scale(1.03); opacity: 0.87; }
+  80% { transform: translateX(10px) translateY(-8px) rotate(1deg) scale(1.01); opacity: 0.82; }
+  100% { transform: translateX(0px) translateY(0px) rotate(0deg) scale(1); opacity: 0.8; }
+}
+
+@keyframes vvoa-community-potluck-sharing-rotation {
+  0% { transform: rotate(0deg) scale(1); opacity: 0.9; box-shadow: 0 0 20px rgba(76, 175, 80, 0.4); }
+  16.66% { transform: rotate(60deg) scale(1.05); opacity: 0.95; box-shadow: 0 0 25px rgba(255, 193, 7, 0.5); }
+  33.33% { transform: rotate(120deg) scale(1.1); opacity: 1; box-shadow: 0 0 30px rgba(255, 152, 0, 0.6); }
+  50% { transform: rotate(180deg) scale(1.05); opacity: 0.95; box-shadow: 0 0 25px rgba(233, 30, 99, 0.5); }
+  66.66% { transform: rotate(240deg) scale(1.02); opacity: 0.92; box-shadow: 0 0 22px rgba(25, 118, 210, 0.4); }
+  83.33% { transform: rotate(300deg) scale(1.03); opacity: 0.93; box-shadow: 0 0 23px rgba(103, 58, 183, 0.45); }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.9; box-shadow: 0 0 20px rgba(76, 175, 80, 0.4); }
+}
+
+@keyframes vvoa-community-welcoming-circle-expansion {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; border-width: 4px; border-color: var(--primary-green); }
+  33% { transform: scale(1.2) rotate(120deg); opacity: 0.8; border-width: 6px; border-color: var(--accent-orange); }
+  66% { transform: scale(1.35) rotate(240deg); opacity: 0.9; border-width: 7px; border-color: var(--primary-pink); }
+}
+
+@keyframes vvoa-community-restaurant-exploration {
+  0% { transform: translateX(0px) translateY(0px) scale(1) rotate(0deg); opacity: 0.7; }
+  25% { transform: translateX(20px) translateY(15px) scale(1.03) rotate(3deg); opacity: 0.75; }
+  50% { transform: translateX(12px) translateY(25px) scale(1.06) rotate(0deg); opacity: 0.8; }
+  75% { transform: translateX(-8px) translateY(20px) scale(1.04) rotate(-2deg); opacity: 0.77; }
+  100% { transform: translateX(0px) translateY(0px) scale(1) rotate(0deg); opacity: 0.7; }
+}
+
+@keyframes vvoa-community-festival-celebration-energy {
+  0% { transform: translate(-50%, -50%) rotate(15deg) scale(1); opacity: 0.75; }
+  25% { transform: translate(-50%, -50%) rotate(18deg) scale(1.03); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) rotate(12deg) scale(1.06); opacity: 0.85; }
+  75% { transform: translate(-50%, -50%) rotate(20deg) scale(1.04); opacity: 0.82; }
+  100% { transform: translate(-50%, -50%) rotate(15deg) scale(1); opacity: 0.75; }
+}
+
+@keyframes vvoa-community-celebration-bounce {
+  0%, 100% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-60%) scale(1.3); }
+}
+
+/* Enhanced Community Event Animations for VVoA Activities */
+@keyframes vvoa-community-potluck-table-arrangement {
+  0% { 
+      transform: translateX(0px) translateY(0px) rotate(0deg) scale(1); 
+      opacity: 0.85; 
+      background-position: 0% 0%, 0deg, 0px 0px, 0% 0%;
+  }
+  15% { 
+      transform: translateX(12px) translateY(-8px) rotate(1deg) scale(1.01); 
+      opacity: 0.88; 
+      background-position: 15% 15%, 54deg, 18px 18px, 15% 15%;
+  }
+  30% { 
+      transform: translateX(18px) translateY(-15px) rotate(0deg) scale(1.03); 
+      opacity: 0.92; 
+      background-position: 30% 30%, 108deg, 36px 36px, 30% 30%;
+  }
+  45% { 
+      transform: translateX(8px) translateY(-22px) rotate(-1deg) scale(1.05); 
+      opacity: 0.95; 
+      background-position: 45% 45%, 162deg, 54px 54px, 45% 45%;
+  }
+  60% { 
+      transform: translateX(-2px) translateY(-18px) rotate(0deg) scale(1.02); 
+      opacity: 0.9; 
+      background-position: 60% 60%, 216deg, 72px 72px, 60% 60%;
+  }
+  75% { 
+      transform: translateX(6px) translateY(-12px) rotate(1deg) scale(1.01); 
+      opacity: 0.87; 
+      background-position: 75% 75%, 270deg, 90px 90px, 75% 75%;
+  }
+  90% { 
+      transform: translateX(15px) translateY(-5px) rotate(0deg) scale(1); 
+      opacity: 0.86; 
+      background-position: 90% 90%, 324deg, 108px 108px, 90% 90%;
+  }
+  100% { 
+      transform: translateX(0px) translateY(0px) rotate(0deg) scale(1); 
+      opacity: 0.85; 
+      background-position: 100% 100%, 360deg, 108px 108px, 100% 100%;
+  }
+}
+
+@keyframes vvoa-community-potluck-dish-sharing-carousel {
+  0% { 
+      transform: rotate(0deg) scale(1); 
+      opacity: 0.9; 
+      box-shadow: 0 0 25px rgba(76, 175, 80, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  12.5% { 
+      transform: rotate(45deg) scale(1.02); 
+      opacity: 0.92; 
+      box-shadow: 0 0 28px rgba(255, 193, 7, 0.6), inset 0 0 18px rgba(255, 255, 255, 0.4);
+  }
+  25% { 
+      transform: rotate(90deg) scale(1.05); 
+      opacity: 0.95; 
+      box-shadow: 0 0 32px rgba(255, 152, 0, 0.7), inset 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  37.5% { 
+      transform: rotate(135deg) scale(1.08); 
+      opacity: 1; 
+      box-shadow: 0 0 35px rgba(233, 30, 99, 0.6), inset 0 0 22px rgba(255, 255, 255, 0.4);
+  }
+  50% { 
+      transform: rotate(180deg) scale(1.05); 
+      opacity: 0.95; 
+      box-shadow: 0 0 30px rgba(25, 118, 210, 0.5), inset 0 0 18px rgba(255, 255, 255, 0.3);
+  }
+  62.5% { 
+      transform: rotate(225deg) scale(1.03); 
+      opacity: 0.93; 
+      box-shadow: 0 0 27px rgba(103, 58, 183, 0.55), inset 0 0 16px rgba(255, 255, 255, 0.35);
+  }
+  75% { 
+      transform: rotate(270deg) scale(1.02); 
+      opacity: 0.92; 
+      box-shadow: 0 0 26px rgba(255, 193, 7, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  87.5% { 
+      transform: rotate(315deg) scale(1.01); 
+      opacity: 0.91; 
+      box-shadow: 0 0 24px rgba(76, 175, 80, 0.45), inset 0 0 14px rgba(255, 255, 255, 0.25);
+  }
+  100% { 
+      transform: rotate(360deg) scale(1); 
+      opacity: 0.9; 
+      box-shadow: 0 0 25px rgba(76, 175, 80, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes vvoa-community-welcoming-circle-expansion {
+  0%, 100% { 
+      transform: scale(1) rotate(0deg); 
+      opacity: 0.7; 
+      border-width: 5px;
+      border-color: var(--primary-green);
+  }
+  25% { 
+      transform: scale(1.15) rotate(90deg); 
+      opacity: 0.85; 
+      border-width: 7px;
+      border-color: var(--accent-orange);
+  }
+  50% { 
+      transform: scale(1.25) rotate(180deg); 
+      opacity: 0.9; 
+      border-width: 8px;
+      border-color: var(--primary-pink);
+  }
+  75% { 
+      transform: scale(1.35) rotate(270deg); 
+      opacity: 0.95; 
+      border-width: 9px;
+      border-color: var(--accent-yellow);
+  }
+}
+
+@keyframes vvoa-community-restaurant-culinary-exploration {
+  0% { 
+      transform: translateX(0px) translateY(0px) scale(1) rotate(0deg); 
+      opacity: 0.75; 
+      background-position: 0deg, 0% 0%, 0% 0%, 0% 0%;
+  }
+  20% { 
+      transform: translateX(18px) translateY(12px) scale(1.02) rotate(2deg); 
+      opacity: 0.78; 
+      background-position: 72deg, 20% 20%, 20% 20%, 20% 20%;
+  }
+  40% { 
+      transform: translateX(25px) translateY(22px) scale(1.05) rotate(0deg); 
+      opacity: 0.82; 
+      background-position: 144deg, 40% 40%, 40% 40%, 40% 40%;
+  }
+  60% { 
+      transform: translateX(15px) translateY(28px) scale(1.07) rotate(-1deg); 
+      opacity: 0.85; 
+      background-position: 216deg, 60% 60%, 60% 60%, 60% 60%;
+  }
+  80% { 
+      transform: translateX(-5px) translateY(20px) scale(1.04) rotate(-2deg); 
+      opacity: 0.8; 
+      background-position: 288deg, 80% 80%, 80% 80%, 80% 80%;
+  }
+  100% { 
+      transform: translateX(0px) translateY(0px) scale(1) rotate(0deg); 
+      opacity: 0.75; 
+      background-position: 360deg, 100% 100%, 100% 100%, 100% 100%;
+  }
+}
+
+@keyframes vvoa-community-culinary-diversity-celebration {
+  0%, 100% { 
+      transform: translate(-50%, -50%) scale(0.9) rotate(0deg); 
+      opacity: 0.5; 
+  }
+  25% { 
+      transform: translate(-50%, -50%) scale(1.1) rotate(90deg); 
+      opacity: 0.65; 
+  }
+  50% { 
+      transform: translate(-50%, -50%) scale(1.3) rotate(180deg); 
+      opacity: 0.8; 
+  }
+  75% { 
+      transform: translate(-50%, -50%) scale(1.5) rotate(270deg); 
+      opacity: 0.7; 
+  }
+}
+
+@keyframes vvoa-community-restaurant-partnership-orbit {
+  0% { 
+      transform: translate(-50%, -50%) rotate(0deg); 
+      border-color: var(--accent-orange); 
+      opacity: 0.6;
+      border-width: 4px;
+  }
+  20% { 
+      transform: translate(-50%, -50%) rotate(72deg); 
+      border-color: var(--primary-green); 
+      opacity: 0.7;
+      border-width: 5px;
+  }
+  40% { 
+      transform: translate(-50%, -50%) rotate(144deg); 
+      border-color: var(--accent-purple); 
+      opacity: 0.8;
+      border-width: 6px;
+  }
+  60% { 
+      transform: translate(-50%, -50%) rotate(216deg); 
+      border-color: var(--accent-yellow); 
+      opacity: 0.85;
+      border-width: 6px;
+  }
+  80% { 
+      transform: translate(-50%, -50%) rotate(288deg); 
+      border-color: var(--primary-pink); 
+      opacity: 0.7;
+      border-width: 5px;
+  }
+  100% { 
+      transform: translate(-50%, -50%) rotate(72deg); 
+      border-color: var(--primary-blue); 
+      opacity: 0.6;
+      border-width: 4px;
+  }
+}
+
+/* Container */
+.vvoa-community-events-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  position: relative;
+}
+
+/* Community Events Header */
+.vvoa-community-events-section-header {
+  text-align: center;
+  position: relative;
+}
+
+.vvoa-community-events-section-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: var(--primary-pink);
+  margin-bottom: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.vvoa-community-events-section-title::before {
+  content: '🎉';
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  font-size: 2.8rem;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0;
+  animation: vvoa-community-celebration-bounce 2s ease-in-out infinite paused;
+}
+
+.vvoa-community-events-section-title::after {
+  content: '🤝';
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  font-size: 2.8rem;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
+  opacity: 0;
+}
+
+.vvoa-community-events-section-title:hover::before,
+.vvoa-community-events-section-title:hover::after {
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+.vvoa-community-events-section-title:hover::before {
+  animation: vvoa-community-celebration-bounce 1s ease-in-out infinite;
+}
+
+.vvoa-community-events-section-title:hover {
+  transform: scale(1.1);
+  color: var(--accent-orange);
+  text-shadow: 0 18px 40px rgba(233, 30, 99, 0.3);
+}
+
+.vvoa-community-events-subtitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vvoa-community-events-subtitle::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-green), var(--accent-yellow), var(--accent-orange), var(--primary-pink));
+  transition: left 0.8s ease;
+  border-radius: 3px;
+}
+
+.vvoa-community-events-section-title:hover + .vvoa-community-events-subtitle::before {
+  left: 100%;
+}
+
+.vvoa-community-events-description {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Monthly Events Grid */
+.vvoa-community-monthly-events-grid {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.vvoa-community-event-activities-area {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Monthly Potlucks Card */
+.vvoa-community-monthly-potlucks-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fff8 100%);
+  border-radius: 25px;
+  padding: 45px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.vvoa-community-monthly-potlucks-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(76, 175, 80, 0.1) 60deg, transparent 120deg, rgba(255, 152, 0, 0.08) 180deg, transparent 240deg, rgba(255, 193, 7, 0.08) 300deg, transparent 360deg);
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+
+.vvoa-community-monthly-potlucks-card:hover::before {
+  transform: rotate(360deg);
+  opacity: 1;
+}
+
+.vvoa-community-monthly-potlucks-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(76, 175, 80, 0.2);
+}
+
+.vvoa-community-potlucks-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.vvoa-community-potlucks-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 2;
+}
+
+img {
+  border-radius: 25px;
+}
+
+/* Diner's Club Card */
+.vvoa-community-diners-club-card {
+  background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);
+  border-radius: 22px;
+  padding: 40px;
+  border: 3px solid var(--accent-orange);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.vvoa-community-diners-club-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 152, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+}
+
+.vvoa-community-diners-club-card:hover::after {
+  width: 500px;
+  height: 500px;
+}
+
+.vvoa-community-diners-club-card:hover {
+  transform: translateX(10px) scale(1.02);
+  border-color: var(--primary-green);
+  box-shadow: 0 18px 45px rgba(255, 152, 0, 0.25);
+}
+
+.vvoa-community-diners-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.vvoa-community-diners-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  position: relative;
+  z-index: 2;
+}
+
+/* Event Calendar Visual Area */
+.vvoa-community-event-calendar-visual-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+    position: sticky;
+    top: 130px;
+}
+
+/* Upcoming Events Calendar */
+.vvoa-community-upcoming-events-calendar {
+  background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  min-height: 520px;
+}
+
+.vvoa-community-calendar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.vvoa-community-event-item {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--primary-green);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vvoa-community-event-item:hover {
+  transform: translateX(10px);
+  border-left-color: var(--accent-orange);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.2);
+}
+
+.vvoa-community-event-date {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.vvoa-community-event-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.vvoa-community-event-time {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* VegFest Highlight */
+.vvoa-community-vegfest-highlight {
+  background: linear-gradient(135deg, var(--accent-yellow), var(--accent-orange));
+  border-radius: 20px;
+  padding: 25px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vvoa-community-vegfest-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.8s ease;
+}
+
+.vvoa-community-vegfest-highlight:hover::before {
+  left: 100%;
+}
+
+.vvoa-community-vegfest-highlight:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 15px 35px rgba(255, 193, 7, 0.4);
+}
+
+.vvoa-community-vegfest-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.vvoa-community-vegfest-date {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+}
+
+/* View Calendar Button */
+/* .vvoa-community-view-calendar-button {
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vvoa-community-view-calendar-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.vvoa-community-view-calendar-button:hover::before {
+  left: 100%;
+}
+
+.vvoa-community-view-calendar-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(25, 118, 210, 0.3);
+} */
+
+/* Featured Restaurants Section */
+.vvoa-community-featured-restaurants-section {
+  background: linear-gradient(135deg, #fff0f8 0%, #ffffff 50%, #f8fff0 100%);
+  border-radius: 25px;
+  padding: 50px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.vvoa-community-featured-restaurants-section::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(233, 30, 99, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.8s ease;
+}
+
+.vvoa-community-featured-restaurants-section:hover::after {
+  width: 700px;
+  height: 700px;
+}
+
+.vvoa-community-featured-restaurants-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 60px rgba(233, 30, 99, 0.15);
+}
+
+.vvoa-community-featured-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-pink);
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.vvoa-community-restaurants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.vvoa-community-restaurant-item {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0;
+  border-radius: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vvoa-community-restaurant-item:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 1);
+  border-color: var(--accent-orange);
+  box-shadow: 0 12px 25px rgba(255, 152, 0, 0.25);
+}
+
+.vvoa-community-restaurant-image {
+  width: 100%;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.vvoa-community-restaurant-item:hover .vvoa-community-restaurant-image {
+  transform: scale(1.05);
+}
+
+.vvoa-community-restaurant-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.vvoa-community-restaurant-item:hover .vvoa-community-restaurant-image::after {
+  opacity: 1;
+}
+
+.vvoa-community-restaurant-name {
+  padding: 15px 18px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Individual Restaurant Images */
+.vvoa-restaurant-vegan-street {
+  background-image: url('https://web.archive.org/web/20230911174332im_/https://albertavegans.ca/wp-content/uploads/2023/08/vegan-street.jpg');
+}
+
+.vvoa-restaurant-die-pie {
+  background-image: url('https://web.archive.org/web/20250427094324im_/https://albertavegans.ca/wp-content/uploads/2023/03/die-pie.jpeg');
+}
+
+.vvoa-restaurant-kb-co {
+  background-image: url('https://web.archive.org/web/20250427094324im_/https://albertavegans.ca/wp-content/uploads/2023/08/kbandco.jpeg');
+}
+
+.vvoa-restaurant-an-chay {
+  background-image: url('https://web.archive.org/web/20250427094324im_/https://albertavegans.ca/wp-content/uploads/2023/03/an-chay-rolls.png');
+}
+
+.vvoa-restaurant-sweet-pea {
+  background-image: url('https://web.archive.org/web/20250427094324im_/https://albertavegans.ca/wp-content/uploads/2023/03/sweet-pea-logo-350.webp');
+}
+
+.vvoa-restaurant-padmanadi {
+  background-image: url('https://web.archive.org/web/20250427094324im_/https://albertavegans.ca/wp-content/uploads/2023/03/padmanadi-logo-768x768.png');
+}
+
+.vvoa-restaurant-moth {
+  background-image: url('https://web.archive.org/web/20250427094324im_/https://albertavegans.ca/wp-content/uploads/2023/03/the-moth-logo.webp');
+}
+
+.vvoa-restaurant-copper-branch {
+  background-image: url('https://web.archive.org/web/20250427094324im_/https://albertavegans.ca/wp-content/uploads/2023/03/copper-branch-logo.png');
+}
+
+.vvoa-restaurant-buckingham {
+  background-image: url('https://web.archive.org/web/20250427094324im_/https://albertavegans.ca/wp-content/uploads/2023/03/buckingham.png');
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .vvoa-community-events-content-container {
+      padding: 0;
+      gap: 60px;
+  }
+
+  .vvoa-community-monthly-events-grid {
+      flex-direction: column;
+      gap: 40px;
+  }
+
+  .vvoa-community-events-section-title {
+      font-size: 2.5rem;
+  }
+
+  .vvoa-community-events-section-title::before,
+  .vvoa-community-events-section-title::after {
+      display: none;
+  }
+
+  .vvoa-community-monthly-potlucks-card,
+  .vvoa-community-diners-club-card {
+      padding: 30px 25px;
+  }
+
+  .vvoa-community-restaurants-grid {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+/* Calendar Navigation Header */
+.vvoa-community-calendar-navigation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+.vvoa-community-calendar-nav-button {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 18px rgba(76, 175, 80, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vvoa-community-calendar-nav-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.vvoa-community-calendar-nav-button:active {
+    transform: scale(0.95);
+}
+
+.vvoa-community-calendar-month-year-display {
+    text-align: center;
+    flex: 1;
+}
+
+.vvoa-community-calendar-current-month-year {
+    font-size: 22px;
+    font-weight: 800;
+    color: #2E7D32;
+    margin: 0;
+}
+
+/* Calendar Weekdays Header */
+.vvoa-community-calendar-weekdays-header {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 3px;
+}
+
+.vvoa-community-calendar-weekday-label {
+    flex: 1;
+    max-width: calc(14.28% - 3px);
+    text-align: center;
+    padding: 12px 5px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #4CAF50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 8px;
+}
+
+/* Calendar Days Grid */
+.vvoa-community-calendar-days-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.vvoa-community-calendar-day-cell {
+    flex: 0 0 calc(14.28% - 3px);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(76, 175, 80, 0.1);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    min-height: 40px;
+}
+
+.vvoa-community-calendar-day-cell:hover {
+    background: rgba(76, 175, 80, 0.1);
+    border-color: rgba(76, 175, 80, 0.3);
+    transform: scale(1.05);
+}
+
+.vvoa-community-calendar-day-cell.other-month {
+    color: #ccc;
+    background: rgba(248, 248, 248, 0.5);
+    cursor: default;
+}
+
+.vvoa-community-calendar-day-cell.other-month:hover {
+    transform: none;
+    background: rgba(248, 248, 248, 0.5);
+    border-color: rgba(76, 175, 80, 0.1);
+}
+
+.vvoa-community-calendar-day-cell.today {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    border-color: #2E7D32;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.vvoa-community-calendar-day-cell.has-event {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.15), rgba(255, 107, 157, 0.1));
+    border-color: rgba(233, 30, 99, 0.4);
+    color: #C2185B;
+    font-weight: 700;
+}
+
+.vvoa-community-calendar-day-cell.has-event::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: #E91E63;
+    border-radius: 50%;
+    animation: vvoa-community-event-indicator-pulse 2s ease-in-out infinite;
+}
+
+.vvoa-community-calendar-day-cell.has-event:hover {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.25), rgba(255, 107, 157, 0.15));
+    border-color: rgba(233, 30, 99, 0.6);
+    transform: scale(1.08);
+}
+
+.vvoa-community-calendar-day-cell.today.has-event {
+    background: linear-gradient(135deg, #E91E63, #F06292);
+    color: white;
+    border-color: #C2185B;
+}
+
+.vvoa-community-calendar-day-cell.today.has-event::after {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes vvoa-community-event-indicator-pulse {
+    0%, 100% { 
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateX(-50%) scale(1.3);
+        opacity: 0.7;
+    }
+}
+
+/* Event Details Modal */
+.vvoa-community-calendar-event-details-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.vvoa-community-calendar-event-details-modal.active {
+    display: flex;
+    align-items: flex-start;
+    overflow: visible;
+}
+
+.vvoa-community-calendar-modal-content {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 255, 248, 0.95));
+    border-radius: 25px;
+    padding: 35px;
+    max-width: 500px;
+    width: 90%;
+    border: 3px solid rgba(76, 175, 80, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: vvoa-community-modal-appear 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes vvoa-community-modal-appear {
+    0% { 
+        opacity: 0;
+        transform: scale(0.8) translateY(-20px);
+    }
+    100% { 
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+    }
+}
+
+.vvoa-community-calendar-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(76, 175, 80, 0.1);
+}
+
+.vvoa-community-calendar-modal-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #2E7D32;
+    margin: 0;
+}
+
+.vvoa-community-calendar-modal-close-button {
+    min-width: 35px;
+    min-height: 35px;
+    background: rgba(233, 30, 99, 0.1);
+    border: 2px solid rgba(233, 30, 99, 0.3);
+    border-radius: 50%;
+    color: #E91E63;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vvoa-community-calendar-modal-close-button:hover {
+    background: rgba(233, 30, 99, 0.2);
+    transform: scale(1.1);
+}
+
+.vvoa-community-calendar-modal-body {
+    color: #555;
+    line-height: 1.6;
+}
+
+.vvoa-community-calendar-modal-date {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.vvoa-community-calendar-modal-time {
+    font-size: 15px;
+    color: #FF9800;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.vvoa-community-calendar-modal-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Enhanced existing calendar container styling */
+.vvoa-community-upcoming-events-calendar {
+    background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: auto;
+    min-height: 520px;
+}
+
+
+.vvoa-community-upcoming-events-calendar:hover {
+    box-shadow: 0 20px 50px rgba(76, 175, 80, 0.2);
+}
+
+.vvoa-community-calendar-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4CAF50;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vvoa-community-calendar-navigation-header {
+        margin-bottom: 20px;
+    }
+
+    .vvoa-community-calendar-nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .vvoa-community-calendar-current-month-year {
+        font-size: 18px;
+    }
+
+    .vvoa-community-calendar-weekday-label {
+        font-size: 12px;
+        padding: 8px 3px;
+    }
+
+    .vvoa-community-calendar-day-cell {
+        font-size: 12px;
+        border-radius: 8px;
+        min-height: 35px;
+    }
+
+    .vvoa-community-calendar-modal-content {
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .vvoa-community-calendar-modal-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vvoa-community-upcoming-events-calendar {
+        padding: 20px;
+    }
+
+    .vvoa-community-calendar-current-month-year {
+        font-size: 16px;
+    }
+
+    .vvoa-community-calendar-nav-button {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .vvoa-community-calendar-modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .vvoa-community-calendar-day-cell {
+        font-size: 11px;
+        min-height: 30px;
+    }
+}

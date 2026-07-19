@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VVoA Admin Portal - Event Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Admin Login Overlay -->
+    <div class="vvoa-admin-login-overlay" id="adminLoginOverlay">
+        <div class="vvoa-admin-login-container">
+            <div class="vvoa-admin-login-header">
+                <i class="fas fa-shield-alt"></i>
+                <h2>VVoA Admin Portal</h2>
+                <p>Event Management System</p>
+            </div>
+            <form id="adminLoginForm" class="vvoa-admin-login-form">
+                <div class="vvoa-admin-form-group">
+                    <label for="adminPassword">
+                        <i class="fas fa-lock"></i>
+                        Admin Password
+                    </label>
+                    <input 
+                        type="password" 
+                        id="adminPassword" 
+                        class="vvoa-admin-input"
+                        placeholder="Enter admin password"
+                        required
+                    >
+                </div>
+                <button type="submit" class="vvoa-admin-login-button">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Access Admin Portal
+                </button>
+                <div class="vvoa-admin-login-error" id="loginError"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Admin Dashboard -->
+    <div class="vvoa-admin-dashboard-container" id="adminDashboard" style="display: none;">
+        <!-- Admin Header -->
+        <header class="vvoa-admin-header">
+            <div class="vvoa-admin-header-content">
+                <div class="vvoa-admin-brand">
+                    <i class="fas fa-calendar-check"></i>
+                    <h1>VVoA Event Manager</h1>
+                    <span class="vvoa-admin-subtitle">Custom Content Management System</span>
+                </div>
+                <button class="vvoa-admin-logout-button" id="logoutButton">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </header>
+
+        <!-- Admin Navigation -->
+        <nav class="vvoa-admin-navigation">
+            <button class="vvoa-admin-nav-tab" data-tab="gallery">
+                <i class="fas fa-photo-video"></i>
+                Event Gallery
+            </button>
+            <button class="vvoa-admin-nav-tab" data-tab="vsm">
+                <i class="fas fa-users"></i>
+                Vegan Social Meetups
+            </button>
+            
+            <button class="vvoa-admin-nav-tab active" data-tab="events">
+                <i class="fas fa-calendar-alt"></i>
+                All Events
+            </button>
+            <button class="vvoa-admin-nav-tab" data-tab="addEvent">
+                <i class="fas fa-plus-circle"></i>
+                Add New Event
+            </button>
+            <button class="vvoa-admin-nav-tab" data-tab="cities">
+                <i class="fas fa-city"></i>
+                Cities Overview
+            </button>
+            <button class="vvoa-admin-nav-tab" data-tab="bulk">
+                <i class="fas fa-file-import"></i>
+                Bulk Import
+            </button>
+            
+        </nav>
+
+        <!-- Admin Content Area -->
+        <main class="vvoa-admin-main-content">
+            <!-- Events List Tab -->
+            <section class="vvoa-admin-tab-content active" id="eventsTab">
+                <div class="vvoa-admin-section-header">
+                    <h2>
+                        <i class="fas fa-list"></i>
+                        Event Management
+                    </h2>
+                    <div class="vvoa-admin-event-stats">
+                        <div class="vvoa-admin-stat-card">
+                            <i class="fas fa-calendar-day"></i>
+                            <div>
+                                <span class="vvoa-admin-stat-number" id="totalEvents">0</span>
+                                <span class="vvoa-admin-stat-label">Total Events</span>
+                            </div>
+                        </div>
+                        <div class="vvoa-admin-stat-card">
+                            <i class="fas fa-city"></i>
+                            <div>
+                                <span class="vvoa-admin-stat-number" id="totalCities">0</span>
+                                <span class="vvoa-admin-stat-label">Cities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="vvoa-admin-filter-bar">
+                    <div class="vvoa-admin-filter-group">
+                        <label for="filterCity">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Filter by City
+                        </label>
+                        <select id="filterCity" class="vvoa-admin-select">
+                            <option value="all">All Cities</option>
+                        </select>
+                    </div>
+
+                    <div class="vvoa-admin-filter-group">
+                        <label for="filterType">
+                            <i class="fas fa-tag"></i>
+                            Event Type
+                        </label>
+                        <select id="filterType" class="vvoa-admin-select">
+                            <option value="all">All Types</option>
+                            <option value="potluck">Potluck</option>
+                            <option value="brunch">Brunch</option>
+                            <option value="diners-club">Diner's Club</option>
+                            <option value="market">Market</option>
+                            <option value="activism">Activism</option>
+                            <option value="social">Social</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="vvoa-admin-filter-group">
+                        <label for="filterMonth">
+                            <i class="fas fa-calendar"></i>
+                            Month
+                        </label>
+                        <select id="filterMonth" class="vvoa-admin-select">
+                            <option value="all">All Months</option>
+                        </select>
+                    </div>
+
+                    <button class="vvoa-admin-filter-apply-button" id="applyFilters">
+                        <i class="fas fa-filter"></i>
+                        Apply Filters
+                    </button>
+
+                    <button class="vvoa-admin-filter-reset-button" id="resetFilters">
+                        <i class="fas fa-redo"></i>
+                        Reset
+                    </button>
+                </div>
+
+                <!-- Events Table -->
+                <div class="vvoa-admin-events-table-container">
+                    <table class="vvoa-admin-events-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Event Title</th>
+                                <th>City</th>
+                                <th>Type</th>
+                                <th>Organizer</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="eventsTableBody">
+                            <!-- Events will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Add Event Tab -->
+            <!-- Add Event Tab -->
+            <section class="vvoa-admin-tab-content" id="addEventTab">
+                <div class="vvoa-admin-section-header">
+                    <h2>
+                        <i class="fas fa-plus-circle"></i>
+                        Add New Event
+                    </h2>
+                </div>
+
+                <form id="addEventForm" class="vvoa-admin-event-form">
+                    <div class="vvoa-admin-form-grid">
+                        <!-- Basic Information -->
+                        <div class="vvoa-admin-form-section">
+                            <h3><i class="fas fa-info-circle"></i> Event Details</h3>
+
+                            <div class="vvoa-admin-form-group">
+                                <label for="eventTitle">Event Title *</label>
+                                <input 
+                                    type="text" 
+                                    id="eventTitle" 
+                                    class="vvoa-admin-input"
+                                    placeholder="e.g., Monthly Potluck"
+                                    required
+                                >
+                            </div>
+
+                            <div class="vvoa-admin-form-group">
+                                <label for="eventDescription">Description *</label>
+                                <textarea 
+                                    id="eventDescription" 
+                                    class="vvoa-admin-textarea"
+                                    rows="4"
+                                    placeholder="Describe the event..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="vvoa-admin-form-group">
+                                <label for="eventType">Event Type *</label>
+                                <select id="eventType" class="vvoa-admin-select" required>
+                                    <option value="">Select type...</option>
+                                    <option value="potluck">Potluck</option>
+                                    <option value="brunch">Brunch</option>
+                                    <option value="diners-club">Diner's Club</option>
+                                    <option value="market">Market/Fair</option>
+                                    <option value="activism">Activism/Protest</option>
+                                    <option value="social">Social Gathering</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Date & Time -->
+                        <div class="vvoa-admin-form-section">
+                            <h3><i class="fas fa-clock"></i> Date & Time</h3>
+
+                            <div class="vvoa-admin-form-group">
+                                <label for="eventDate">Event Date *</label>
+                                <input 
+                                    type="date" 
+                                    id="eventDate" 
+                                    class="vvoa-admin-input"
+                                    required
+                                >
+                            </div>
+
+                            <div class="vvoa-admin-form-row">
+                                <div class="vvoa-admin-form-group">
+                                    <label for="eventTime">Start Time *</label>
+                                    <input 
+                                        type="time" 
+                                        id="eventTime" 
+                                        class="vvoa-admin-input"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="vvoa-admin-form-group">
+                                    <label for="eventEndTime">End Time</label>
+                                    <input 
+                                        type="time" 
+                                        id="eventEndTime" 
+                                        class="vvoa-admin-input"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="vvoa-admin-form-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+
+                            <div class="vvoa-admin-form-group">
+                                <label for="eventCity">City *</label>
+                                <input 
+                                    type="text" 
+                                    id="eventCity" 
+                                    class="vvoa-admin-input"
+                                    placeholder="e.g., Edmonton, Calgary, Red Deer"
+                                    list="cityDatalist"
+                                    required
+                                >
+                                <datalist id="cityDatalist">
+                                    <option value="Edmonton">
+                                    <option value="Calgary">
+                                    <option value="Red Deer">
+                                    <option value="Lethbridge">
+                                    <option value="Medicine Hat">
+                                    <option value="Grande Prairie">
+                                    <option value="Airdrie">
+                                    <option value="Spruce Grove">
+                                    <option value="Leduc">
+                                    <option value="Fort McMurray">
+                                </datalist>
+                            </div>
+
+                            <div class="vvoa-admin-form-group">
+                                <label for="eventVenue">Venue</label>
+                                <input 
+                                    type="text" 
+                                    id="eventVenue" 
+                                    class="vvoa-admin-input"
+                                    placeholder="e.g., Community Center, Restaurant Name"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Organizer & Cost -->
+                        <div class="vvoa-admin-form-section">
+                            <h3><i class="fas fa-ticket-alt"></i> Organizer & Cost</h3>
+
+                            <div class="vvoa-admin-form-group">
+                                <label for="eventOrganizer">Organizer</label>
+                                <input 
+                                    type="text" 
+                                    id="eventOrganizer" 
+                                    class="vvoa-admin-input"
+                                    value="VVoA"
+                                    placeholder="Organization name"
+                                >
+                            </div>
+
+                            <div class="vvoa-admin-form-row">
+                                <div class="vvoa-admin-form-group">
+                                    <label for="eventCost">Cost</label>
+                                    <input 
+                                        type="text" 
+                                        id="eventCost" 
+                                        class="vvoa-admin-input"
+                                        placeholder="e.g., $5, Free"
+                                    >
+                                </div>
+
+                                <div class="vvoa-admin-form-group">
+                                    <label for="eventMemberCost">Member Cost</label>
+                                    <input 
+                                        type="text" 
+                                        id="eventMemberCost" 
+                                        class="vvoa-admin-input"
+                                        placeholder="e.g., $3"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vvoa-admin-form-actions">
+                        <button type="submit" class="vvoa-admin-button-primary">
+                            <i class="fas fa-save"></i>
+                            Create Event
+                        </button>
+                        <button type="reset" class="vvoa-admin-button-secondary">
+                            <i class="fas fa-undo"></i>
+                            Clear Form
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Cities Overview Tab -->
+            <section class="vvoa-admin-tab-content" id="citiesTab">
+                <div class="vvoa-admin-section-header">
+                    <h2>
+                        <i class="fas fa-city"></i>
+                        Alberta Cities Overview
+                    </h2>
+                </div>
+
+                <div class="vvoa-admin-cities-grid" id="citiesGrid">
+                    <!-- Cities will be populated here -->
+                </div>
+            </section>
+
+            <!-- Bulk Import Tab -->
+            <section class="vvoa-admin-tab-content" id="bulkTab">
+                <div class="vvoa-admin-section-header">
+                    <h2>
+                        <i class="fas fa-file-import"></i>
+                        Bulk Import Events
+                    </h2>
+                    <p>Import multiple events at once using JSON format</p>
+                </div>
+
+                <div class="vvoa-admin-bulk-import-container">
+                    <div class="vvoa-admin-bulk-instructions">
+                        <h3>JSON Format Example:</h3>
+                        <pre class="vvoa-admin-code-block">
+{
+  "events": [
+    {
+      "title": "Calgary Vegan Meetup",
+      "description": "Monthly social gathering",
+      "eventType": "social",
+      "date": "2025-01-15",
+      "time": "18:00",
+      "city": "Calgary",
+      "organizer": "Calgary Vegans",
+      "isVVoAEvent": false
+    }
+  ]
+}
+                        </pre>
+                    </div>
+
+                    <form id="bulkImportForm" class="vvoa-admin-bulk-form">
+                        <div class="vvoa-admin-form-group">
+                            <label for="bulkJsonInput">Paste JSON Data</label>
+                            <textarea 
+                                id="bulkJsonInput" 
+                                class="vvoa-admin-textarea"
+                                rows="15"
+                                placeholder='{"events": [...]}'
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="vvoa-admin-button-primary">
+                            <i class="fas fa-upload"></i>
+                            Import Events
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Gallery Management Tab -->
+            <section class="vvoa-admin-tab-content" id="galleryTab">
+                <div class="vvoa-admin-section-header">
+                    <h2>
+                        <i class="fas fa-images"></i>
+                        Event Gallery Management
+                    </h2>
+                    <p style="color: #666; font-size: 1rem; margin-top: 10px;">Add videos (YouTube) and photos (Google Drive links) to the gallery</p>
+                </div>
+
+                <!-- Add Media Form -->
+                <div class="vvoa-admin-form-container" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                    <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 20px;">
+                        <i class="fas fa-plus-circle"></i> Add New Media
+                    </h3>
+                    <form id="addGalleryItemForm" style="max-width: 800px;">
+                        <div class="vvoa-admin-form-row">
+                            <div class="vvoa-admin-form-group">
+                                <label for="galleryMediaType">Media Type *</label>
+                                <select id="galleryMediaType" class="vvoa-admin-select" required>
+                                    <option value="photo">Photo</option>
+                                    <option value="video">Video</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="vvoa-admin-form-group">
+                            <label for="galleryMediaUrl">URL *</label>
+                            <input 
+                                type="url" 
+                                id="galleryMediaUrl" 
+                                class="vvoa-admin-input" 
+                                placeholder="YouTube link or Google Drive link"
+                                required
+                            >
+                            <small style="display: block; margin-top: 8px; font-size: 0.85rem; color: #666;">
+                                <strong>YouTube:</strong> https://www.youtube.com/watch?v=... or https://youtu.be/...<br>
+                                <strong>Google Drive:</strong> Right-click file → Get link → Set to "Anyone with link"
+                            </small>
+                        </div>
+
+                        <div class="vvoa-admin-form-group">
+                            <label for="galleryMediaCaption">Caption (Optional)</label>
+                            <textarea 
+                                id="galleryMediaCaption" 
+                                class="vvoa-admin-textarea" 
+                                rows="3"
+                                placeholder="Brief description of this photo/video"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="vvoa-admin-button-primary">
+                            <i class="fas fa-plus"></i>
+                            Add to Gallery
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Gallery Items List -->
+                <div class="vvoa-admin-list-container" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 25px;">
+                        <i class="fas fa-list"></i> Current Gallery Items
+                    </h3>
+                    <div id="galleryItemsList" class="vvoa-admin-media-grid">
+                        <!-- Items will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vegan Social Meetups Tab -->
+            <section class="vvoa-admin-tab-content" id="vsmTab">
+                <div class="vvoa-admin-section-header">
+                    <h2>
+                        <i class="fas fa-users"></i>
+                        Vegan Social Meetups Management
+                    </h2>
+                    <p style="color: #666; font-size: 1rem; margin-top: 10px;">Manage description and event photos</p>
+                </div>
+
+                <!-- Description Editor -->
+                <div class="vvoa-admin-form-container" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                    <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 20px;">
+                        <i class="fas fa-edit"></i> Page Description
+                    </h3>
+                    <form id="updateVsmDescriptionForm" style="max-width: 800px;">
+                        <div class="vvoa-admin-form-group">
+                            <label for="vsmDescription">Description *</label>
+                            <textarea 
+                                id="vsmDescription" 
+                                class="vvoa-admin-textarea" 
+                                rows="5"
+                                placeholder="Enter the description for Vegan Social Meetups page"
+                                required
+                            >We are all about building a vegan social community where folks who are vegan or interested in veganism can connect and build meaningful lifelong friendships and connections. We do this through in-person vegan events in Calgary and Edmonton.</textarea>
+                        </div>
+
+                        <button type="submit" class="vvoa-admin-button-primary">
+                            <i class="fas fa-save"></i>
+                            Update Description
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Add Media Form -->
+                <div class="vvoa-admin-form-container" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                    <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 20px;">
+                        <i class="fas fa-plus-circle"></i> Add Event Photo/Video
+                    </h3>
+                    <form id="addVsmItemForm" style="max-width: 800px;">
+                        <div class="vvoa-admin-form-row">
+                            <div class="vvoa-admin-form-group">
+                                <label for="vsmMediaType">Media Type *</label>
+                                <select id="vsmMediaType" class="vvoa-admin-select" required>
+                                    <option value="photo">Photo</option>
+                                    <option value="video">Video</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="vvoa-admin-form-group">
+                            <label for="vsmMediaUrl">URL *</label>
+                            <input 
+                                type="url" 
+                                id="vsmMediaUrl" 
+                                class="vvoa-admin-input" 
+                                placeholder="YouTube link or Google Drive link"
+                                required
+                            >
+                            <small style="display: block; margin-top: 8px; font-size: 0.85rem; color: #666;">
+                                <strong>YouTube:</strong> https://www.youtube.com/watch?v=... or https://youtu.be/...<br>
+                                <strong>Google Drive:</strong> Right-click file → Get link → Set to "Anyone with link"
+                            </small>
+                        </div>
+
+                        <div class="vvoa-admin-form-group">
+                            <label for="vsmMediaCaption">Caption (Optional)</label>
+                            <textarea 
+                                id="vsmMediaCaption" 
+                                class="vvoa-admin-textarea" 
+                                rows="3"
+                                placeholder="Brief description of this photo/video"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="vvoa-admin-button-primary">
+                            <i class="fas fa-plus"></i>
+                            Add Media
+                        </button>
+                    </form>
+                </div>
+
+                <!-- VSM Items List -->
+                <div class="vvoa-admin-list-container" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 25px;">
+                        <i class="fas fa-list"></i> Current Photos & Videos
+                    </h3>
+                    <div id="vsmItemsList" class="vvoa-admin-media-grid">
+                        <!-- Items will be loaded here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Toast Notification -->
+        <div class="vvoa-admin-toast" id="adminToast">
+            <div class="vvoa-admin-toast-content">
+                <i class="fas fa-check-circle"></i>
+                <span id="toastMessage"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Event Modal -->
+    <div class="vvoa-admin-modal" id="editEventModal">
+        <div class="vvoa-admin-modal-content">
+            <div class="vvoa-admin-modal-header">
+                <h3><i class="fas fa-edit"></i> Edit Event</h3>
+                <button class="vvoa-admin-modal-close" id="closeEditModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="vvoa-admin-modal-body">
+                <form id="editEventForm">
+                    <!-- Same form fields as add event, will be populated dynamically -->
+                    <input type="hidden" id="editEventId">
+
+                    <div class="vvoa-admin-form-group">
+                        <label for="editEventTitle">Event Title *</label>
+                        <input type="text" id="editEventTitle" class="vvoa-admin-input" required>
+                    </div>
+
+                    <div class="vvoa-admin-form-group">
+                        <label for="editEventDescription">Description *</label>
+                        <textarea id="editEventDescription" class="vvoa-admin-textarea" rows="4" required></textarea>
+                    </div>
+
+                    <div class="vvoa-admin-form-row">
+                        <div class="vvoa-admin-form-group">
+                            <label for="editEventType">Event Type *</label>
+                            <select id="editEventType" class="vvoa-admin-select" required>
+                                <option value="potluck">Potluck</option>
+                                <option value="brunch">Brunch</option>
+                                <option value="diners-club">Diner's Club</option>
+                                <option value="market">Market</option>
+                                <option value="activism">Activism</option>
+                                <option value="social">Social</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="vvoa-admin-form-group">
+                            <label for="editEventCity">City *</label>
+                            <input type="text" id="editEventCity" class="vvoa-admin-input" required>
+                        </div>
+                    </div>
+
+                    <div class="vvoa-admin-form-row">
+                        <div class="vvoa-admin-form-group">
+                            <label for="editEventDate">Date *</label>
+                            <input type="date" id="editEventDate" class="vvoa-admin-input" required>
+                        </div>
+
+                        <div class="vvoa-admin-form-group">
+                            <label for="editEventTime">Time *</label>
+                            <input type="time" id="editEventTime" class="vvoa-admin-input" required>
+                        </div>
+                    </div>
+
+                    <div class="vvoa-admin-form-group">
+                        <label for="editEventVenue">Venue</label>
+                        <input type="text" id="editEventVenue" class="vvoa-admin-input">
+                    </div>
+
+                    <div class="vvoa-admin-form-group">
+                        <label for="editEventOrganizer">Organizer</label>
+                        <input type="text" id="editEventOrganizer" class="vvoa-admin-input">
+                    </div>
+
+                    <div class="vvoa-admin-form-row">
+                        <div class="vvoa-admin-form-group">
+                            <label for="editEventCost">Cost</label>
+                            <input type="text" id="editEventCost" class="vvoa-admin-input">
+                        </div>
+
+                        <div class="vvoa-admin-form-group">
+                            <label for="editEventMemberCost">Member Cost</label>
+                            <input type="text" id="editEventMemberCost" class="vvoa-admin-input">
+                        </div>
+                    </div>
+
+                    <div class="vvoa-admin-modal-actions">
+                        <button type="submit" class="vvoa-admin-button-primary">
+                            <i class="fas fa-save"></i>
+                            Save Changes
+                        </button>
+                        <button type="button" class="vvoa-admin-button-secondary" id="cancelEdit">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

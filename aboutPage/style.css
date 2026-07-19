@@ -1,0 +1,2093 @@
+/* Main Section Container */
+.vvoa-who-are-we-main-section {
+    height: max-content;
+    padding: 150px 0 120px 0;
+    background: linear-gradient(145deg, #ffffff 0%, #f1f8e9 50%, #e8f5e8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Organic Leaf Pattern Background Elements */
+.vvoa-who-are-we-organic-leaf-pattern-one {
+    position: absolute;
+    top: 15%;
+    left: -5%;
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(45deg, var(--primary-green), transparent);
+    border-radius: 0% 100% 0% 100%;
+    opacity: 0.6;
+    transform: rotate(25deg);
+    animation: vvoa-who-are-we-gentle-sway-animation 8s ease-in-out infinite;
+}
+
+.vvoa-who-are-we-organic-leaf-pattern-two {
+    position: absolute;
+    bottom: 20%;
+    right: -8%;
+    width: 250px;
+    height: 180px;
+    background: linear-gradient(135deg, var(--accent-orange), transparent);
+    border-radius: 100% 0% 100% 0%;
+    opacity: 0.08;
+    transform: rotate(-15deg);
+    animation: vvoa-who-are-we-gentle-sway-animation 12s ease-in-out infinite reverse;
+}
+
+/* Plant Growth Inspired Animation */
+@keyframes vvoa-who-are-we-gentle-sway-animation {
+    0%, 100% { transform: translateY(0px) rotate(25deg); }
+    50% { transform: translateY(-20px) rotate(35deg); }
+}
+
+/* Container */
+.vvoa-who-are-we-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Section Title with Plant Growth Effect */
+.vvoa-who-are-we-section-title {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vvoa-who-are-we-section-title:hover {
+    transform: scale(1.05);
+    color: var(--accent-orange);
+    text-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* Growing Vine Underline Effect */
+.vvoa-who-are-we-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-green), var(--accent-yellow), var(--primary-green));
+    transform: translateX(-50%);
+    transition: width 0.6s ease-out;
+    border-radius: 2px;
+}
+
+.vvoa-who-are-we-section-title:hover::after {
+    width: 80%;
+}
+
+/* Subtitle with Seed Sprouting Animation */
+.vvoa-who-are-we-section-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.vvoa-who-are-we-section-subtitle::before {
+    content: '🌱';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+}
+
+.vvoa-who-are-we-section-title:hover + .vvoa-who-are-we-section-subtitle::before {
+    left: calc(50% - 100px);
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
+.vvoa-who-are-we-section-subtitle::after {
+    content: '🌿';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
+    opacity: 0;
+}
+
+.vvoa-who-are-we-section-title:hover + .vvoa-who-are-we-section-subtitle::after {
+    right: calc(50% - 100px);
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
+/* Main Content Grid */
+.vvoa-who-are-we-main-content-grid {
+    display: flex;
+    gap: 50px;
+    align-items: stretch;
+}
+
+/* Text Content Area */
+.vvoa-who-are-we-text-content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Organization Description Card */
+.vvoa-who-are-we-organization-description-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fff8 100%);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Sustainable Growth Border Effect */
+.vvoa-who-are-we-organization-description-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--primary-green), var(--accent-yellow), var(--primary-green));
+    z-index: -1;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    border-radius: 20px;
+}
+
+.vvoa-who-are-we-organization-description-card:hover::before {
+    opacity: 0.15;
+}
+
+.vvoa-who-are-we-organization-description-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(76, 175, 80, 0.2);
+}
+
+/* Paragraph Styling */
+.vvoa-who-are-we-organization-description-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+}
+
+.vvoa-who-are-we-organization-description-card:hover .vvoa-who-are-we-organization-description-paragraph {
+    color: var(--text-secondary);
+}
+
+/* Vision Statement Card */
+.vvoa-who-are-we-vision-statement-card {
+    background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);
+    padding: 35px;
+    border-radius: 18px;
+    border-left: 6px solid var(--accent-orange);
+    box-shadow: 0 8px 25px rgba(255, 152, 0, 0.15);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+/* Community Growth Animation Effect */
+.vvoa-who-are-we-vision-statement-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 152, 0, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+img {
+    border-radius: 25px;
+}
+
+.vvoa-who-are-we-vision-statement-card:hover::after {
+    left: 100%;
+}
+
+.vvoa-who-are-we-vision-statement-card:hover {
+    transform: translateX(10px);
+    border-left-width: 12px;
+    box-shadow: 0 15px 40px rgba(255, 152, 0, 0.25);
+}
+
+.vvoa-who-are-we-vision-statement-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+}
+
+/* Values Showcase Area */
+.vvoa-who-are-we-values-showcase-area {
+    background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid var(--primary-blue);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Ripple Effect for Values */
+.vvoa-who-are-we-values-showcase-area::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(25, 118, 210, 0.1) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all 0.6s ease;
+}
+
+.vvoa-who-are-we-values-showcase-area:hover::before {
+    width: 600px;
+    height: 600px;
+}
+
+.vvoa-who-are-we-values-showcase-area:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-purple);
+    box-shadow: 0 12px 35px rgba(25, 118, 210, 0.2);
+}
+
+.vvoa-who-are-we-values-showcase-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 2;
+}
+
+/* Image Area */
+.vvoa-who-are-we-image-area {
+    flex: 0 0 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Compassionate Living Visual Card */
+.vvoa-who-are-we-compassionate-living-visual-card {
+    background: linear-gradient(135deg, #fff 0%, #f0f8f0 100%);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Plant Growth Visual Effect */
+.vvoa-who-are-we-plant-growth-visual-element {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, var(--primary-green), var(--accent-yellow));
+    border-radius: 50% 0% 50% 0%;
+    position: relative;
+    opacity: 0.75;
+    z-index: 2;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-origin: center bottom;
+}
+
+.vvoa-who-are-we-plant-growth-visual-element::before {
+    content: '🌱';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    transition: all 0.4s ease;
+}
+
+.vvoa-who-are-we-plant-growth-visual-element::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 40px;
+    height: 20px;
+    background: var(--primary-green);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s ease;
+}
+
+.vvoa-who-are-we-compassionate-living-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    z-index: 1;
+    transition: all 0.4s ease;
+    filter: brightness(1.05) saturate(1.1);
+}
+
+.vvoa-who-are-we-compassionate-living-visual-card:hover .vvoa-who-are-we-plant-growth-visual-element {
+    transform: scale(1.1) rotate(5deg);
+    border-radius: 30% 70% 60% 40%;
+}
+
+.vvoa-who-are-we-compassionate-living-visual-card:hover .vvoa-who-are-we-plant-growth-visual-element::before {
+    content: '🌿';
+    transform: translateX(-50%) scale(1.2);
+}
+
+.vvoa-who-are-we-compassionate-living-visual-card:hover .vvoa-who-are-we-plant-growth-visual-element::after {
+    width: 60px;
+    height: 30px;
+}
+
+.vvoa-who-are-we-community-connection-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.vvoa-who-are-we-community-connection-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+/* Volunteer Spirit Showcase */
+.vvoa-who-are-we-volunteer-spirit-showcase {
+    background: linear-gradient(135deg, #fffaf0 0%, #fff 100%);
+    border-radius: 18px;
+    padding: 30px;
+    border: 2px solid var(--accent-yellow);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Hearts Growing Effect for Volunteer Spirit */
+.vvoa-who-are-we-volunteer-spirit-showcase::after {
+    content: '💚';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vvoa-who-are-we-volunteer-spirit-showcase:hover::after {
+    transform: scale(1);
+}
+
+.vvoa-who-are-we-volunteer-spirit-showcase:hover {
+    transform: rotate(1deg);
+    border-color: var(--primary-green);
+    box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
+}
+
+.vvoa-who-are-we-volunteer-spirit-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vvoa-who-are-we-volunteer-spirit-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .vvoa-who-are-we-content-container {
+        padding: 0 20px;
+    }
+
+    .vvoa-who-are-we-main-content-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .vvoa-who-are-we-image-area {
+        flex: none;
+    }
+
+    .vvoa-who-are-we-section-title {
+        font-size: 2.5rem;
+    }
+
+    .vvoa-who-are-we-organization-description-card,
+    .vvoa-who-are-we-vision-statement-card,
+    .vvoa-who-are-we-values-showcase-area {
+        padding: 25px;
+    }
+}
+
+/* Mission Section Container */
+.vvoa-mission-main-section {
+    height: max-content;
+    padding: 100px 0 140px 0;
+    background: linear-gradient(145deg, #f0f8f0 0%, #ffffff 30%, #fff8f0 70%, #f0f8f0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Plant-Based Diet Growth Patterns - Representing Sprouting Seeds and Growing Roots */
+.vvoa-mission-plant-based-growth-pattern-one {
+    position: absolute;
+    top: 8%;
+    right: -4%;
+    width: 160px;
+    height: 380px;
+    background: linear-gradient(
+        45deg, 
+        var(--primary-green) 0%, 
+        transparent 20%, 
+        var(--accent-yellow) 40%, 
+        transparent 60%, 
+        var(--primary-green) 80%, 
+        transparent 100%
+    );
+    clip-path: polygon(
+        30% 0%, 
+        70% 0%, 
+        85% 25%, 
+        95% 50%, 
+        85% 75%, 
+        70% 100%, 
+        30% 100%, 
+        15% 75%, 
+        5% 50%, 
+        15% 25%
+    );
+    opacity: 0.15;
+    transform: rotate(-25deg);
+    animation: vvoa-mission-plant-seed-to-sprout 12s ease-in-out infinite;
+}
+
+.vvoa-mission-plant-based-growth-pattern-one::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-green), var(--accent-yellow));
+    transform: translateX(-50%);
+    border-radius: 4px;
+    animation: vvoa-mission-plant-stem-growth 12s ease-in-out infinite;
+}
+
+.vvoa-mission-plant-based-growth-pattern-one::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    height: 20%;
+    background: radial-gradient(ellipse, var(--accent-yellow) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: vvoa-mission-plant-leaf-unfold 12s ease-in-out infinite;
+}
+
+.vvoa-mission-plant-based-growth-pattern-two {
+    position: absolute;
+    bottom: 12%;
+    left: -8%;
+    width: 280px;
+    height: 320px;
+    background: radial-gradient(
+        ellipse at center,
+        var(--accent-orange) 0%,
+        transparent 20%,
+        var(--primary-green) 40%,
+        transparent 60%,
+        var(--accent-yellow) 80%,
+        transparent 100%
+    );
+    clip-path: polygon(
+        20% 30%, 
+        40% 10%, 
+        60% 20%, 
+        80% 0%, 
+        90% 30%, 
+        80% 50%, 
+        90% 80%, 
+        70% 90%, 
+        50% 80%, 
+        30% 95%, 
+        10% 70%, 
+        0% 40%
+    );
+    opacity: 0.12;
+    transform: rotate(35deg);
+    animation: vvoa-mission-plant-root-network-spread 16s ease-in-out infinite reverse;
+}
+
+.vvoa-mission-plant-based-growth-pattern-two::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%;
+    height: 20%;
+    background: var(--primary-green);
+    border-radius: 50%;
+    animation: vvoa-mission-plant-seed-pulse 16s ease-in-out infinite;
+}
+
+.vvoa-mission-plant-based-growth-pattern-two::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    border: 3px solid var(--accent-orange);
+    border-radius: 50%;
+    border-style: dashed;
+    animation: vvoa-mission-plant-nutrient-absorption 16s linear infinite;
+}
+
+.vvoa-mission-ethical-living-pattern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: vvoa-mission-ethical-pulse 8s ease-in-out infinite;
+}
+
+/* Enhanced Plant Growth Animations for VVoA Mission */
+@keyframes vvoa-mission-plant-seed-to-sprout {
+    0% { 
+        transform: translateY(30px) rotate(-25deg) scale(0.8); 
+        opacity: 0.1; 
+    }
+    25% { 
+        transform: translateY(15px) rotate(-20deg) scale(0.9); 
+        opacity: 0.12; 
+    }
+    50% { 
+        transform: translateY(0px) rotate(-25deg) scale(1); 
+        opacity: 0.15; 
+    }
+    75% { 
+        transform: translateY(-10px) rotate(-30deg) scale(1.05); 
+        opacity: 0.18; 
+    }
+    100% { 
+        transform: translateY(30px) rotate(-25deg) scale(0.8); 
+        opacity: 0.1; 
+    }
+}
+
+@keyframes vvoa-mission-plant-stem-growth {
+    0%, 100% { height: 80%; }
+    50% { height: 100%; }
+}
+
+@keyframes vvoa-mission-plant-leaf-unfold {
+    0%, 100% { 
+        transform: scale(0.8) rotate(0deg); 
+        opacity: 0.3; 
+    }
+    50% { 
+        transform: scale(1.2) rotate(10deg); 
+        opacity: 0.6; 
+    }
+}
+
+@keyframes vvoa-mission-plant-root-network-spread {
+    0% { 
+        transform: translateX(-20px) rotate(35deg) scale(0.9); 
+        opacity: 0.08; 
+    }
+    33% { 
+        transform: translateX(-5px) rotate(30deg) scale(1); 
+        opacity: 0.12; 
+    }
+    66% { 
+        transform: translateX(10px) rotate(40deg) scale(1.1); 
+        opacity: 0.15; 
+    }
+    100% { 
+        transform: translateX(-20px) rotate(35deg) scale(0.9); 
+        opacity: 0.08; 
+    }
+}
+
+@keyframes vvoa-mission-plant-seed-pulse {
+    0%, 100% { 
+        transform: scale(0.8); 
+        opacity: 0.4; 
+    }
+    50% { 
+        transform: scale(1.3); 
+        opacity: 0.7; 
+    }
+}
+
+@keyframes vvoa-mission-plant-nutrient-absorption {
+    0% { 
+        transform: rotate(0deg) scale(1); 
+        opacity: 0.3; 
+    }
+    50% { 
+        transform: rotate(180deg) scale(1.1); 
+        opacity: 0.5; 
+    }
+    100% { 
+        transform: rotate(360deg) scale(1); 
+        opacity: 0.3; 
+    }
+}
+
+@keyframes vvoa-mission-ethical-pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.05; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.08; }
+}
+
+/* Container */
+.vvoa-mission-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Mission Header */
+.vvoa-mission-section-header {
+    text-align: center;
+    position: relative;
+}
+
+.vvoa-mission-section-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+/* Sustainable Living Icon Animation */
+.vvoa-mission-section-title::before {
+    content: '🌱';
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    font-size: 2.5rem;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+}
+
+.vvoa-mission-section-title::after {
+    content: '🌿';
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    font-size: 2.5rem;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
+    opacity: 0;
+}
+
+.vvoa-mission-section-title:hover::before,
+.vvoa-mission-section-title:hover::after {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
+.vvoa-mission-section-title:hover {
+    transform: scale(1.05);
+    color: var(--accent-orange);
+    text-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
+}
+
+/* Advocacy Motto */
+.vvoa-mission-advocacy-motto {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    position: relative;
+    overflow: hidden;
+}
+
+.vvoa-mission-advocacy-motto::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-green), var(--accent-yellow), var(--primary-green));
+    transition: left 0.8s ease;
+}
+
+.vvoa-mission-section-title:hover + .vvoa-mission-advocacy-motto::before {
+    left: 100%;
+}
+
+/* Mission Content Grid */
+.vvoa-mission-content-grid {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* Main Mission Statement Area */
+.vvoa-mission-statement-area {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Primary Mission Card */
+.vvoa-mission-primary-statement-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fff8 100%);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    border: 3px solid transparent;
+}
+
+/* Plant-Based Advocacy Border Growth */
+.vvoa-mission-primary-statement-card::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, var(--primary-green), var(--accent-yellow), var(--primary-green), var(--accent-orange));
+    z-index: -1;
+    border-radius: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.vvoa-mission-primary-statement-card:hover::before {
+    opacity: 0.6;
+}
+
+.vvoa-mission-primary-statement-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(76, 175, 80, 0.25);
+}
+
+.vvoa-mission-primary-statement-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.vvoa-mission-primary-statement-card:hover .vvoa-mission-primary-statement-text {
+    color: var(--text-secondary);
+}
+
+/* Mission Pillars Container */
+.vvoa-mission-pillars-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* Individual Mission Pillar */
+.vvoa-mission-individual-pillar {
+    flex: 1;
+    background: linear-gradient(135deg, #fff 0%, #f0f8ff 100%);
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Sustainable Impact Ripple Effect */
+.vvoa-mission-individual-pillar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(25, 118, 210, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+}
+
+.vvoa-mission-individual-pillar:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.vvoa-mission-individual-pillar:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(25, 118, 210, 0.2);
+}
+
+.vvoa-mission-pillar-icon {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.vvoa-mission-individual-pillar:hover .vvoa-mission-pillar-icon {
+    transform: scale(1.2) rotate(5deg);
+    color: var(--accent-purple);
+}
+
+.vvoa-mission-pillar-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.vvoa-mission-pillar-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    position: relative;
+    z-index: 2;
+}
+
+/* Mission Visual Area */
+.vvoa-mission-visual-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Community Building Visual */
+.vvoa-mission-community-building-visual {
+    background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chicken Image for Mission Visual */
+.vvoa-mission-chickens-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    filter: brightness(1.05) saturate(1.1);
+}
+
+.vvoa-mission-community-building-visual:hover .vvoa-mission-chickens-image {
+    transform: scale(1.05);
+    filter: brightness(1.1) saturate(1.2);
+}
+
+/* Mission Values Overlay */
+.vvoa-mission-values-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 152, 0, 0.9), transparent);
+    color: white;
+    padding: 25px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    border-radius: 0 0 15px 15px;
+}
+
+.vvoa-mission-community-building-visual:hover .vvoa-mission-values-overlay {
+    transform: translateY(0);
+}
+
+.vvoa-mission-values-overlay-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.vvoa-mission-values-overlay-text {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    line-height: 1.4;
+}
+
+.vvoa-mission-alberta-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.vvoa-mission-alberta-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+
+/* Community Connection Metrics */
+.vvoa-mission-community-connection-metrics {
+    background: linear-gradient(135deg, #f0fff0 0%, #ffffff 100%);
+    border-radius: 18px;
+    padding: 25px;
+    border: 2px solid var(--primary-green);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Growth Network Effect */
+.vvoa-mission-community-connection-metrics::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-green);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vvoa-mission-community-connection-metrics:hover::after {
+    transform: scale(1);
+}
+
+.vvoa-mission-community-connection-metrics:hover {
+    transform: translateX(8px);
+    border-color: var(--accent-orange);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.2);
+}
+
+.vvoa-mission-metrics-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vvoa-mission-metrics-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Compassionate World Vision */
+.vvoa-mission-compassionate-world-vision {
+    background: linear-gradient(135deg, #fffaf0 0%, #fff 100%);
+    border-radius: 20px;
+    padding: 35px;
+    border-left: 6px solid var(--accent-yellow);
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.15);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+/* Compassion Spread Animation */
+.vvoa-mission-compassionate-world-vision::after {
+    content: '💚';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    transform: scale(0) rotate(0deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vvoa-mission-compassionate-world-vision:hover::after {
+    transform: scale(1) rotate(360deg);
+}
+
+.vvoa-mission-compassionate-world-vision:hover {
+    transform: translateY(-6px);
+    border-left-width: 12px;
+    box-shadow: 0 18px 45px rgba(255, 193, 7, 0.25);
+}
+
+.vvoa-mission-compassion-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vvoa-mission-compassion-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .vvoa-mission-content-container {
+        padding: 0 20px;
+        gap: 60px;
+    }
+
+    .vvoa-mission-content-grid {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .vvoa-mission-pillars-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .vvoa-mission-section-title {
+        font-size: 2.8rem;
+    }
+
+    .vvoa-mission-primary-statement-card {
+        padding: 35px 25px;
+    }
+
+    .vvoa-mission-section-title::before,
+    .vvoa-mission-section-title::after {
+        display: none;
+    }
+}
+
+/* History Section Container */
+.vvoa-history-main-section {
+    height: max-content;
+    padding: 120px 0 160px 0;
+    background: linear-gradient(145deg, #fafafa 0%, #f0f8f0 25%, #fff8f0 50%, #f8f0ff 75%, #fafafa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Edmonton River Valley Timeline Pattern - Representing Flowing Water and Community Paths */
+.vvoa-history-edmonton-river-valley-timeline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        /* Main river flow representing Edmonton's North Saskatchewan River */
+        conic-gradient(from 45deg at 20% 30%, 
+            transparent 0deg, 
+            rgba(76, 175, 80, 0.08) 60deg, 
+            transparent 120deg, 
+            rgba(25, 118, 210, 0.06) 180deg, 
+            transparent 240deg, 
+            rgba(255, 152, 0, 0.05) 300deg, 
+            transparent 360deg
+        ),
+        /* Secondary tributary streams for community connections */
+        radial-gradient(ellipse 800px 200px at 80% 20%, 
+            rgba(76, 175, 80, 0.04) 0%, 
+            transparent 30%, 
+            rgba(255, 193, 7, 0.03) 60%, 
+            transparent 100%
+        ),
+        /* Valley contour lines representing geographical features */
+        repeating-linear-gradient(120deg, 
+            transparent 0px, 
+            rgba(76, 175, 80, 0.02) 2px, 
+            transparent 4px, 
+            transparent 40px
+        );
+    clip-path: polygon(
+        0% 20%, 
+        25% 10%, 
+        50% 25%, 
+        75% 15%, 
+        100% 30%, 
+        100% 70%, 
+        75% 85%, 
+        50% 75%, 
+        25% 90%, 
+        0% 80%
+    );
+    opacity: 0.9;
+    animation: vvoa-history-river-valley-meandering 25s ease-in-out infinite;
+}
+
+.vvoa-history-edmonton-river-valley-timeline::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    height: 8px;
+    background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        rgba(76, 175, 80, 0.15) 20%, 
+        rgba(25, 118, 210, 0.12) 40%, 
+        rgba(255, 152, 0, 0.1) 60%, 
+        rgba(76, 175, 80, 0.15) 80%, 
+        transparent 100%
+    );
+    border-radius: 50px;
+    animation: vvoa-history-main-river-current-flow 15s linear infinite;
+}
+
+.vvoa-history-edmonton-river-valley-timeline::after {
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    right: 10%;
+    width: 70%;
+    height: 6px;
+    background: linear-gradient(
+        -90deg, 
+        transparent 0%, 
+        rgba(255, 152, 0, 0.12) 25%, 
+        rgba(76, 175, 80, 0.1) 50%, 
+        rgba(25, 118, 210, 0.08) 75%, 
+        transparent 100%
+    );
+    border-radius: 50px;
+    animation: vvoa-history-tributary-flow 20s linear infinite reverse;
+}
+
+/* Potluck Picnic Growth Circles - Representing Community Gathering Expansion */
+.vvoa-history-potluck-growth-circle-one {
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    width: 140px;
+    height: 140px;
+    background: 
+        /* Central picnic gathering spot */
+        radial-gradient(circle at 40% 40%, 
+            var(--primary-green) 0%, 
+            transparent 15%, 
+            var(--accent-yellow) 30%, 
+            transparent 45%, 
+            var(--accent-orange) 60%, 
+            transparent 100%
+        ),
+        /* Outer community reach */
+        conic-gradient(from 0deg, 
+            rgba(76, 175, 80, 0.2) 0deg, 
+            transparent 60deg, 
+            rgba(255, 193, 7, 0.15) 120deg, 
+            transparent 180deg, 
+            rgba(255, 152, 0, 0.1) 240deg, 
+            transparent 300deg, 
+            rgba(76, 175, 80, 0.2) 360deg
+        );
+    border-radius: 50%;
+    opacity: 0.18;
+    animation: vvoa-history-picnic-gathering-expansion 10s ease-in-out infinite;
+}
+
+.vvoa-history-potluck-growth-circle-one::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    border: 3px dotted var(--primary-green);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: vvoa-history-community-invitation-pulse 10s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.vvoa-history-potluck-growth-circle-one::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: 25%;
+    background: 
+        /* Picnic blanket pattern */
+        repeating-conic-gradient(from 0deg at 50% 50%, 
+            var(--primary-green) 0deg 45deg, 
+            var(--accent-yellow) 45deg 90deg, 
+            var(--accent-orange) 90deg 135deg, 
+            var(--primary-green) 135deg 180deg
+        );
+    border-radius: 20%;
+    transform: translate(-50%, -50%);
+    animation: vvoa-history-picnic-blanket-weave 10s linear infinite;
+}
+
+.vvoa-history-potluck-growth-circle-two {
+    position: absolute;
+    bottom: 20%;
+    left: 12%;
+    width: 180px;
+    height: 180px;
+    background: 
+        /* Expanding community network from original gathering */
+        radial-gradient(circle at 30% 70%, 
+            var(--accent-orange) 0%, 
+            transparent 20%, 
+            var(--primary-green) 40%, 
+            transparent 60%, 
+            var(--primary-blue) 80%, 
+            transparent 100%
+        ),
+        /* Knowledge sharing ripples */
+        repeating-radial-gradient(circle at 50% 50%, 
+            transparent 0px, 
+            rgba(76, 175, 80, 0.08) 20px, 
+            transparent 40px, 
+            rgba(255, 152, 0, 0.06) 60px, 
+            transparent 80px
+        );
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: vvoa-history-community-network-growth 14s ease-in-out infinite reverse;
+}
+
+.vvoa-history-potluck-growth-circle-two::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    background: 
+        /* Central knowledge hub */
+        conic-gradient(from 45deg, 
+            var(--accent-orange) 0deg 72deg, 
+            var(--primary-green) 72deg 144deg, 
+            var(--accent-yellow) 144deg 216deg, 
+            var(--primary-blue) 216deg 288deg, 
+            var(--accent-orange) 288deg 360deg
+        );
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: vvoa-history-knowledge-sharing-rotation 14s linear infinite;
+    opacity: 0.4;
+}
+
+.vvoa-history-potluck-growth-circle-two::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    border: 2px solid var(--accent-orange);
+    border-radius: 50%;
+    border-style: solid;
+    border-top-style: dashed;
+    border-right-style: dotted;
+    transform: translate(-50%, -50%);
+    animation: vvoa-history-community-connection-orbit 14s linear infinite reverse;
+}
+
+/* Vegetarian to Vegan Evolution Pattern */
+.vvoa-history-vegetarian-to-vegan-evolution {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 300px;
+    height: 200px;
+    background: 
+        linear-gradient(45deg, transparent 0%, rgba(76, 175, 80, 0.05) 25%, transparent 50%),
+        linear-gradient(-45deg, transparent 0%, rgba(233, 30, 99, 0.05) 25%, transparent 50%);
+    border-radius: 60% 40% 30% 70%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    opacity: 0.8;
+    animation: vvoa-history-evolution-transformation 15s ease-in-out infinite;
+}
+
+/* Enhanced River Valley and Potluck Animations for VVoA History */
+@keyframes vvoa-history-river-valley-meandering {
+    0% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%;
+        transform: skewY(0deg);
+        opacity: 0.7; 
+    }
+    25% { 
+        background-position: 25% 25%, 20% 10%, 10% 0%;
+        transform: skewY(1deg);
+        opacity: 0.8; 
+    }
+    50% { 
+        background-position: 50% 50%, 40% 20%, 20% 0%;
+        transform: skewY(0deg);
+        opacity: 0.9; 
+    }
+    75% { 
+        background-position: 75% 25%, 60% 10%, 30% 0%;
+        transform: skewY(-1deg);
+        opacity: 0.8; 
+    }
+    100% { 
+        background-position: 100% 0%, 80% 0%, 40% 0%;
+        transform: skewY(0deg);
+        opacity: 0.7; 
+    }
+}
+
+@keyframes vvoa-history-main-river-current-flow {
+    0% { 
+        background-position: 0% 50%;
+        transform: scaleX(1) translateX(0%);
+    }
+    50% { 
+        background-position: 100% 50%;
+        transform: scaleX(1.1) translateX(2%);
+    }
+    100% { 
+        background-position: 200% 50%;
+        transform: scaleX(1) translateX(0%);
+    }
+}
+
+@keyframes vvoa-history-tributary-flow {
+    0% { 
+        background-position: 0% 50%;
+        opacity: 0.6;
+    }
+    33% { 
+        background-position: 33% 50%;
+        opacity: 0.8;
+    }
+    66% { 
+        background-position: 66% 50%;
+        opacity: 0.9;
+    }
+    100% { 
+        background-position: 100% 50%;
+        opacity: 0.6;
+    }
+}
+
+@keyframes vvoa-history-picnic-gathering-expansion {
+    0% { 
+        transform: scale(0.9) rotate(0deg); 
+        opacity: 0.15; 
+        background-position: 0% 0%, 0deg;
+    }
+    25% { 
+        transform: scale(1) rotate(90deg); 
+        opacity: 0.18; 
+        background-position: 25% 25%, 90deg;
+    }
+    50% { 
+        transform: scale(1.1) rotate(180deg); 
+        opacity: 0.22; 
+        background-position: 50% 50%, 180deg;
+    }
+    75% { 
+        transform: scale(1.05) rotate(270deg); 
+        opacity: 0.2; 
+        background-position: 75% 25%, 270deg;
+    }
+    100% { 
+        transform: scale(0.9) rotate(360deg); 
+        opacity: 0.15; 
+        background-position: 100% 0%, 360deg;
+    }
+}
+
+@keyframes vvoa-history-community-invitation-pulse {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(0.9); 
+        opacity: 0.4; 
+        border-width: 2px;
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.2); 
+        opacity: 0.7; 
+        border-width: 4px;
+    }
+}
+
+@keyframes vvoa-history-picnic-blanket-weave {
+    0% { 
+        transform: translate(-50%, -50%) rotate(0deg) scale(1); 
+        opacity: 0.6; 
+    }
+    25% { 
+        transform: translate(-50%, -50%) rotate(90deg) scale(1.1); 
+        opacity: 0.8; 
+    }
+    50% { 
+        transform: translate(-50%, -50%) rotate(180deg) scale(1); 
+        opacity: 0.9; 
+    }
+    75% { 
+        transform: translate(-50%, -50%) rotate(270deg) scale(0.9); 
+        opacity: 0.7; 
+    }
+    100% { 
+        transform: translate(-50%, -50%) rotate(360deg) scale(1); 
+        opacity: 0.6; 
+    }
+}
+
+@keyframes vvoa-history-community-network-growth {
+    0% { 
+        transform: scale(0.8) rotate(0deg); 
+        opacity: 0.12; 
+        background-position: 0% 0%, 0px 0px;
+    }
+    33% { 
+        transform: scale(1) rotate(120deg); 
+        opacity: 0.15; 
+        background-position: 30% 30%, 20px 20px;
+    }
+    66% { 
+        transform: scale(1.15) rotate(240deg); 
+        opacity: 0.18; 
+        background-position: 60% 60%, 40px 40px;
+    }
+    100% { 
+        transform: scale(0.8) rotate(360deg); 
+        opacity: 0.12; 
+        background-position: 100% 100%, 60px 60px;
+    }
+}
+
+@keyframes vvoa-history-knowledge-sharing-rotation {
+    0% { 
+        transform: translate(-50%, -50%) rotate(0deg) scale(1); 
+        opacity: 0.3; 
+    }
+    50% { 
+        transform: translate(-50%, -50%) rotate(180deg) scale(1.1); 
+        opacity: 0.5; 
+    }
+    100% { 
+        transform: translate(-50%, -50%) rotate(360deg) scale(1); 
+        opacity: 0.3; 
+    }
+}
+
+@keyframes vvoa-history-community-connection-orbit {
+    0% { 
+        transform: translate(-50%, -50%) rotate(0deg); 
+        border-color: var(--accent-orange); 
+    }
+    25% { 
+        transform: translate(-50%, -50%) rotate(90deg); 
+        border-color: var(--primary-green); 
+    }
+    50% { 
+        transform: translate(-50%, -50%) rotate(180deg); 
+        border-color: var(--accent-yellow); 
+    }
+    75% { 
+        transform: translate(-50%, -50%) rotate(270deg); 
+        border-color: var(--primary-blue); 
+    }
+    100% { 
+        transform: translate(-50%, -50%) rotate(360deg); 
+        border-color: var(--accent-orange); 
+    }
+}
+
+@keyframes vvoa-history-evolution-transformation {
+    0% { 
+        transform: translate(-50%, -50%) rotate(15deg) scale(1); 
+        border-radius: 60% 40% 30% 70%; 
+    }
+    33% { 
+        transform: translate(-50%, -50%) rotate(10deg) scale(1.05); 
+        border-radius: 40% 60% 50% 50%; 
+    }
+    66% { 
+        transform: translate(-50%, -50%) rotate(20deg) scale(0.95); 
+        border-radius: 70% 30% 40% 60%; 
+    }
+    100% { 
+        transform: translate(-50%, -50%) rotate(15deg) scale(1); 
+        border-radius: 60% 40% 30% 70%; 
+    }
+}
+
+/* Container */
+.vvoa-history-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    position: relative;
+}
+
+/* History Header */
+.vvoa-history-section-header {
+    text-align: center;
+    position: relative;
+}
+
+.vvoa-history-section-title {
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+/* 1989 Foundation Year Animation */
+.vvoa-history-section-title::before {
+    content: '1989';
+    position: absolute;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    font-size: 1.8rem;
+    color: var(--accent-orange);
+    font-weight: 700;
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+}
+
+.vvoa-history-section-title::after {
+    content: '2026';
+    position: absolute;
+    right: -80px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    font-size: 1.8rem;
+    color: var(--accent-purple);
+    font-weight: 700;
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
+    opacity: 0;
+}
+
+.vvoa-history-section-title:hover::before,
+.vvoa-history-section-title:hover::after {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
+.vvoa-history-section-title:hover {
+    transform: scale(1.08);
+    color: var(--accent-orange);
+    text-shadow: 0 12px 30px rgba(76, 175, 80, 0.3);
+}
+
+/* Glen McLean Pioneer Subtitle */
+.vvoa-history-pioneer-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    position: relative;
+    overflow: hidden;
+}
+
+.vvoa-history-pioneer-subtitle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-green), var(--accent-yellow), var(--accent-orange));
+    transition: left 0.8s ease;
+    border-radius: 2px;
+}
+
+.vvoa-history-section-title:hover + .vvoa-history-pioneer-subtitle::before {
+    left: 100%;
+}
+
+/* Philosophy Quote Card */
+.vvoa-history-philosophy-quote-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f0ff 100%);
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(103, 58, 183, 0.15);
+    border-left: 6px solid var(--accent-purple);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+/* Vegan Philosophy Spread Effect */
+.vvoa-history-philosophy-quote-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(103, 58, 183, 0.1), transparent);
+    transition: left 0.8s ease;
+}
+
+.vvoa-history-philosophy-quote-card:hover::before {
+    left: 100%;
+}
+
+.vvoa-history-philosophy-quote-card:hover {
+    transform: translateX(12px);
+    border-left-width: 12px;
+    box-shadow: 0 25px 60px rgba(103, 58, 183, 0.25);
+}
+
+.vvoa-history-philosophy-quote-text {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.vvoa-history-philosophy-attribution {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    position: relative;
+    z-index: 2;
+}
+
+/* Historical Journey Grid */
+.vvoa-history-journey-grid {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Historical Timeline Area */
+.vvoa-history-timeline-area {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Foundation Story Card */
+.vvoa-history-foundation-story-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8f0 100%);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+/* River Valley Potluck Growing Effect */
+.vvoa-history-foundation-story-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.7s ease;
+}
+
+.vvoa-history-foundation-story-card:hover::after {
+    width: 500px;
+    height: 500px;
+}
+
+.vvoa-history-foundation-story-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(76, 175, 80, 0.2);
+}
+
+.vvoa-history-foundation-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.vvoa-history-foundation-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 2;
+}
+
+/* Evolution Timeline Card */
+.vvoa-history-evolution-timeline-card {
+    background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);
+    padding: 35px;
+    border-radius: 18px;
+    border: 3px solid var(--accent-orange);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Name Change Evolution Animation */
+.vvoa-history-evolution-timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: var(--accent-orange);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vvoa-history-evolution-timeline-card:hover::before {
+    transform: scale(1);
+}
+
+.vvoa-history-evolution-timeline-card:hover {
+    transform: rotate(1.5deg) scale(1.02);
+    border-color: var(--primary-green);
+    box-shadow: 0 15px 35px rgba(255, 152, 0, 0.3);
+}
+
+.vvoa-history-evolution-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vvoa-history-evolution-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Early Challenges Card */
+.vvoa-history-early-challenges-card {
+    background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+    padding: 35px;
+    border-radius: 18px;
+    border: 2px solid var(--primary-blue);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Challenge Overcome Animation */
+.vvoa-history-early-challenges-card::after {
+    content: '💪';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    transform: scale(0) rotate(0deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vvoa-history-early-challenges-card:hover::after {
+    transform: scale(1) rotate(360deg);
+}
+
+.vvoa-history-early-challenges-card:hover {
+    transform: translateX(8px);
+    border-color: var(--accent-purple);
+    box-shadow: 0 12px 30px rgba(25, 118, 210, 0.2);
+}
+
+.vvoa-history-challenges-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vvoa-history-challenges-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Visual Achievements Area */
+.vvoa-history-achievements-visual-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Growth Through Decades Visual */
+.vvoa-history-growth-through-decades-visual {
+    background: linear-gradient(135deg, #fff 0%, #f8fff8 100%);
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Decade Growth Visualization */
+.vvoa-history-decade-growth-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.vvoa-history-growth-bar {
+    background: linear-gradient(to top, var(--primary-green), var(--accent-yellow));
+    border-radius: 4px 4px 0 0;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.vvoa-history-growth-bar:nth-child(1) { width: 20px; height: 30%; }
+.vvoa-history-growth-bar:nth-child(2) { width: 20px; height: 50%; }
+.vvoa-history-growth-bar:nth-child(3) { width: 20px; height: 70%; }
+.vvoa-history-growth-bar:nth-child(4) { width: 20px; height: 90%; }
+
+.vvoa-history-growth-through-decades-visual:hover .vvoa-history-growth-bar {
+    height: 100% !important;
+    background: linear-gradient(to top, var(--accent-orange), var(--accent-yellow));
+}
+
+.vvoa-history-growth-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* Speaker Series Showcase */
+.vvoa-history-speaker-series-showcase {
+    background: linear-gradient(135deg, var(--accent-purple), var(--primary-pink));
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Knowledge Spread Wave */
+.vvoa-history-speaker-series-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.8s ease;
+}
+
+.vvoa-history-speaker-series-showcase:hover::before {
+    left: 100%;
+}
+
+.vvoa-history-speaker-series-showcase:hover {
+    transform: scale(1.03) rotate(-1deg);
+    box-shadow: 0 18px 40px rgba(103, 58, 183, 0.4);
+}
+
+.vvoa-history-speaker-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.vvoa-history-speaker-names {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+
+/* VegFest Milestone Card */
+.vvoa-history-vegfest-milestone-card {
+    background: linear-gradient(135deg, #fffaf0 0%, #fff 100%);
+    border-radius: 18px;
+    padding: 25px;
+    border: 2px solid var(--accent-yellow);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* VegFest Success Animation */
+.vvoa-history-vegfest-milestone-card::after {
+    content: '🎉';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    transform: scale(0) rotate(0deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vvoa-history-vegfest-milestone-card:hover::after {
+    transform: scale(1) rotate(360deg);
+}
+
+.vvoa-history-vegfest-milestone-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-green);
+    box-shadow: 0 15px 35px rgba(255, 193, 7, 0.3);
+}
+
+.vvoa-history-vegfest-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vvoa-history-vegfest-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .vvoa-history-content-container {
+        padding: 0 20px;
+        gap: 60px;
+    }
+
+    .vvoa-history-journey-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .vvoa-history-section-title {
+        font-size: 2.8rem;
+    }
+
+    .vvoa-history-section-title::before,
+    .vvoa-history-section-title::after {
+        display: none;
+    }
+
+    .vvoa-history-philosophy-quote-card,
+    .vvoa-history-foundation-story-card {
+        padding: 30px 25px;
+    }
+}

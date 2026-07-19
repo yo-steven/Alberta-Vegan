@@ -1,0 +1,1404 @@
+
+/* Temporary debug styles - add at the top */
+.vvoa-admin-tab-content {
+    border: 2px solid red !important;
+    min-height: 200px !important;
+    padding: 30px;
+}
+
+.vvoa-admin-tab-content.active {
+    display: block !important;
+    border: 2px solid green !important;
+}
+
+#addEventTab {
+    background: yellow !important;
+}
+
+
+:root {
+    --primary-green: #4CAF50;
+    --primary-blue: #1976D2;
+    --primary-pink: #E91E63;
+    --accent-orange: #FF9800;
+    --accent-yellow: #FFC107;
+    --accent-purple: #673AB7;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-light: #999;
+    --bg-light: #f5f5f5;
+    --bg-white: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: var(--text-primary);
+    height: max-content;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   LOGIN OVERLAY
+============================================ */
+
+.vvoa-admin-login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.vvoa-admin-login-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        repeating-linear-gradient(90deg, rgba(76, 175, 80, 0.2) 0px, transparent 1px, transparent 40px, rgba(76, 175, 80, 0.2) 41px),
+        repeating-linear-gradient(0deg, rgba(76, 175, 80, 0.2) 0px, transparent 1px, transparent 40px, rgba(76, 175, 80, 0.2) 41px);
+    opacity: 0.5;
+}
+
+.vvoa-admin-login-container {
+    background: #ffffff;
+    border-radius: 2px;
+    padding: 60px 50px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.06),
+        0 2px 6px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e5e7eb;
+    position: relative;
+    z-index: 1;
+    animation: vvoa-admin-login-appear 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes vvoa-admin-login-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.vvoa-admin-login-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 25px;
+}
+
+.vvoa-admin-login-header i {
+    font-size: 2.2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    display: block;
+    font-weight: 400;
+}
+
+.vvoa-admin-login-header h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.vvoa-admin-login-header p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+.vvoa-admin-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.vvoa-admin-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vvoa-admin-form-group label {
+    font-weight: 500;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 0.2px;
+}
+
+.vvoa-admin-form-group label i {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.vvoa-admin-input {
+    padding: 13px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    font-family: inherit;
+    color: #1a1a1a;
+}
+
+.vvoa-admin-input:hover {
+    border-color: #9ca3af;
+}
+
+.vvoa-admin-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.08);
+}
+
+.vvoa-admin-input::placeholder {
+    color: #9ca3af;
+}
+
+.vvoa-admin-login-button {
+    padding: 14px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    margin-top: 12px;
+}
+
+.vvoa-admin-login-button:hover {
+    background: #43a047;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vvoa-admin-login-button:active {
+    background: #388e3c;
+    transform: translateY(1px);
+}
+
+.vvoa-admin-login-error {
+    color: #dc2626;
+    font-size: 0.875rem;
+    text-align: left;
+    padding: 12px 14px;
+    background: #fef2f2;
+    border-radius: 2px;
+    display: none;
+    border-left: 3px solid #dc2626;
+    font-weight: 500;
+}
+
+.vvoa-admin-login-error.show {
+    display: block;
+    animation: vvoa-admin-error-appear 0.3s ease;
+}
+
+@keyframes vvoa-admin-error-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+    .vvoa-admin-login-container {
+        padding: 40px 30px;
+        width: 95%;
+        border-radius: 0;
+    }
+
+    .vvoa-admin-login-header {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+
+    .vvoa-admin-login-header h2 {
+        font-size: 1.35rem;
+    }
+
+    .vvoa-admin-login-header i {
+        font-size: 2rem;
+    }
+
+    .vvoa-admin-input {
+        padding: 12px 14px;
+    }
+
+    .vvoa-admin-login-button {
+        padding: 13px 18px;
+    }
+}
+
+.vvoa-admin-login-error {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+    background: rgba(211, 47, 47, 0.1);
+    border-radius: 8px;
+    display: none;
+}
+
+.vvoa-admin-login-error.show {
+    display: block;
+    animation: vvoa-admin-shake 0.5s ease;
+}
+
+@keyframes vvoa-admin-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* ============================================
+   ADMIN DASHBOARD
+============================================ */
+
+.vvoa-admin-dashboard-container {
+    min-height: 100vh;
+    background: var(--bg-light);
+}
+
+/* Admin Header */
+.vvoa-admin-header {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #2E7D32 100%);
+    color: white;
+    padding: 25px 40px;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.vvoa-admin-header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vvoa-admin-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.vvoa-admin-brand i {
+    font-size: 2.5rem;
+}
+
+.vvoa-admin-brand h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.vvoa-admin-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    display: block;
+}
+
+.vvoa-admin-logout-button {
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.vvoa-admin-logout-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Admin Navigation */
+.vvoa-admin-navigation {
+    background: var(--bg-white);
+    padding: 0 40px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+}
+
+.vvoa-admin-nav-tab {
+    padding: 18px 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.vvoa-admin-nav-tab:hover {
+    color: var(--primary-green);
+    background: rgba(76, 175, 80, 0.05);
+}
+
+.vvoa-admin-nav-tab.active {
+    color: var(--primary-green);
+    border-bottom-color: var(--primary-green);
+    background: rgba(76, 175, 80, 0.08);
+}
+
+/* Main Content */
+.vvoa-admin-main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.vvoa-admin-tab-content {
+    display: none;
+    animation: vvoa-admin-fade-in 0.4s ease;
+}
+
+.vvoa-admin-tab-content.active {
+    display: block;
+}
+
+@keyframes vvoa-admin-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.vvoa-admin-section-header {
+    margin-bottom: 30px;
+}
+
+.vvoa-admin-section-header h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.vvoa-admin-section-header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+/* Event Stats */
+.vvoa-admin-event-stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.vvoa-admin-stat-card {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #66BB6A 100%);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.vvoa-admin-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.vvoa-admin-stat-card i {
+    font-size: 2.5rem;
+    opacity: 0.9;
+}
+
+.vvoa-admin-stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    display: block;
+}
+
+.vvoa-admin-stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    display: block;
+}
+
+/* Filter Bar */
+.vvoa-admin-filter-bar {
+    background: var(--bg-white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.vvoa-admin-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.vvoa-admin-filter-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vvoa-admin-select {
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: var(--bg-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.vvoa-admin-select:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.vvoa-admin-filter-apply-button,
+.vvoa-admin-filter-reset-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.vvoa-admin-filter-apply-button {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #66BB6A 100%);
+    color: white;
+}
+
+.vvoa-admin-filter-apply-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
+.vvoa-admin-filter-reset-button {
+    background: var(--bg-light);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+}
+
+.vvoa-admin-filter-reset-button:hover {
+    background: var(--border-color);
+}
+
+/* Events Table */
+.vvoa-admin-events-table-container {
+    background: var(--bg-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.vvoa-admin-events-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vvoa-admin-events-table thead {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #2E7D32 100%);
+    color: white;
+}
+
+.vvoa-admin-events-table th {
+    padding: 18px 20px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.vvoa-admin-events-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.vvoa-admin-events-table tbody tr:hover {
+    background: rgba(76, 175, 80, 0.05);
+}
+
+.vvoa-admin-events-table td {
+    padding: 18px 20px;
+    font-size: 0.95rem;
+}
+
+.vvoa-admin-event-type-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.vvoa-admin-event-type-badge.potluck {
+    background: rgba(76, 175, 80, 0.15);
+    color: #2E7D32;
+}
+
+.vvoa-admin-event-type-badge.brunch {
+    background: rgba(255, 193, 7, 0.15);
+    color: #F57F17;
+}
+
+.vvoa-admin-event-type-badge.diners-club {
+    background: rgba(255, 152, 0, 0.15);
+    color: #E65100;
+}
+
+.vvoa-admin-event-type-badge.market {
+    background: rgba(233, 30, 99, 0.15);
+    color: #C2185B;
+}
+
+.vvoa-admin-event-type-badge.activism {
+    background: rgba(25, 118, 210, 0.15);
+    color: #1565C0;
+}
+
+.vvoa-admin-event-type-badge.social {
+    background: rgba(103, 58, 183, 0.15);
+    color: #4527A0;
+}
+
+.vvoa-admin-event-type-badge.other {
+    background: rgba(158, 158, 158, 0.15);
+    color: #424242;
+}
+
+.vvoa-admin-event-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.vvoa-admin-action-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+
+.vvoa-admin-action-button.edit {
+    background: rgba(25, 118, 210, 0.1);
+    color: var(--primary-blue);
+}
+
+.vvoa-admin-action-button.edit:hover {
+    background: rgba(25, 118, 210, 0.2);
+    transform: translateY(-2px);
+}
+
+.vvoa-admin-action-button.delete {
+    background: rgba(211, 47, 47, 0.1);
+    color: #d32f2f;
+}
+
+.vvoa-admin-action-button.delete:hover {
+    background: rgba(211, 47, 47, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Event Form */
+.vvoa-admin-event-form {
+    background: var(--bg-white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+}
+
+.vvoa-admin-form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.vvoa-admin-form-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 25px;
+    background: var(--bg-light);
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+}
+
+.vvoa-admin-form-section.vvoa-admin-full-width {
+    flex-basis: 100%;
+}
+
+.vvoa-admin-form-section h3 {
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.vvoa-admin-form-group {
+    margin-bottom: 20px;
+}
+
+.vvoa-admin-form-group:last-child {
+    margin-bottom: 0;
+}
+
+.vvoa-admin-form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.vvoa-admin-textarea {
+    padding: 14px 18px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--bg-white);
+    font-family: inherit;
+    width: 100%;
+    resize: vertical;
+}
+
+.vvoa-admin-textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.vvoa-admin-form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.vvoa-admin-form-row .vvoa-admin-form-group {
+    flex: 1;
+}
+
+.vvoa-admin-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 12px;
+    background: var(--bg-white);
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.vvoa-admin-checkbox-label:hover {
+    border-color: var(--primary-green);
+    background: rgba(76, 175, 80, 0.05);
+}
+
+.vvoa-admin-checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-green);
+}
+
+.vvoa-admin-form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid var(--border-color);
+}
+
+.vvoa-admin-button-primary,
+.vvoa-admin-button-secondary {
+    padding: 16px 35px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.vvoa-admin-button-primary {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #66BB6A 100%);
+    color: white;
+}
+
+.vvoa-admin-button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+.vvoa-admin-button-secondary {
+    background: var(--bg-light);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+}
+
+.vvoa-admin-button-secondary:hover {
+    background: var(--border-color);
+}
+
+/* Cities Grid */
+.vvoa-admin-cities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.vvoa-admin-city-card {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+    flex: 1;
+    min-width: 250px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.vvoa-admin-city-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-green);
+}
+
+.vvoa-admin-city-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vvoa-admin-city-event-count {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.vvoa-admin-city-label {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Bulk Import */
+.vvoa-admin-bulk-import-container {
+    display: flex;
+    gap: 30px;
+}
+
+.vvoa-admin-bulk-instructions {
+    flex: 1;
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+}
+
+.vvoa-admin-bulk-instructions h3 {
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
+.vvoa-admin-code-block {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.vvoa-admin-bulk-form {
+    flex: 1;
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Modal */
+.vvoa-admin-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.vvoa-admin-modal.active {
+    display: flex;
+}
+
+.vvoa-admin-modal-content {
+    background: var(--bg-white);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+    animation: vvoa-admin-modal-appear 0.3s ease;
+}
+
+@keyframes vvoa-admin-modal-appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.vvoa-admin-modal-header {
+    padding: 25px 30px;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.05) 100%);
+}
+
+.vvoa-admin-modal-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vvoa-admin-modal-close {
+    width: 40px;
+    height: 40px;
+    background: rgba(211, 47, 47, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: #d32f2f;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.vvoa-admin-modal-close:hover {
+    background: rgba(211, 47, 47, 0.2);
+    transform: scale(1.1);
+}
+
+.vvoa-admin-modal-body {
+    padding: 30px;
+}
+
+.vvoa-admin-modal-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 2px solid var(--border-color);
+}
+
+/* Toast Notification */
+.vvoa-admin-toast {
+    position: fixed;
+    bottom: -100px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--primary-green) 0%, #2E7D32 100%);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    z-index: 2000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vvoa-admin-toast.show {
+    bottom: 30px;
+}
+
+.vvoa-admin-toast.error {
+    background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+}
+
+.vvoa-admin-toast-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.vvoa-admin-toast-content i {
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .vvoa-admin-header-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .vvoa-admin-brand {
+        flex-direction: column;
+    }
+
+    .vvoa-admin-main-content {
+        padding: 30px 20px;
+    }
+
+    .vvoa-admin-form-grid {
+        flex-direction: column;
+    }
+
+    .vvoa-admin-form-section {
+        min-width: 100%;
+    }
+
+    .vvoa-admin-bulk-import-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .vvoa-admin-login-container {
+        padding: 35px 25px;
+        width: 95%;
+    }
+
+    .vvoa-admin-header {
+        padding: 20px;
+    }
+
+    .vvoa-admin-brand h1 {
+        font-size: 1.4rem;
+    }
+
+    .vvoa-admin-navigation {
+        padding: 0 20px;
+    }
+
+    .vvoa-admin-nav-tab {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    .vvoa-admin-main-content {
+        padding: 20px 15px;
+    }
+
+    .vvoa-admin-section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .vvoa-admin-event-stats {
+        flex-direction: column;
+    }
+
+    .vvoa-admin-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .vvoa-admin-filter-group {
+        min-width: 100%;
+    }
+
+    .vvoa-admin-events-table-container {
+        overflow-x: auto;
+    }
+
+    .vvoa-admin-events-table {
+        min-width: 800px;
+    }
+
+    .vvoa-admin-event-form {
+        padding: 25px 20px;
+    }
+
+    .vvoa-admin-form-row {
+        flex-direction: column;
+    }
+
+    .vvoa-admin-form-actions {
+        flex-direction: column;
+    }
+
+    .vvoa-admin-button-primary,
+    .vvoa-admin-button-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .vvoa-admin-cities-grid {
+        flex-direction: column;
+    }
+
+    .vvoa-admin-city-card {
+        min-width: 100%;
+    }
+
+    .vvoa-admin-modal-content {
+        width: 95%;
+        margin: 20px;
+    }
+
+    .vvoa-admin-toast {
+        right: 15px;
+        left: 15px;
+    }
+
+    .vvoa-admin-toast.show {
+        bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .vvoa-admin-login-container {
+        padding: 30px 20px;
+    }
+
+    .vvoa-admin-brand h1 {
+        font-size: 1.2rem;
+    }
+
+    .vvoa-admin-brand i {
+        font-size: 2rem;
+    }
+
+    .vvoa-admin-nav-tab {
+        font-size: 0.85rem;
+        padding: 12px 15px;
+    }
+
+    .vvoa-admin-stat-card {
+        padding: 15px 20px;
+    }
+
+    .vvoa-admin-stat-card i {
+        font-size: 2rem;
+    }
+
+    .vvoa-admin-stat-number {
+        font-size: 1.5rem;
+    }
+
+    .vvoa-admin-event-form {
+        padding: 20px 15px;
+    }
+
+    .vvoa-admin-form-section {
+        padding: 20px 15px;
+    }
+
+    .vvoa-admin-modal-header {
+        padding: 20px;
+    }
+
+    .vvoa-admin-modal-body {
+        padding: 20px;
+    }
+}
+
+/* Loading Spinner */
+.vvoa-admin-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: vvoa-admin-spin 0.8s linear infinite;
+}
+
+@keyframes vvoa-admin-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Empty State */
+.vvoa-admin-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+
+.vvoa-admin-empty-state i {
+    font-size: 4rem;
+    color: var(--border-color);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.vvoa-admin-empty-state h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.vvoa-admin-empty-state p {
+    font-size: 1rem;
+}
+
+
+/* ============================================
+   MEDIA MANAGEMENT STYLES (Gallery & VSM)
+   ============================================ */
+
+.vvoa-admin-media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.vvoa-admin-media-item {
+    background: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vvoa-admin-media-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.vvoa-admin-media-thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #e0e0e0;
+}
+
+.vvoa-admin-media-video-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.vvoa-admin-media-info {
+    padding: 15px;
+}
+
+.vvoa-admin-media-type-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.vvoa-admin-media-type-badge.video {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.vvoa-admin-media-type-badge.photo {
+    background: #fce4ec;
+    color: #c2185b;
+}
+
+.vvoa-admin-media-caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vvoa-admin-media-url {
+    font-size: 0.75rem;
+    color: #999;
+    word-break: break-all;
+    margin-bottom: 12px;
+}
+
+.vvoa-admin-media-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.vvoa-admin-btn-delete {
+    flex: 1;
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.vvoa-admin-btn-delete:hover {
+    background: #d32f2f;
+}
+
+.vvoa-admin-empty-media-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    grid-column: 1 / -1;
+}
+
+.vvoa-admin-empty-media-state i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.vvoa-admin-empty-media-state p {
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vvoa-admin-media-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vvoa-admin-media-grid {
+        grid-template-columns: 1fr;
+    }
+}

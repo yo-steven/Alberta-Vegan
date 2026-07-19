@@ -1,0 +1,826 @@
+.vvoa-contact-hero-section-container {
+  min-height: 100vh;
+  padding: 180px 0 100px;
+  background: linear-gradient(135deg, 
+      #F1F8E9 0%, 
+      #E8F5E8 25%, 
+      #C8E6C8 50%, 
+      #A5D6A7 75%, 
+      #81C784 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.vvoa-alberta-prairie-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+      repeating-linear-gradient(45deg, 
+          rgba(76, 175, 80, 0.1) 0px, 
+          rgba(76, 175, 80, 0.1) 2px, 
+          transparent 2px, 
+          transparent 20px),
+      repeating-linear-gradient(-45deg, 
+          rgba(139, 195, 74, 0.08) 0px, 
+          rgba(139, 195, 74, 0.08) 1px, 
+          transparent 1px, 
+          transparent 30px),
+      radial-gradient(circle at 20% 30%, rgba(165, 214, 167, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(129, 199, 132, 0.12) 0%, transparent 40%);
+  animation: vvoa-prairie-pattern-drift 40s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes vvoa-prairie-pattern-drift {
+  0%, 100% { 
+      transform: translateX(-20px) translateY(0px) scale(1.5); 
+      opacity: 0.8; 
+  }
+  25% { 
+      transform: translateX(20px) translateY(-10px) scale(1.3); 
+      opacity: 0.9; 
+  }
+  50% { 
+      transform: translateX(-15px) translateY(15px) scale(1.3); 
+      opacity: 1; 
+  }
+  75% { 
+      transform: translateX(10px) translateY(-5px) scale(1.5); 
+      opacity: 0.95; 
+  }
+}
+
+.vvoa-floating-plant-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.vvoa-wheat-grain-particle {
+  position: absolute;
+  width: 6px;
+  height: 15px;
+  background: linear-gradient(to bottom, #8BC34A, #689F38);
+  border-radius: 3px;
+  animation: vvoa-grain-gentle-sway 8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.vvoa-wheat-grain-particle:nth-child(odd) {
+  background: linear-gradient(to bottom, #9CCC65, #7CB342);
+  animation-duration: 10s;
+}
+
+@keyframes vvoa-grain-gentle-sway {
+  0%, 100% { 
+      transform: rotate(-3deg) translateY(0px); 
+      opacity: 0.7; 
+  }
+  25% { 
+      transform: rotate(4deg) translateY(-5px); 
+      opacity: 0.9; 
+  }
+  50% { 
+      transform: rotate(-2deg) translateY(-2px); 
+      opacity: 1; 
+  }
+  75% { 
+      transform: rotate(3deg) translateY(-7px); 
+      opacity: 0.8; 
+  }
+}
+
+.vvoa-wheat-grain-particle:nth-child(1) { left: 8%; top: 15%; animation-delay: 0s; }
+.vvoa-wheat-grain-particle:nth-child(2) { left: 20%; top: 25%; animation-delay: 1s; }
+.vvoa-wheat-grain-particle:nth-child(3) { left: 35%; top: 10%; animation-delay: 2s; }
+.vvoa-wheat-grain-particle:nth-child(4) { right: 25%; top: 20%; animation-delay: 3s; }
+.vvoa-wheat-grain-particle:nth-child(5) { right: 15%; top: 30%; animation-delay: 4s; }
+.vvoa-wheat-grain-particle:nth-child(6) { left: 12%; bottom: 25%; animation-delay: 0.5s; }
+.vvoa-wheat-grain-particle:nth-child(7) { right: 30%; bottom: 20%; animation-delay: 2.5s; }
+.vvoa-wheat-grain-particle:nth-child(8) { left: 40%; bottom: 30%; animation-delay: 1.5s; }
+
+.vvoa-contact-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 0 5%;
+  gap: 100px;
+  position: relative;
+  z-index: 10;
+}
+
+.vvoa-contact-text-area {
+  flex: 1;
+  position: relative;
+}
+
+.vvoa-contact-main-heading {
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.vvoa-stay-in-contact-text {
+  color: #4CAF50;
+  font-weight: 700;
+  display: block;
+  background: linear-gradient(135deg, #4CAF50, #66BB6A, #4CAF50);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: vvoa-contact-text-flow 5s ease-in-out infinite;
+}
+
+.vvoa-with-us-text {
+  color: #E91E63;
+  font-weight: 300;
+  display: block;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #E91E63, #FF6B9D, #E91E63);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: vvoa-contact-text-flow 6s ease-in-out infinite reverse;
+}
+
+@keyframes vvoa-contact-text-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.vvoa-contact-description-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 50px;
+  max-width: 500px;
+  position: relative;
+}
+
+.vvoa-contact-description-text::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4CAF50, #66BB6A, #4CAF50);
+  border-radius: 3px;
+  animation: vvoa-description-accent 8s ease-in-out infinite;
+}
+
+@keyframes vvoa-description-accent {
+  0%, 100% { opacity: 0.6; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+.vvoa-contact-image-showcase {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(76, 175, 80, 0.1));
+  backdrop-filter: blur(15px);
+  border: 3px solid rgba(76, 175, 80, 0.3);
+  box-shadow: 0 25px 60px rgba(76, 175, 80, 0.2);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vvoa-contact-image-showcase:hover {
+  transform: scale(1.02) rotate(1deg);
+  box-shadow: 0 30px 80px rgba(76, 175, 80, 0.3);
+}
+
+.vvoa-contact-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: brightness(1.1) contrast(1.05);
+}
+
+.vvoa-contact-image-showcase:hover .vvoa-contact-main-image {
+  transform: scale(1.05);
+}
+
+.vvoa-community-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(76, 175, 80, 0.9);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.vvoa-established-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+    width: max-content;
+    height: max-content;
+  background: rgba(233, 30, 99, 0.9);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.vvoa-contact-form-area {
+  flex: 1;
+  position: relative;
+}
+
+.vvoa-contact-form-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 35px;
+  padding: 50px;
+  border: 3px solid rgba(76, 175, 80, 0.2);
+  box-shadow: 0 30px 80px rgba(76, 175, 80, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.vvoa-contact-form-container::before {
+  content: '';
+  position: absolute;
+    top: -100%;
+    left: -100%;
+  inset: -3px;
+  background: conic-gradient(from 0deg, 
+      rgba(76, 175, 80, 0.3), 
+      rgba(139, 195, 74, 0.3), 
+      rgba(165, 214, 167, 0.3), 
+      rgba(76, 175, 80, 0.3));
+  border-radius: 38px;
+    width: 400%;
+    height: 400%;
+  z-index: -1;
+  opacity: 0;
+  animation: vvoa-form-border-rotation 15s linear infinite;
+  transition: opacity 0.6s ease;
+}
+
+@keyframes vvoa-form-border-rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.vvoa-contact-form-container:hover::before {
+  opacity: 1;
+}
+
+.vvoa-form-field-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.vvoa-message-field {
+  margin-bottom: 40px;
+}
+
+.vvoa-form-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2E7D32;
+  margin-bottom: 8px;
+}
+
+.vvoa-required-asterisk {
+  color: #E91E63;
+  margin-left: 2px;
+}
+
+.vvoa-form-input, .vvoa-form-textarea {
+  width: 100%;
+  padding: 18px 24px;
+  border: 3px solid #4CAF50;
+  border-radius: 50px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  color: #333;
+}
+
+.vvoa-form-textarea {
+  border-radius: 25px;
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.vvoa-phone-input {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23E91E63"><path d="M3 0h18l-9 12L3 0z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) center;
+  background-size: 20px;
+  padding-right: 50px;
+}
+
+.vvoa-form-input:focus, .vvoa-form-textarea:focus {
+  border-color: #E91E63;
+  box-shadow: 0 0 0 6px rgba(233, 30, 99, 0.1);
+  transform: scale(1.02);
+}
+
+.vvoa-form-input::placeholder, .vvoa-form-textarea::placeholder {
+  color: #999;
+  opacity: 0.8;
+}
+
+.vvoa-form-submit-container {
+  text-align: center;
+  position: relative;
+}
+
+.vvoa-contact-submit-button {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #673AB7, #9C27B0, #8E24AA);
+  background-size: 200% 100%;
+  color: white;
+  padding: 20px 45px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 15px 40px rgba(103, 58, 183, 0.4);
+  animation: vvoa-submit-energy-pulse 4s ease-in-out infinite;
+}
+
+@keyframes vvoa-submit-energy-pulse {
+  0%, 100% { 
+      background-position: 0% 50%; 
+      box-shadow: 0 15px 40px rgba(103, 58, 183, 0.4);
+  }
+  50% { 
+      background-position: 100% 50%; 
+      box-shadow: 0 18px 50px rgba(103, 58, 183, 0.6);
+  }
+}
+
+.vvoa-contact-submit-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.vvoa-contact-submit-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.vvoa-contact-submit-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 25px 60px rgba(103, 58, 183, 0.7);
+  animation-duration: 2s;
+}
+
+.vvoa-submit-icon {
+  margin-left: 12px;
+  font-size: 16px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vvoa-contact-submit-button:hover .vvoa-submit-icon {
+  transform: translateX(5px) rotate(15deg);
+}
+
+@keyframes vvoa-success-ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+.vvoa-form-message {
+    padding: 15px 20px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    animation: vvoa-message-slide-in 0.5s ease-out;
+}
+
+.vvoa-form-message-success {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(129, 199, 132, 0.1));
+    color: #2E7D32;
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.vvoa-form-message-error {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(255, 107, 157, 0.1));
+    color: #C2185B;
+    border: 2px solid rgba(233, 30, 99, 0.3);
+}
+
+@keyframes vvoa-message-slide-in {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1200px) {
+    .vvoa-contact-content-wrapper {
+        gap: 80px;
+        padding: 0 4%;
+    }
+
+    .vvoa-contact-main-heading {
+        font-size: clamp(2.8rem, 6vw, 4rem);
+    }
+
+    .vvoa-contact-form-container {
+        padding: 45px 40px;
+    }
+}
+
+/* Standard Tablets (Portrait) */
+@media (max-width: 1024px) {
+    .vvoa-contact-content-wrapper {
+        flex-direction: column;
+        gap: 60px;
+        padding: 0 5%;
+    }
+
+    .vvoa-contact-text-area {
+        text-align: center;
+        order: 1;
+        width: 100%;
+    }
+
+    .vvoa-contact-form-area {
+        order: 2;
+        width: 100%;
+    }
+
+    .vvoa-floating-plant-elements {
+        display: none;
+    }
+
+    .vvoa-contact-description-text {
+        max-width: 600px;
+        margin: 0 auto 40px;
+    }
+
+    .vvoa-contact-image-showcase {
+        height: 350px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .vvoa-contact-form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px 35px;
+    }
+}
+
+/* Small Tablets (Landscape Phones) */
+@media (max-width: 768px) {
+    .vvoa-contact-hero-section-container {
+        padding: 100px 0 80px;
+    }
+
+    .vvoa-contact-content-wrapper {
+        gap: 50px;
+        padding: 0 4%;
+    }
+
+    .vvoa-contact-main-heading {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+        margin-bottom: 30px;
+    }
+
+    .vvoa-contact-description-text {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .vvoa-contact-form-container {
+        padding: 35px 30px;
+        border-radius: 25px;
+    }
+
+    .vvoa-form-field-group {
+        margin-bottom: 25px;
+    }
+
+    .vvoa-message-field {
+        margin-bottom: 35px;
+    }
+
+    .vvoa-form-input, .vvoa-form-textarea {
+        padding: 16px 22px;
+        font-size: 15px;
+        border-width: 2px;
+    }
+
+    .vvoa-form-textarea {
+        min-height: 100px;
+        border-radius: 20px;
+    }
+
+    .vvoa-contact-image-showcase {
+        height: 280px;
+        border-radius: 25px;
+    }
+
+    .vvoa-community-badge, .vvoa-established-badge {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .vvoa-contact-submit-button {
+        padding: 18px 40px;
+        font-size: 16px;
+    }
+}
+
+/* Large Phones */
+@media (max-width: 640px) {
+    .vvoa-contact-hero-section-container {
+        padding: 90px 0 70px;
+    }
+
+    .vvoa-contact-content-wrapper {
+        gap: 40px;
+        padding: 0 3%;
+        margin-top: 30px;
+    }
+
+    .vvoa-contact-main-heading {
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        margin-bottom: 25px;
+    }
+
+    .vvoa-stay-in-contact-text, .vvoa-with-us-text {
+        margin-top: 5px;
+    }
+
+    .vvoa-contact-description-text {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .vvoa-contact-description-text::before {
+        left: -15px;
+        width: 3px;
+    }
+
+    .vvoa-contact-form-container {
+        padding: 30px 25px;
+        border-radius: 20px;
+        border-width: 2px;
+    }
+
+    .vvoa-form-label {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .vvoa-form-input, .vvoa-form-textarea {
+        padding: 14px 18px;
+        font-size: 14px;
+        border-radius: 40px;
+    }
+
+    .vvoa-form-textarea {
+        border-radius: 18px;
+        min-height: 90px;
+    }
+
+    .vvoa-contact-image-showcase {
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    .vvoa-contact-submit-button {
+        padding: 16px 35px;
+        font-size: 15px;
+        border-radius: 40px;
+    }
+}
+
+/* Standard Phones */
+@media (max-width: 480px) {
+    .vvoa-contact-hero-section-container {
+        padding: 80px 0 60px;
+    }
+
+    .vvoa-contact-content-wrapper {
+        gap: 35px;
+        padding: 0 4%;
+    }
+
+    .vvoa-contact-main-heading {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .vvoa-contact-description-text {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .vvoa-contact-form-container {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .vvoa-form-field-group {
+        margin-bottom: 20px;
+    }
+
+    .vvoa-message-field {
+        margin-bottom: 30px;
+    }
+
+    .vvoa-form-label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .vvoa-form-input, .vvoa-form-textarea {
+        padding: 12px 16px;
+        font-size: 14px;
+        border-radius: 35px;
+    }
+
+    .vvoa-form-textarea {
+        border-radius: 15px;
+        min-height: 80px;
+    }
+
+    .vvoa-phone-input {
+        background-size: 16px;
+        background-position: calc(100% - 15px) center;
+        padding-right: 40px;
+    }
+
+    .vvoa-contact-image-showcase {
+        height: 220px;
+        border-radius: 18px;
+    }
+
+    .vvoa-community-badge {
+        top: 15px;
+        left: 15px;
+        padding: 8px 12px;
+        font-size: 11px;
+        border-radius: 20px;
+    }
+
+    .vvoa-established-badge {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 11px;
+        border-radius: 20px;
+    }
+
+    .vvoa-contact-submit-button {
+        padding: 14px 30px;
+        font-size: 14px;
+        border-radius: 35px;
+        letter-spacing: 1px;
+    }
+
+    .vvoa-submit-icon {
+        margin-left: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 375px) {
+    .vvoa-contact-hero-section-container {
+        padding: 70px 0 50px;
+    }
+
+    .vvoa-contact-content-wrapper {
+        gap: 30px;
+        padding: 0 3%;
+    }
+
+    .vvoa-contact-main-heading {
+        font-size: clamp(1.8rem, 11vw, 2.5rem);
+        margin-bottom: 15px;
+    }
+
+    .vvoa-contact-description-text {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .vvoa-contact-form-container {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .vvoa-form-input, .vvoa-form-textarea {
+        padding: 10px 14px;
+        font-size: 13px;
+        border-radius: 30px;
+    }
+
+    .vvoa-form-textarea {
+        border-radius: 12px;
+        min-height: 70px;
+    }
+
+    .vvoa-contact-image-showcase {
+        height: 200px;
+        border-radius: 15px;
+    }
+
+    .vvoa-contact-submit-button {
+        padding: 12px 25px;
+        font-size: 13px;
+        border-radius: 30px;
+    }
+
+    .vvoa-alberta-prairie-pattern-overlay {
+        opacity: 0.5;
+    }
+}
+
+/* Extra Small Phones */
+@media (max-width: 320px) {
+    .vvoa-contact-content-wrapper {
+        padding: 50px 3%;
+    }
+
+    .vvoa-contact-main-heading {
+        font-size: clamp(1.6rem, 12vw, 2.2rem);
+    }
+
+    .vvoa-contact-form-container {
+        padding: 18px 12px;
+    }
+
+    .vvoa-form-input, .vvoa-form-textarea {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .vvoa-contact-image-showcase {
+        height: 180px;
+    }
+
+    .vvoa-contact-submit-button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Vegan Social Meetups - Vegans and Vegetarians of Alberta</title>
+        <meta
+            name="description"
+            content="Join our vegan social community in Calgary and Edmonton. Build meaningful friendships through in-person events."
+        />
+
+        <!-- Font Awesome Latest Version -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            defer
+        />
+
+        <link rel="stylesheet" href="/crossFile.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="vvoa-main-header-container">
+            <nav class="vvoa-navigation-wrapper">
+                <div class="vvoa-brand-logo-container">
+                    <div class="vvoa-logo-alberta-growth-container">
+                        <img src="/logo.svg" alt="Vegans and Vegetarians of Alberta Logo" class="vvoa-logo-svg-image">
+                    </div>
+                </div>
+
+                <div class="vvoa-mobile-nav-toggle">
+                    <div class="vvoa-hamburger-line"></div>
+                    <div class="vvoa-hamburger-line"></div>
+                    <div class="vvoa-hamburger-line"></div>
+                </div>
+
+                <ul class="vvoa-main-navigation-menu">
+                    <li class="vvoa-nav-menu-item">
+                        <a href="/" class="vvoa-nav-link-primary">Home</a>
+                    </li>
+                    <li class="vvoa-nav-menu-item vvoa-nav-dropdown">
+                        <a href="/about" class="vvoa-nav-link-primary">
+                            About
+                            <i class="fas fa-chevron-down vvoa-dropdown-indicator-arrow"></i>
+                        </a>
+                        <ul class="vvoa-dropdown-menu">
+                            <li><a href="/about" class="vvoa-dropdown-link">About Us</a></li>
+                            <li><a href="/about/members" class="vvoa-dropdown-link">Board Members</a></li>
+                        </ul>
+                    </li>
+                    <li class="vvoa-nav-menu-item">
+                        <a href="/contact" class="vvoa-nav-link-primary">Contact</a>
+                    </li>
+                    <li class="vvoa-nav-menu-item vvoa-nav-dropdown">
+                        <a href="/membership-donate" class="vvoa-nav-link-primary">
+                            Donate & Membership
+                        </a>
+                    </li>
+                    <li class="vvoa-nav-menu-item">
+                        <a href="/vegfest" class="vvoa-nav-link-primary">
+                            VegFest Edmonton
+                        </a>
+                    </li>
+                    <li class="vvoa-nav-menu-item">
+                        <a href="/community-events" class="vvoa-nav-link-primary">Events</a>
+                    </li>
+                    <li class="vvoa-nav-menu-item">
+                        <a href="/meetup" class="vvoa-nav-link-primary">VeganSocialMeetups</a>
+                    </li>
+                    <li class="vvoa-nav-menu-item">
+                        <a href="/gallery" class="vvoa-nav-link-primary">Gallery</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="vsm-hero-section">
+            <div class="vsm-hero-overlay"></div>
+            <div class="vsm-hero-content">
+                <h1 class="vsm-hero-title">
+                    <i class="fas fa-users"></i>
+                    Vegan Social Meetups
+                </h1>
+                <p class="vsm-hero-subtitle" id="vsmDescription">
+                    We are all about building a vegan social community where folks who are vegan or interested in veganism can connect and build meaningful lifelong friendships and connections. We do this through in-person vegan events in Calgary and Edmonton.
+                </p>
+                <a href="https://vegansocialmeetups.com" target="_blank" class="vsm-website-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    Visit vegansocialmeetups.com
+                </a>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="vsm-gallery-section">
+            <div class="vsm-container">
+                <h2 class="vsm-section-title">
+                    <i class="fas fa-camera"></i>
+                    Event Photos/Videos!
+                </h2>
+
+                <!-- Loading State -->
+                <div class="vsm-loading" id="vsmLoading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading photos...</p>
+                </div>
+
+                <!-- Empty State -->
+                <div class="vsm-empty" id="vsmEmpty" style="display: none;">
+                    <i class="fas fa-images"></i>
+                    <p>No photos yet. Check back soon for event highlights!</p>
+                </div>
+
+                <!-- Photo Grid -->
+                <div class="vsm-photo-grid" id="vsmPhotoGrid">
+                    <!-- Photos will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Modal -->
+        <div class="vsm-modal" id="vsmModal">
+            <div class="vsm-modal-overlay" id="vsmModalClose"></div>
+            <div class="vsm-modal-content">
+                <button class="vsm-modal-close-btn" id="vsmModalCloseBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="vsm-modal-body" id="vsmModalBody">
+                    <!-- Media content will be loaded here -->
+                </div>
+                <div class="vsm-modal-caption" id="vsmModalCaption"></div>
+            </div>
+        </div>
+
+        <footer class="vvoa-footer-section-main-container">
+            <div class="vvoa-footer-alberta-landscape-silhouette"></div>
+
+            <div class="vvoa-footer-content-wrapper">
+                <div class="vvoa-footer-brand-section">
+                    <div class="vvoa-footer-logo-constellation-container">
+                        <div class="vvoa-footer-alberta-plant-network">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+
+                    <p class="vvoa-footer-organization-description">
+                        Vegans and Vegetarians of Alberta is a non-profit organization dedicated to promoting plant-based living across Alberta through education, community support, and advocacy.
+                    </p>
+                </div>
+
+                <div class="vvoa-footer-navigation-sections">
+                    <div class="vvoa-footer-nav-column">
+                        <h3 class="vvoa-footer-nav-column-title">Quick Links</h3>
+                        <ul class="vvoa-footer-nav-links-list">
+                            <li class="vvoa-footer-nav-link-item">
+                                <a href="/about" class="vvoa-footer-nav-link">About Us</a>
+                            </li>
+                            <li class="vvoa-footer-nav-link-item">
+                                <a href="/contact" class="vvoa-footer-nav-link">Contact</a>
+                            </li>
+                            <li class="vvoa-footer-nav-link-item">
+                                <a href="/membership-donate" class="vvoa-footer-nav-link">Donate</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="vvoa-footer-nav-column">
+                        <h3 class="vvoa-footer-nav-column-title">Community</h3>
+                        <ul class="vvoa-footer-nav-links-list">
+                            <li class="vvoa-footer-nav-link-item">
+                                <a href="membership-donate" class="vvoa-footer-nav-link">Membership</a>
+                            </li>
+                            <li class="vvoa-footer-nav-link-item">
+                                <a href="/vegfest" class="vvoa-footer-nav-link">VegFest Edmonton</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="vvoa-footer-connect-section">
+                    <h3 class="vvoa-footer-nav-column-title">Connect with us!</h3>
+
+                    <div class="vvoa-footer-social-constellation">
+                        <a onclick="window.open('https://www.facebook.com/vegfestedmonton/')" class="vvoa-footer-social-orbital-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a onclick="window.open('https://www.instagram.com/vegfestedmonton/?hl=en')" class="vvoa-footer-social-orbital-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <div class="vvoa-footer-contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@vvoaalberta.org</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vvoa-footer-copyright-section">
+                <div class="vvoa-footer-copyright-text">
+                    © 2026 Vegans and Vegetarians of Alberta.
+                </div>
+            </div>
+        </footer>
+
+        <script src="/crossFile.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

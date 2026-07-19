@@ -1,0 +1,4141 @@
+/* VegFest Hero Section Main Container */
+.vegfest-edmonton-hero-section-main-container {
+    height: max-content;
+    background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 25%, #ffffff 50%, #f0f9f5 75%, #ffffff 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+/* Animated Background Plant Growth Patterns */
+.vegfest-hero-animated-plant-growth-background::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 120%;
+    height: 140%;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(76, 175, 80, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 60%, rgba(129, 199, 132, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 90%, rgba(102, 187, 106, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 90% 10%, rgba(165, 214, 167, 0.03) 0%, transparent 50%);
+    animation: vegfest-hero-plant-growth-ambient-flow 25s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes vegfest-hero-plant-growth-ambient-flow {
+    0%, 100% { 
+        transform: translate(0px, 0px) rotate(0deg) scale(1); 
+        opacity: 0.4; 
+    }
+    25% { 
+        transform: translate(15px, -10px) rotate(1deg) scale(1.02); 
+        opacity: 0.6; 
+    }
+    50% { 
+        transform: translate(-10px, 15px) rotate(-0.5deg) scale(0.98); 
+        opacity: 0.5; 
+    }
+    75% { 
+        transform: translate(20px, 5px) rotate(0.8deg) scale(1.01); 
+        opacity: 0.7; 
+    }
+}
+
+/* Floating Veggie Festival Community Icons */
+.vegfest-hero-floating-community-festival-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-community-festival-icon-particle {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(129, 199, 132, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF50;
+    font-size: 20px;
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    backdrop-filter: blur(10px);
+    animation: vegfest-community-icon-organic-float 15s ease-in-out infinite;
+}
+
+.vegfest-community-festival-icon-particle:nth-child(1) {
+    top: 20%;
+    left: 40%;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.vegfest-community-festival-icon-particle:nth-child(2) {
+    top: 25%;
+    right: 8%;
+    animation-delay: 2s;
+    animation-duration: 20s;
+}
+
+.vegfest-community-festival-icon-particle:nth-child(3) {
+    bottom: 30%;
+    left: 3%;
+    animation-delay: 4s;
+    animation-duration: 16s;
+}
+
+.vegfest-community-festival-icon-particle:nth-child(4) {
+    bottom: 15%;
+    right: 12%;
+    animation-delay: 6s;
+    animation-duration: 22s;
+}
+
+.vegfest-community-festival-icon-particle:nth-child(5) {
+    top: 40%;
+    left: 15%;
+    animation-delay: 8s;
+    animation-duration: 19s;
+}
+
+.vegfest-community-festival-icon-particle:nth-child(6) {
+    top: 60%;
+    right: 25%;
+    animation-delay: 10s;
+    animation-duration: 17s;
+}
+
+@keyframes vegfest-community-icon-organic-float {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+        opacity: 0.6;
+    }
+    25% { 
+        transform: translateY(-20px) translateX(15px) rotate(5deg) scale(1.1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translateY(-35px) translateX(-10px) rotate(-3deg) scale(0.95);
+        opacity: 0.9;
+    }
+    75% { 
+        transform: translateY(-15px) translateX(25px) rotate(8deg) scale(1.05);
+        opacity: 0.7;
+    }
+}
+
+/* Main Content Wrapper */
+.vegfest-hero-main-content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Text Content Area */
+.vegfest-hero-text-content-area {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Main Heading with Animated Plant-Based Typography */
+.vegfest-hero-main-heading {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 800;
+    color: #E91E63;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Festival Description Text */
+.vegfest-hero-festival-description-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 50px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.vegfest-hero-festival-description-text::before {
+    content: '🌱';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    animation: vegfest-hero-seedling-growth-pulse 3s ease-in-out infinite;
+}
+
+@keyframes vegfest-hero-seedling-growth-pulse {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: scale(1.2) rotate(5deg);
+        opacity: 1;
+    }
+}
+
+.vegfest-hero-cta-arrow-icon {
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vegfest-hero-discover-festival-button:hover .vegfest-hero-cta-arrow-icon {
+    transform: translateX(8px) rotate(15deg);
+}
+
+/* Festival Impact Statistics */
+.vegfest-hero-festival-impact-statistics-display {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.vegfest-hero-impact-metric-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(76, 175, 80, 0.2);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.vegfest-hero-impact-metric-showcase:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(76, 175, 80, 0.4);
+    box-shadow: 0 15px 35px rgba(76, 175, 80, 0.2);
+}
+
+.vegfest-hero-impact-number-display {
+    font-size: 32px;
+    font-weight: 800;
+    color: #4CAF50;
+    margin-bottom: 5px;
+}
+
+.vegfest-hero-impact-label-text {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Visual Content Area */
+.vegfest-hero-visual-content-area {
+    flex: 1;
+    position: relative;
+}
+
+/* Main Festival Image Showcase */
+.vegfest-hero-festival-image-showcase-container {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegfest-hero-festival-image-showcase-container:hover {
+    transform: scale(1.02) rotate(1deg);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.2);
+}
+
+.vegfest-hero-main-festival-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: all 0.6s ease;
+}
+
+.vegfest-hero-festival-image-showcase-container:hover .vegfest-hero-main-festival-image {
+    transform: scale(1.1);
+}
+
+/* Festival Celebration Badge */
+.vegfest-hero-celebration-festival-badge {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: linear-gradient(135deg, #E91E63, #FF6B9D);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    animation: vegfest-hero-badge-celebration-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes vegfest-hero-badge-celebration-pulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.4);
+    }
+    50% { 
+        transform: scale(1.05);
+        box-shadow: 0 0 0 20px rgba(233, 30, 99, 0);
+    }
+}
+
+/* Community Engagement Indicator */
+.vegfest-hero-community-engagement-indicator {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #FFC107, #FF9800);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    animation: vegfest-hero-engagement-indicator-glow 3s ease-in-out infinite;
+}
+
+@keyframes vegfest-hero-engagement-indicator-glow {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(255, 193, 7, 0.6), 0 0 40px rgba(255, 193, 7, 0.4);
+    }
+}
+
+/* Floating Festival Activity Elements */
+.vegfest-hero-floating-festival-activity-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.vegfest-festival-activity-element {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid rgba(76, 175, 80, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    backdrop-filter: blur(15px);
+    animation: vegfest-festival-activity-organic-movement 12s ease-in-out infinite;
+}
+
+.vegfest-festival-activity-element:nth-child(1) {
+    top: 15%;
+    right: -30px;
+    animation-delay: 1s;
+}
+
+.vegfest-festival-activity-element:nth-child(2) {
+    bottom: 20%;
+    left: -30px;
+    animation-delay: 3s;
+}
+
+.vegfest-festival-activity-element:nth-child(3) {
+    top: 50%;
+    right: -35px;
+    animation-delay: 5s;
+}
+
+@keyframes vegfest-festival-activity-organic-movement {
+    0%, 100% { 
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    25% { 
+        transform: translateX(-40px) translateY(-20px) rotate(90deg);
+        opacity: 0.9;
+    }
+    50% { 
+        transform: translateX(-60px) translateY(15px) rotate(180deg);
+        opacity: 1;
+    }
+    75% { 
+        transform: translateX(-30px) translateY(-10px) rotate(270deg);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .vegfest-hero-main-content-wrapper {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .vegfest-hero-text-content-area {
+        max-width: 100%;
+    }
+
+    .vegfest-hero-festival-impact-statistics-display {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .vegfest-edmonton-hero-section-main-container {
+        padding: 80px 0;
+    }
+
+    .vegfest-hero-main-content-wrapper {
+        padding: 0%;
+        gap: 40px;
+    }
+
+    .vegfest-hero-main-festival-image {
+        height: 350px;
+    }
+
+    .vegfest-community-festival-icon-particle {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .vegfest-festival-activity-element {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .vegfest-hero-festival-impact-statistics-display {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vegfest-hero-festival-description-text {
+        font-size: 16px;
+        padding-left: 0;
+    }
+
+    .vegfest-hero-festival-description-text::before {
+        position: relative;
+        left: auto;
+        top: auto;
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .vegfest-hero-discover-festival-button {
+        padding: 15px 25px;
+        font-size: 15px;
+    }
+}
+
+
+/* Event Details Banner Styles */
+.vegfest-hero-event-details-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+    padding: 18px 30px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(129, 199, 132, 0.1));
+    border-radius: 50px;
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    backdrop-filter: blur(10px);
+    animation: vegfest-event-details-pulse 3s ease-in-out infinite;
+}
+
+@keyframes vegfest-event-details-pulse {
+    0%, 100% {
+        box-shadow: 0 5px 20px rgba(76, 175, 80, 0.2);
+    }
+    50% {
+        box-shadow: 0 8px 30px rgba(76, 175, 80, 0.35);
+    }
+}
+
+.vegfest-hero-event-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.vegfest-hero-event-detail-item i {
+    font-size: 20px;
+    color: var(--primary-green);
+}
+
+.vegfest-hero-event-detail-separator {
+    color: rgba(76, 175, 80, 0.4);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .vegfest-hero-event-details-banner {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 20px;
+    }
+
+    .vegfest-hero-event-detail-separator {
+        display: none;
+    }
+
+    .vegfest-hero-event-detail-item {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/* VegFest Feature Cards Section Main Container */
+.vegfest-feature-cards-section-main-container {
+    height: max-content;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fff8 25%, #f0f9f0 50%, #e8f5e8 75%, #f5faf5 100%);
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+/* Animated Festival Energy Field Background */
+.vegfest-feature-cards-animated-festival-energy-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-feature-cards-animated-festival-energy-field::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: 
+        conic-gradient(from 0deg at 30% 30%, rgba(76, 175, 80, 0.03) 0deg, transparent 60deg, rgba(129, 199, 132, 0.02) 120deg, transparent 180deg),
+        conic-gradient(from 180deg at 70% 70%, rgba(233, 30, 99, 0.02) 0deg, transparent 90deg, rgba(255, 193, 7, 0.02) 180deg, transparent 270deg),
+        radial-gradient(ellipse at 60% 40%, rgba(102, 187, 106, 0.04) 0%, transparent 70%);
+    animation: vegfest-festival-energy-field-rotation 35s linear infinite;
+}
+
+@keyframes vegfest-festival-energy-field-rotation {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Floating Festival Elements */
+.vegfest-feature-cards-floating-festival-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.vegfest-floating-festival-element {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(248, 255, 248, 0.6));
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF50;
+    font-size: 16px;
+    animation: vegfest-floating-element-organic-drift 20s ease-in-out infinite;
+}
+
+.vegfest-floating-festival-element:nth-child(1) {
+    top: 10%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.vegfest-floating-festival-element:nth-child(2) {
+    top: 30%;
+    right: 12%;
+    animation-delay: 4s;
+}
+
+.vegfest-floating-festival-element:nth-child(3) {
+    bottom: 25%;
+    left: 15%;
+    animation-delay: 8s;
+}
+
+.vegfest-floating-festival-element:nth-child(4) {
+    bottom: 40%;
+    right: 8%;
+    animation-delay: 12s;
+}
+
+.vegfest-floating-festival-element:nth-child(5) {
+    top: 50%;
+    left: 5%;
+    animation-delay: 16s;
+}
+
+@keyframes vegfest-floating-element-organic-drift {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+        opacity: 0.6;
+    }
+    25% { 
+        transform: translateY(-30px) translateX(20px) rotate(90deg) scale(1.2);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translateY(-50px) translateX(-15px) rotate(180deg) scale(0.9);
+        opacity: 1;
+    }
+    75% { 
+        transform: translateY(-20px) translateX(35px) rotate(270deg) scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+/* Main Content Wrapper */
+.vegfest-feature-cards-main-content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Feature Cards Grid Container */
+.vegfest-feature-cards-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Individual Feature Card */
+.vegfest-feature-card-individual-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    width: 100%;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 255, 248, 0.8));
+    border-radius: 30px;
+    padding: 40px;
+    border: 3px solid rgba(76, 175, 80, 0.1);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.vegfest-feature-card-individual-container::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(45deg, 
+        rgba(76, 175, 80, 0.4) 0%, 
+        rgba(129, 199, 132, 0.3) 25%,
+        rgba(233, 30, 99, 0.3) 50%,
+        rgba(255, 193, 7, 0.3) 75%,
+        rgba(76, 175, 80, 0.4) 100%);
+    background-size: 400% 400%;
+    border-radius: 30px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    animation: vegfest-card-rainbow-border-flow 8s ease-in-out infinite;
+}
+
+@keyframes vegfest-card-rainbow-border-flow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.vegfest-feature-card-individual-container:hover::before {
+    opacity: 1;
+}
+
+.vegfest-feature-card-individual-container:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+/* Feature Card Image Container */
+.vegfest-feature-card-image-showcase-container {
+    position: relative;
+    margin-bottom: 35px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 220px;
+    transition: all 0.6s ease;
+}
+
+.vegfest-feature-card-image-showcase-container:hover {
+    transform: scale(1.05);
+}
+
+.vegfest-feature-card-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.vegfest-feature-card-main-image-second {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegfest-feature-card-individual-container:hover .vegfest-feature-card-main-image {
+    transform: scale(1.15) rotate(2deg);
+    filter: brightness(1.1) saturate(1.2);
+}
+
+/* Festival Activity Badge */
+.vegfest-feature-card-activity-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    animation: vegfest-activity-badge-pulse 3s ease-in-out infinite;
+}
+
+@keyframes vegfest-activity-badge-pulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+    50% { 
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+}
+
+/* VegFest Logo Overlay */
+.vegfest-feature-card-vegfest-logo-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(233, 30, 99, 0.9);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 800;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    animation: vegfest-logo-overlay-glow 4s ease-in-out infinite;
+}
+
+@keyframes vegfest-logo-overlay-glow {
+    0%, 100% { 
+        box-shadow: 0 0 15px rgba(233, 30, 99, 0.3);
+    }
+    50% { 
+        box-shadow: 0 0 25px rgba(233, 30, 99, 0.6), 0 0 35px rgba(233, 30, 99, 0.4);
+    }
+}
+
+/* Feature Card Content Area */
+.vegfest-feature-card-content-area {
+    position: relative;
+}
+
+/* Feature Card Title */
+.vegfest-feature-card-title-heading {
+    font-size: 26px;
+    font-weight: 800;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    position: relative;
+    line-height: 1.3;
+}
+
+.vegfest-feature-card-title-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4CAF50, #E91E63);
+    border-radius: 2px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegfest-feature-card-individual-container:hover .vegfest-feature-card-title-heading::after {
+    width: 80px;
+}
+
+/* Feature Card Description */
+.vegfest-feature-card-description-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+/* Feature Card CTA Button */
+.vegfest-feature-card-cta-button-container {
+    position: relative;
+}
+
+.vegfest-feature-card-action-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #673AB7, #9C27B0);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px rgba(103, 58, 183, 0.3);
+}
+
+.vegfest-feature-card-action-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.8s ease;
+}
+
+.vegfest-feature-card-action-button:hover::before {
+    left: 100%;
+}
+
+.vegfest-feature-card-action-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(103, 58, 183, 0.4);
+    background: linear-gradient(135deg, #7B1FA2, #8E24AA);
+}
+
+.vegfest-feature-card-button-icon {
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vegfest-feature-card-action-button:hover .vegfest-feature-card-button-icon {
+    transform: translateX(8px) rotate(20deg);
+}
+
+/* Floating Festival Activity Icons */
+.vegfest-feature-card-floating-activity-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-card-activity-icon-particle {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(76, 175, 80, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #4CAF50;
+    backdrop-filter: blur(10px);
+    animation: vegfest-card-activity-icon-orbit 15s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.vegfest-feature-card-individual-container:hover .vegfest-card-activity-icon-particle {
+    opacity: 1;
+}
+
+.vegfest-card-activity-icon-particle:nth-child(1) {
+    top: 10%;
+    right: 20%;
+    animation-delay: 0s;
+}
+
+.vegfest-card-activity-icon-particle:nth-child(2) {
+    bottom: 15%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.vegfest-card-activity-icon-particle:nth-child(3) {
+    top: 60%;
+    right: 10%;
+    animation-delay: 4s;
+}
+
+@keyframes vegfest-card-activity-icon-orbit {
+    0%, 100% { 
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1);
+    }
+    33% { 
+        transform: translateX(20px) translateY(-15px) rotate(120deg) scale(1.2);
+    }
+    66% { 
+        transform: translateX(-15px) translateY(20px) rotate(240deg) scale(0.8);
+    }
+}
+
+/* Specific Card Customizations */
+
+/* Vendors & Exhibitors Card */
+.vegfest-feature-card-vendors-exhibitors-container .vegfest-feature-card-activity-badge {
+    background: linear-gradient(135deg, #FF9800, #FFC107);
+}
+
+.vegfest-feature-card-vendors-exhibitors-container .vegfest-feature-card-vegfest-logo-overlay {
+    background: rgba(255, 152, 0, 0.9);
+}
+
+/* Live Performances Card */
+.vegfest-feature-card-live-performances-container .vegfest-feature-card-activity-badge {
+    background: linear-gradient(135deg, #E91E63, #F06292);
+}
+
+.vegfest-feature-card-live-performances-container .vegfest-feature-card-vegfest-logo-overlay {
+    background: rgba(233, 30, 99, 0.9);
+}
+
+/* Programming Schedule Card */
+.vegfest-feature-card-programming-schedule-container .vegfest-feature-card-activity-badge {
+    background: linear-gradient(135deg, #3F51B5, #5C6BC0);
+}
+
+.vegfest-feature-card-programming-schedule-container .vegfest-feature-card-vegfest-logo-overlay {
+    background: rgba(63, 81, 181, 0.9);
+}
+
+/* Kids Activities Card */
+.vegfest-feature-card-kids-activities-container .vegfest-feature-card-activity-badge {
+    background: linear-gradient(135deg, #9C27B0, #BA68C8);
+}
+
+.vegfest-feature-card-kids-activities-container .vegfest-feature-card-vegfest-logo-overlay {
+    background: rgba(156, 39, 176, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .vegfest-feature-cards-grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vegfest-feature-card-individual-container {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vegfest-feature-cards-section-main-container {
+        padding: 80px 0;
+    }
+
+    .vegfest-feature-cards-main-content-wrapper {
+        padding: 0 4%;
+    }
+
+    .vegfest-feature-card-individual-container {
+        padding: 30px;
+        min-width: 280px;
+    }
+
+    .vegfest-feature-card-image-showcase-container {
+        height: 180px;
+    }
+
+    .vegfest-feature-card-title-heading {
+        font-size: 22px;
+    }
+
+    .vegfest-floating-festival-element {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vegfest-feature-cards-grid-container {
+        gap: 30px;
+    }
+
+    .vegfest-feature-card-individual-container {
+        padding: 25px;
+    }
+
+    .vegfest-feature-card-image-showcase-container {
+        height: 160px;
+    }
+
+    .vegfest-feature-card-title-heading {
+        font-size: 20px;
+    }
+
+    .vegfest-feature-card-description-text {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+/* VegFest Volunteer Section Main Container */
+.vegfest-volunteer-section-main-container {
+    height: max-content;
+    background: linear-gradient(135deg, #f3e5f5 0%, #e8eaf6 25%, #e0f2f1 50%, #f1f8e9 75%, #fff3e0 100%);
+    position: relative;
+    padding: 140px 0;
+    overflow: hidden;
+}
+
+/* Animated Community Connection Network */
+.vegfest-volunteer-animated-community-connection-network {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-volunteer-animated-community-connection-network::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    background-image: 
+        linear-gradient(45deg, transparent 40%, rgba(233, 30, 99, 0.02) 50%, transparent 60%),
+        linear-gradient(135deg, transparent 40%, rgba(255, 193, 7, 0.03) 50%, transparent 60%),
+        linear-gradient(-45deg, transparent 35%, rgba(76, 175, 80, 0.02) 50%, transparent 65%);
+    background-size: 200px 200px, 300px 300px, 250px 250px;
+    animation: vegfest-volunteer-community-network-pulse 30s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+@keyframes vegfest-volunteer-community-network-pulse {
+    0%, 100% { 
+        transform: translate(0px, 0px) rotate(0deg) scale(1);
+        opacity: 0.4;
+    }
+    25% { 
+        transform: translate(20px, -15px) rotate(2deg) scale(1.05);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: translate(-15px, 25px) rotate(-1deg) scale(0.95);
+        opacity: 0.5;
+    }
+    75% { 
+        transform: translate(30px, 10px) rotate(3deg) scale(1.02);
+        opacity: 0.8;
+    }
+}
+
+/* Main Content Wrapper */
+.vegfest-volunteer-main-content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Volunteer Image Showcase */
+.vegfest-volunteer-image-showcase-container {
+    position: relative;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegfest-volunteer-image-showcase-container:hover {
+    transform: scale(1.03) rotate(-2deg);
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.25);
+}
+
+.vegfest-volunteer-main-image {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    transition: all 0.8s ease;
+}
+
+.vegfest-volunteer-image-showcase-container:hover .vegfest-volunteer-main-image {
+    transform: scale(1.1);
+    filter: brightness(1.1) saturate(1.3);
+}
+
+/* Community Spirit Badge */
+.vegfest-volunteer-community-spirit-badge {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: linear-gradient(135deg, #9C27B0, #BA68C8);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    animation: vegfest-volunteer-spirit-badge-heartbeat 2.8s ease-in-out infinite;
+    box-shadow: 0 8px 25px rgba(156, 39, 176, 0.3);
+}
+
+@keyframes vegfest-volunteer-spirit-badge-heartbeat {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 8px 25px rgba(156, 39, 176, 0.3), 0 0 0 0 rgba(156, 39, 176, 0.4);
+    }
+    14% { 
+        transform: scale(1.1);
+        box-shadow: 0 12px 35px rgba(156, 39, 176, 0.5), 0 0 0 10px rgba(156, 39, 176, 0.2);
+    }
+    28% { 
+        transform: scale(1);
+        box-shadow: 0 8px 25px rgba(156, 39, 176, 0.3), 0 0 0 0 rgba(156, 39, 176, 0.4);
+    }
+    42% { 
+        transform: scale(1.1);
+        box-shadow: 0 12px 35px rgba(156, 39, 176, 0.5), 0 0 0 10px rgba(156, 39, 176, 0.2);
+    }
+}
+
+/* Volunteer Impact Indicator */
+.vegfest-volunteer-impact-indicator {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #FF9800, #FFC107);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    animation: vegfest-volunteer-impact-glow-pulse 3.5s ease-in-out infinite;
+}
+
+@keyframes vegfest-volunteer-impact-glow-pulse {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(255, 152, 0, 0.4);
+        filter: brightness(1);
+    }
+    50% { 
+        box-shadow: 0 0 40px rgba(255, 152, 0, 0.8), 0 0 60px rgba(255, 152, 0, 0.6);
+        filter: brightness(1.2);
+    }
+}
+
+/* Text Content Area */
+.vegfest-volunteer-text-content-area {
+    flex: 1;
+    max-width: 650px;
+}
+
+/* Volunteer Section Heading */
+.vegfest-volunteer-section-heading {
+    font-size: clamp(3.2rem, 6vw, 6rem);
+    font-weight: 900;
+    color: #E91E63;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.vegfest-volunteer-section-heading::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #FFC107 0%, #FF9800 25%, #E91E63 50%, #9C27B0 75%, #4CAF50 100%);
+    border-radius: 4px;
+    animation: vegfest-volunteer-heading-rainbow-expansion 3s ease-out 1s forwards;
+}
+
+@keyframes vegfest-volunteer-heading-rainbow-expansion {
+    0% { width: 0; }
+    100% { width: 320px; }
+}
+
+.vegfest-volunteer-section-heading:hover::before {
+    animation: vegfest-volunteer-heading-color-wave 2s ease-in-out infinite;
+}
+
+@keyframes vegfest-volunteer-heading-color-wave {
+    0%, 100% { 
+        background: linear-gradient(90deg, #FFC107 0%, #FF9800 25%, #E91E63 50%, #9C27B0 75%, #4CAF50 100%);
+        transform: scaleX(1);
+    }
+    50% { 
+        background: linear-gradient(90deg, #4CAF50 0%, #9C27B0 25%, #E91E63 50%, #FF9800 75%, #FFC107 100%);
+        transform: scaleX(1.1);
+    }
+}
+
+/* Volunteer Description Text */
+.vegfest-volunteer-description-text {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 50px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.vegfest-volunteer-description-text::before {
+    content: '💪';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    animation: vegfest-volunteer-strength-emoji-flex 4s ease-in-out infinite;
+}
+
+@keyframes vegfest-volunteer-strength-emoji-flex {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+    25% { 
+        transform: scale(1.3) rotate(10deg);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.1) rotate(-5deg);
+        opacity: 0.9;
+    }
+    75% { 
+        transform: scale(1.2) rotate(8deg);
+        opacity: 1;
+    }
+}
+
+/* Apply Now CTA Container */
+.vegfest-volunteer-apply-now-cta-container {
+    margin-bottom: 60px;
+}
+
+.vegfest-volunteer-apply-now-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 45px;
+    background: linear-gradient(135deg, #E91E63, #F06292);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 60px;
+    border: 4px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 12px 30px rgba(233, 30, 99, 0.4);
+}
+
+.vegfest-volunteer-apply-now-button::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(45deg, 
+        #E91E63 0%, 
+        #F06292 25%,
+        #BA68C8 50%,
+        #FF9800 75%,
+        #E91E63 100%);
+    background-size: 400% 400%;
+    border-radius: 60px;
+    z-index: -1;
+    animation: vegfest-volunteer-cta-rainbow-border-flow 6s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.vegfest-volunteer-apply-now-button:hover::before {
+    opacity: 1;
+}
+
+@keyframes vegfest-volunteer-cta-rainbow-border-flow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.vegfest-volunteer-apply-now-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 1s ease;
+}
+
+.vegfest-volunteer-apply-now-button:hover::after {
+    left: 100%;
+}
+
+.vegfest-volunteer-apply-now-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(233, 30, 99, 0.5);
+}
+
+.vegfest-volunteer-cta-heart-icon {
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vegfest-volunteer-apply-now-button:hover .vegfest-volunteer-cta-heart-icon {
+    transform: translateX(10px) rotate(20deg) scale(1.3);
+    color: #FFE082;
+}
+
+/* Volunteer Impact Statistics */
+.vegfest-volunteer-impact-statistics-showcase {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vegfest-volunteer-impact-statistic-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(248, 248, 255, 0.6));
+    border-radius: 25px;
+    border: 3px solid rgba(156, 39, 176, 0.2);
+    backdrop-filter: blur(15px);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(156, 39, 176, 0.15);
+}
+
+.vegfest-volunteer-impact-statistic-display::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: conic-gradient(from 0deg, 
+        rgba(156, 39, 176, 0.6) 0deg, 
+        rgba(233, 30, 99, 0.4) 90deg,
+        rgba(255, 152, 0, 0.4) 180deg,
+        rgba(76, 175, 80, 0.4) 270deg,
+        rgba(156, 39, 176, 0.6) 360deg);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    animation: vegfest-volunteer-statistic-orbital-glow 8s linear infinite;
+    transition: opacity 0.6s ease;
+}
+
+.vegfest-volunteer-impact-statistic-display:hover::before {
+    opacity: 1;
+}
+
+@keyframes vegfest-volunteer-statistic-orbital-glow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.vegfest-volunteer-impact-statistic-display:hover {
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 20px 50px rgba(156, 39, 176, 0.25);
+    border-color: rgba(156, 39, 176, 0.4);
+}
+
+.vegfest-volunteer-impact-number-display {
+    font-size: 36px;
+    font-weight: 900;
+    color: #9C27B0;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.vegfest-volunteer-impact-number-display::after {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    font-size: 16px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vegfest-volunteer-impact-statistic-display:hover .vegfest-volunteer-impact-number-display::after {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+.vegfest-volunteer-impact-label-text {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .vegfest-volunteer-main-content-wrapper {
+        flex-direction: column-reverse;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .vegfest-volunteer-text-content-area {
+        max-width: 100%;
+    }
+
+    .vegfest-volunteer-impact-statistics-showcase {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .vegfest-volunteer-section-main-container {
+        padding: 100px 0;
+    }
+
+    .vegfest-volunteer-main-content-wrapper {
+        padding: 0 4%;
+        gap: 50px;
+    }
+
+    .vegfest-volunteer-main-image {
+        height: 400px;
+    }
+
+    .vegfest-volunteer-heart-energy-particle {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .vegfest-volunteer-connection-element {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .vegfest-volunteer-impact-statistics-showcase {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vegfest-volunteer-description-text {
+        font-size: 17px;
+        padding-left: 0;
+    }
+
+    .vegfest-volunteer-description-text::before {
+        position: relative;
+        left: auto;
+        top: auto;
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .vegfest-volunteer-apply-now-button {
+        padding: 18px 35px;
+        font-size: 16px;
+        gap: 15px;
+    }
+
+    .vegfest-volunteer-impact-statistics-showcase {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+
+
+
+/* VegFest Sponsors Section Main Container */
+.vegfest-sponsors-section-main-container {
+    height: max-content;
+    background: linear-gradient(160deg, #fafafa 0%, #f0f0f0 25%, #e8e8e8 50%, #f5f5f5 75%, #ffffff 100%);
+    position: relative;
+    padding: 160px 0;
+    overflow: hidden;
+}
+
+/* Animated Partnership Energy Field */
+.vegfest-sponsors-animated-partnership-energy-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-sponsors-animated-partnership-energy-field::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background-image: 
+        radial-gradient(ellipse at 25% 25%, rgba(233, 30, 99, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse at 75% 75%, rgba(255, 193, 7, 0.05) 0%, transparent 60%),
+        radial-gradient(ellipse at 50% 10%, rgba(76, 175, 80, 0.03) 0%, transparent 70%),
+        radial-gradient(ellipse at 80% 40%, rgba(156, 39, 176, 0.04) 0%, transparent 65%);
+    animation: vegfest-sponsors-partnership-energy-flow 28s ease-in-out infinite;
+}
+
+@keyframes vegfest-sponsors-partnership-energy-flow {
+    0%, 100% { 
+        transform: translate(0px, 0px) rotate(0deg) scale(1);
+        opacity: 0.6;
+    }
+    25% { 
+        transform: translate(25px, -20px) rotate(3deg) scale(1.08);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translate(-20px, 30px) rotate(-2deg) scale(0.95);
+        opacity: 0.7;
+    }
+    75% { 
+        transform: translate(35px, 15px) rotate(4deg) scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+/* Floating Gratitude Symbols */
+.vegfest-sponsors-floating-gratitude-symbols {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.vegfest-sponsors-gratitude-symbol-particle {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 248, 248, 0.7));
+    border: 3px solid rgba(233, 30, 99, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    backdrop-filter: blur(20px);
+    animation: vegfest-sponsors-gratitude-symbol-appreciation-float 16s ease-in-out infinite;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.vegfest-sponsors-gratitude-symbol-particle:nth-child(1) {
+    top: 12%;
+    left: 8%;
+    animation-delay: 0s;
+    color: #E91E63;
+}
+
+.vegfest-sponsors-gratitude-symbol-particle:nth-child(2) {
+    top: 25%;
+    right: 12%;
+    animation-delay: 4s;
+    color: #4CAF50;
+}
+
+.vegfest-sponsors-gratitude-symbol-particle:nth-child(3) {
+    bottom: 30%;
+    left: 15%;
+    animation-delay: 8s;
+    color: #FF9800;
+}
+
+.vegfest-sponsors-gratitude-symbol-particle:nth-child(4) {
+    bottom: 20%;
+    right: 8%;
+    animation-delay: 12s;
+    color: #9C27B0;
+}
+
+.vegfest-sponsors-gratitude-symbol-particle:nth-child(5) {
+    top: 50%;
+    left: 5%;
+    animation-delay: 2s;
+    color: #FFC107;
+}
+
+.vegfest-sponsors-gratitude-symbol-particle:nth-child(6) {
+    top: 70%;
+    right: 20%;
+    animation-delay: 6s;
+    color: #673AB7;
+}
+
+@keyframes vegfest-sponsors-gratitude-symbol-appreciation-float {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+    25% { 
+        transform: translateY(-35px) translateX(25px) rotate(90deg) scale(1.2);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(-50px) translateX(-20px) rotate(180deg) scale(0.9);
+        opacity: 0.8;
+    }
+    75% { 
+        transform: translateY(-20px) translateX(40px) rotate(270deg) scale(1.1);
+        opacity: 0.9;
+    }
+}
+
+/* Main Content Wrapper */
+.vegfest-sponsors-main-content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Sponsors Section Heading Container */
+.vegfest-sponsors-heading-container {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.vegfest-sponsors-main-heading {
+    font-size: clamp(3.5rem, 6vw, 7rem);
+    font-weight: 900;
+    color: #E91E63;
+    line-height: 1.1;
+    position: relative;
+    display: inline-block;
+}
+
+.vegfest-sponsors-main-heading::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #FFC107 0%, #FF9800 50%, #E91E63 100%);
+    border-radius: 4px;
+    animation: vegfest-sponsors-heading-appreciation-expansion 3.5s ease-out 1.2s forwards;
+}
+
+@keyframes vegfest-sponsors-heading-appreciation-expansion {
+    0% { width: 0; }
+    100% { width: 400px; }
+}
+
+.vegfest-sponsors-main-heading:hover::before {
+    animation: vegfest-sponsors-heading-gratitude-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes vegfest-sponsors-heading-gratitude-pulse {
+    0%, 100% { 
+        background: linear-gradient(90deg, #FFC107 0%, #FF9800 50%, #E91E63 100%);
+        transform: translateX(-50%) scaleX(1);
+    }
+    50% { 
+        background: linear-gradient(90deg, #4CAF50 0%, #66BB6A 50%, #81C784 100%);
+        transform: translateX(-50%) scaleX(1.2);
+    }
+}
+
+/* Sponsors Grid Showcase */
+.vegfest-sponsors-grid-showcase-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+/* Individual Sponsor Container */
+.vegfest-individual-sponsor-showcase-container {
+    position: relative;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 248, 248, 0.9));
+    border-radius: 35px;
+    padding: 50px;
+    min-width: 320px;
+    max-width: 380px;
+    border: 4px solid rgba(233, 30, 99, 0.1);
+    backdrop-filter: blur(25px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.vegfest-individual-sponsor-showcase-container::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(45deg, 
+        rgba(233, 30, 99, 0.5) 0%, 
+        rgba(255, 193, 7, 0.4) 25%,
+        rgba(76, 175, 80, 0.4) 50%,
+        rgba(156, 39, 176, 0.4) 75%,
+        rgba(233, 30, 99, 0.5) 100%);
+    background-size: 400% 400%;
+    border-radius: 35px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    animation: vegfest-sponsor-appreciation-border-flow 8s ease-in-out infinite;
+}
+
+.vegfest-individual-sponsor-showcase-container:hover::before {
+    opacity: 1;
+}
+
+@keyframes vegfest-sponsor-appreciation-border-flow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.vegfest-individual-sponsor-showcase-container:hover {
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    border-color: rgba(233, 30, 99, 0.3);
+}
+
+/* Sponsor Logo Display */
+.vegfest-sponsor-logo-display-container {
+    position: relative;
+    text-align: center;
+}
+
+.vegfest-sponsor-brand-logo-showcase {
+    width: 200px;
+    height: 120px;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    border: 3px solid rgba(76, 175, 80, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.vegfest-sponsor-brand-logo-showcase img {
+    width: 85%;
+    object-fit: contain;
+    transition: all 0.6s ease;
+}
+
+.vegfest-sponsor-brand-logo-showcase .vegfest-sponsor-logo-placeholder {
+    font-size: 16px;
+    font-weight: 700;
+    color: #4CAF50;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.vegfest-sponsor-brand-logo-showcase::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, 
+        transparent 0deg, 
+        rgba(76, 175, 80, 0.1) 60deg,
+        rgba(233, 30, 99, 0.1) 120deg,
+        rgba(255, 193, 7, 0.1) 180deg,
+        rgba(156, 39, 176, 0.1) 240deg,
+        rgba(76, 175, 80, 0.1) 300deg,
+        transparent 360deg);
+    animation: vegfest-sponsor-logo-appreciation-rotation 12s linear infinite;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.vegfest-individual-sponsor-showcase-container:hover .vegfest-sponsor-brand-logo-showcase::before {
+    opacity: 1;
+}
+
+@keyframes vegfest-sponsor-logo-appreciation-rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.vegfest-individual-sponsor-showcase-container:hover .vegfest-sponsor-brand-logo-showcase {
+    transform: scale(1.1) rotate(3deg);
+    border-color: rgba(76, 175, 80, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Partnership Appreciation Badge */
+.vegfest-sponsor-partnership-appreciation-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    animation: vegfest-sponsor-appreciation-badge-pulse 3.2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+@keyframes vegfest-sponsor-appreciation-badge-pulse {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4), 0 0 0 0 rgba(76, 175, 80, 0.3);
+    }
+    50% { 
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6), 0 0 0 15px rgba(76, 175, 80, 0);
+    }
+}
+
+/* Sponsor Business Name */
+.vegfest-sponsor-business-name-display {
+    font-size: 22px;
+    font-weight: 800;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.vegfest-sponsor-business-name-display::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #E91E63, #4CAF50);
+    border-radius: 2px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegfest-individual-sponsor-showcase-container:hover .vegfest-sponsor-business-name-display::after {
+    width: 100px;
+}
+
+/* Floating Partnership Connection Elements */
+.vegfest-sponsor-floating-partnership-connection-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-sponsor-partnership-connection-element {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid rgba(233, 30, 99, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    backdrop-filter: blur(15px);
+    animation: vegfest-sponsor-partnership-connection-orbit 14s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.vegfest-individual-sponsor-showcase-container:hover .vegfest-sponsor-partnership-connection-element {
+    opacity: 1;
+}
+
+.vegfest-sponsor-partnership-connection-element:nth-child(1) {
+    top: 15%;
+    right: 15%;
+    animation-delay: 0s;
+    color: #4CAF50;
+}
+
+.vegfest-sponsor-partnership-connection-element:nth-child(2) {
+    bottom: 20%;
+    left: 10%;
+    animation-delay: 3s;
+    color: #E91E63;
+}
+
+.vegfest-sponsor-partnership-connection-element:nth-child(3) {
+    top: 60%;
+    right: 5%;
+    animation-delay: 6s;
+    color: #FF9800;
+}
+
+@keyframes vegfest-sponsor-partnership-connection-orbit {
+    0%, 100% { 
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1);
+    }
+    33% { 
+        transform: translateX(-25px) translateY(-20px) rotate(120deg) scale(1.2);
+    }
+    66% { 
+        transform: translateX(20px) translateY(25px) rotate(240deg) scale(0.8);
+    }
+}
+
+/* Specific Sponsor Customizations */
+
+/* Padmanadi Sponsor */
+.vegfest-sponsor-padmanadi-container .vegfest-sponsor-partnership-appreciation-badge {
+    background: linear-gradient(135deg, #FF6B9D, #E91E63);
+}
+
+.vegfest-sponsor-padmanadi-container .vegfest-sponsor-brand-logo-showcase {
+    color: #E91E63;
+    border-color: rgba(233, 30, 99, 0.2);
+}
+
+/* ATCO Sponsor */
+.vegfest-sponsor-atco-container .vegfest-sponsor-partnership-appreciation-badge {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+}
+
+.vegfest-sponsor-atco-container .vegfest-sponsor-brand-logo-showcase {
+    color: #1976D2;
+    border-color: rgba(25, 118, 210, 0.2);
+}
+
+/* EARTHSAVE Sponsor */
+.vegfest-sponsor-earthsave-container .vegfest-sponsor-partnership-appreciation-badge {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+}
+
+.vegfest-sponsor-earthsave-container .vegfest-sponsor-brand-logo-showcase {
+    color: #2E7D32;
+    border-color: rgba(46, 125, 50, 0.2);
+}
+
+/* ReMax Sponsor */
+.vegfest-sponsor-remax-container .vegfest-sponsor-partnership-appreciation-badge {
+    background: linear-gradient(135deg, #F44336, #D32F2F);
+}
+
+.vegfest-sponsor-remax-container .vegfest-sponsor-brand-logo-showcase {
+    color: #D32F2F;
+    border-color: rgba(211, 47, 47, 0.2);
+}
+
+/* Cynful Sweets Sponsor */
+.vegfest-sponsor-cynful-sweets-container .vegfest-sponsor-partnership-appreciation-badge {
+    background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+}
+
+.vegfest-sponsor-cynful-sweets-container .vegfest-sponsor-brand-logo-showcase {
+    color: #7B1FA2;
+    border-color: rgba(123, 31, 162, 0.2);
+}
+
+/* Freson Bros Sponsor */
+.vegfest-sponsor-freson-bros-container .vegfest-sponsor-partnership-appreciation-badge {
+    background: linear-gradient(135deg, #FF9800, #F57C00);
+}
+
+.vegfest-sponsor-freson-bros-container .vegfest-sponsor-brand-logo-showcase {
+    color: #F57C00;
+    border-color: rgba(245, 124, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .vegfest-sponsors-grid-showcase-container {
+        gap: 40px;
+    }
+
+    .vegfest-individual-sponsor-showcase-container {
+        min-width: 280px;
+        max-width: 350px;
+        padding: 40px;
+    }
+
+    .vegfest-sponsors-partnership-connection-lines {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .vegfest-sponsors-section-main-container {
+        padding: 120px 0;
+    }
+
+    .vegfest-sponsors-main-content-wrapper {
+        padding: 0 4%;
+    }
+
+    .vegfest-sponsors-heading-container {
+        margin-bottom: 60px;
+    }
+
+    .vegfest-individual-sponsor-showcase-container {
+        padding: 35px;
+        min-width: 260px;
+    }
+
+    .vegfest-sponsor-brand-logo-showcase {
+        width: 160px;
+        height: 100px;
+        font-size: 14px;
+    }
+
+    .vegfest-sponsors-gratitude-symbol-particle {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vegfest-sponsors-grid-showcase-container {
+        gap: 30px;
+    }
+
+    .vegfest-individual-sponsor-showcase-container {
+        padding: 30px;
+        min-width: 240px;
+    }
+
+    .vegfest-sponsor-brand-logo-showcase {
+        width: 140px;
+        height: 90px;
+        font-size: 13px;
+    }
+
+    .vegfest-sponsor-business-name-display {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+/* VegFest Vendors Exhibitors Section Main Container */
+.vegfest-vendors-exhibitors-section-main-container {
+    height: max-content;
+    background: linear-gradient(150deg, #fff8e1 0%, #f3e5f5 25%, #e8f5e9 50%, #fce4ec 75%, #e0f7fa 100%);
+    position: relative;
+    padding: 150px 0;
+    overflow: hidden;
+}
+
+/* Animated Marketplace Energy Field */
+.vegfest-vendors-animated-marketplace-energy-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-vendors-animated-marketplace-energy-field::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 193, 7, 0.06) 0%, transparent 60%),
+        radial-gradient(circle at 75% 25%, rgba(76, 175, 80, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 25% 75%, rgba(233, 30, 99, 0.04) 0%, transparent 65%),
+        radial-gradient(circle at 75% 75%, rgba(156, 39, 176, 0.05) 0%, transparent 70%);
+    animation: vegfest-vendors-marketplace-energy-commerce-flow 26s ease-in-out infinite;
+}
+
+@keyframes vegfest-vendors-marketplace-energy-commerce-flow {
+    0%, 100% { 
+        transform: translate(0px, 0px) rotate(0deg) scale(1);
+        opacity: 0.8;
+    }
+    25% { 
+        transform: translate(25px, -20px) rotate(3deg) scale(1.05);
+        opacity: 1;
+    }
+    50% { 
+        transform: translate(-20px, 30px) rotate(-2deg) scale(0.98);
+        opacity: 0.7;
+    }
+    75% { 
+        transform: translate(35px, 15px) rotate(4deg) scale(1.02);
+        opacity: 0.9;
+    }
+}
+
+/* Floating Vendor Commerce Elements */
+.vegfest-vendors-floating-commerce-celebration-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.vegfest-vendor-commerce-element {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 248, 248, 0.7));
+    border: 3px solid rgba(255, 193, 7, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    backdrop-filter: blur(25px);
+    animation: vegfest-vendor-commerce-element-marketplace-float 18s ease-in-out infinite;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.vegfest-vendor-commerce-element:nth-child(1) {
+    top: 8%;
+    left: 5%;
+    animation-delay: 0s;
+    color: #FF9800;
+}
+
+.vegfest-vendor-commerce-element:nth-child(2) {
+    top: 20%;
+    right: 8%;
+    animation-delay: 2.5s;
+    color: #4CAF50;
+}
+
+.vegfest-vendor-commerce-element:nth-child(3) {
+    bottom: 30%;
+    left: 10%;
+    animation-delay: 5s;
+    color: #E91E63;
+}
+
+.vegfest-vendor-commerce-element:nth-child(4) {
+    bottom: 15%;
+    right: 12%;
+    animation-delay: 7.5s;
+    color: #9C27B0;
+}
+
+.vegfest-vendor-commerce-element:nth-child(5) {
+    top: 50%;
+    left: 3%;
+    animation-delay: 10s;
+    color: #2196F3;
+}
+
+.vegfest-vendor-commerce-element:nth-child(6) {
+    top: 70%;
+    right: 18%;
+    animation-delay: 12.5s;
+    color: #FF5722;
+}
+
+.vegfest-vendor-commerce-element:nth-child(7) {
+    bottom: 50%;
+    left: 15%;
+    animation-delay: 15s;
+    color: #607D8B;
+}
+
+@keyframes vegfest-vendor-commerce-element-marketplace-float {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+    25% { 
+        transform: translateY(-35px) translateX(25px) rotate(90deg) scale(1.2);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(-50px) translateX(-20px) rotate(180deg) scale(0.9);
+        opacity: 0.8;
+    }
+    75% { 
+        transform: translateY(-20px) translateX(40px) rotate(270deg) scale(1.1);
+        opacity: 0.9;
+    }
+}
+
+/* Main Content Wrapper */
+.vegfest-vendors-main-content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Section Heading Container */
+.vegfest-vendors-section-heading-container {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.vegfest-vendors-decorative-banner {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
+    border-radius: 50px;
+    padding: 30px 60px;
+    display: inline-block;
+    border: 3px solid rgba(255, 193, 7, 0.2);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(255, 193, 7, 0.2);
+}
+
+.vegfest-vendors-decorative-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: vegfest-vendors-banner-shine-effect 4s ease-in-out infinite;
+}
+
+@keyframes vegfest-vendors-banner-shine-effect {
+    0%, 100% { left: -100%; }
+    50% { left: 100%; }
+}
+
+.vegfest-vendors-main-heading {
+    font-size: clamp(2.8rem, 6vw, 7.5rem);
+    font-weight: 900;
+    color: #E91E63;
+    line-height: 1;
+    position: relative;
+}
+
+.vegfest-vendors-main-heading::after {
+    content: '🛒';
+    position: absolute;
+    top: -10px;
+    right: -50px;
+    font-size: 40px;
+    animation: vegfest-vendors-heading-shopping-cart-bounce 3s ease-in-out infinite;
+}
+
+@keyframes vegfest-vendors-heading-shopping-cart-bounce {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% { 
+        transform: translateY(-15px) rotate(10deg);
+    }
+}
+
+/* Vendors Content Grid */
+.vegfest-vendors-content-grid-container {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+/* Vendors Introduction Content Area */
+.vegfest-vendors-introduction-content-area {
+    flex: 1;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 248, 248, 0.8));
+    border-radius: 35px;
+    padding: 50px;
+    border: 4px solid rgba(76, 175, 80, 0.15);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.vegfest-vendors-introduction-content-area::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, 
+        transparent 0deg, 
+        rgba(76, 175, 80, 0.05) 60deg,
+        rgba(255, 193, 7, 0.05) 120deg,
+        rgba(233, 30, 99, 0.05) 180deg,
+        rgba(156, 39, 176, 0.05) 240deg,
+        rgba(76, 175, 80, 0.05) 300deg,
+        transparent 360deg);
+    animation: vegfest-vendors-introduction-content-rotation 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.vegfest-vendors-introduction-content-area:hover::before {
+    opacity: 1;
+}
+
+@keyframes vegfest-vendors-introduction-content-rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.vegfest-vendors-introduction-heading {
+    font-size: 32px;
+    font-weight: 800;
+    color: #4CAF50;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.vegfest-vendors-introduction-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #66BB6A);
+    border-radius: 2px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegfest-vendors-introduction-content-area:hover .vegfest-vendors-introduction-heading::after {
+    width: 200px;
+}
+
+.vegfest-vendors-introduction-description-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Vendor Categories Showcase */
+.vegfest-vendors-categories-showcase-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.vegfest-vendor-category-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    border: 2px solid rgba(76, 175, 80, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.vegfest-vendor-category-highlight-item:hover {
+    transform: translateX(15px) scale(1.02);
+    background: rgba(76, 175, 80, 0.1);
+    border-color: rgba(76, 175, 80, 0.3);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.15);
+}
+
+.vegfest-vendor-category-icon-container {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+    transition: all 0.5s ease;
+}
+
+.vegfest-vendor-category-highlight-item:hover .vegfest-vendor-category-icon-container {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 12px 30px rgba(76, 175, 80, 0.4);
+}
+
+.vegfest-vendor-category-text-content {
+    flex: 1;
+}
+
+.vegfest-vendor-category-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2E7D32;
+    margin-bottom: 8px;
+}
+
+.vegfest-vendor-category-description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Vendors Application Content Area */
+.vegfest-vendors-application-content-area {
+    flex: 1;
+    background: linear-gradient(145deg, rgba(233, 30, 99, 0.05), rgba(255, 255, 255, 0.9));
+    border-radius: 35px;
+    padding: 50px;
+    border: 4px solid rgba(233, 30, 99, 0.15);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 25px 60px rgba(233, 30, 99, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.vegfest-vendors-application-content-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(233, 30, 99, 0.1), 
+        transparent);
+    animation: vegfest-vendors-application-content-sweep 6s ease-in-out infinite;
+}
+
+@keyframes vegfest-vendors-application-content-sweep {
+    0%, 100% { left: -100%; }
+    50% { left: 100%; }
+}
+
+.vegfest-vendors-application-heading {
+    font-size: 32px;
+    font-weight: 800;
+    color: #E91E63;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.vegfest-vendors-application-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #E91E63, #F06292);
+    border-radius: 2px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegfest-vendors-application-content-area:hover .vegfest-vendors-application-heading::after {
+    width: 180px;
+}
+
+.vegfest-vendors-application-description-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Vendors Application CTA */
+.vegfest-vendors-application-cta-container {
+    margin-bottom: 50px;
+}
+
+.vegfest-vendors-application-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #673AB7, #9C27B0);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 12px 30px rgba(103, 58, 183, 0.4);
+}
+
+.vegfest-vendors-application-button::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(45deg, 
+        #673AB7 0%, 
+        #9C27B0 25%,
+        #E91E63 50%,
+        #FF9800 75%,
+        #673AB7 100%);
+    background-size: 400% 400%;
+    border-radius: 50px;
+    z-index: -1;
+    animation: vegfest-vendors-application-button-rainbow-border-flow 8s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.vegfest-vendors-application-button:hover::before {
+    opacity: 1;
+}
+
+@keyframes vegfest-vendors-application-button-rainbow-border-flow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.vegfest-vendors-application-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 1s ease;
+}
+
+.vegfest-vendors-application-button:hover::after {
+    left: 100%;
+}
+
+.vegfest-vendors-application-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(103, 58, 183, 0.5);
+}
+
+.vegfest-vendors-application-icon {
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.vegfest-vendors-application-button:hover .vegfest-vendors-application-icon {
+    transform: translateX(8px) rotate(15deg) scale(1.2);
+}
+
+/* Vendor Benefits Showcase */
+.vegfest-vendors-benefits-showcase-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vegfest-vendor-benefit-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    border: 2px solid rgba(233, 30, 99, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.vegfest-vendor-benefit-highlight-item:hover {
+    transform: translateX(-10px) scale(1.02);
+    background: rgba(233, 30, 99, 0.1);
+    border-color: rgba(233, 30, 99, 0.3);
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.15);
+}
+
+.vegfest-vendor-benefit-icon-display {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #E91E63, #F06292);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 6px 15px rgba(233, 30, 99, 0.3);
+    transition: all 0.5s ease;
+}
+
+.vegfest-vendor-benefit-highlight-item:hover .vegfest-vendor-benefit-icon-display {
+    transform: scale(1.2) rotate(-10deg);
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.4);
+}
+
+.vegfest-vendor-benefit-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    flex: 1;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .vegfest-vendors-content-grid-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .vegfest-vendors-introduction-content-area,
+    .vegfest-vendors-application-content-area {
+        padding: 40px;
+    }
+
+    .vegfest-vendors-categories-showcase-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vegfest-vendors-exhibitors-section-main-container {
+        padding: 120px 0;
+    }
+
+    .vegfest-vendors-main-content-wrapper {
+        padding: 0 4%;
+    }
+
+    .vegfest-vendors-section-heading-container {
+        margin-bottom: 60px;
+    }
+
+    .vegfest-vendors-decorative-banner {
+        padding: 25px 45px;
+    }
+
+    .vegfest-vendors-introduction-content-area,
+    .vegfest-vendors-application-content-area {
+        padding: 35px 30px;
+        border-radius: 25px;
+    }
+
+    .vegfest-vendors-introduction-heading,
+    .vegfest-vendors-application-heading {
+        font-size: 28px;
+    }
+
+    .vegfest-vendors-introduction-description-text,
+    .vegfest-vendors-application-description-text {
+        font-size: 16px;
+    }
+
+    .vegfest-vendor-commerce-element {
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+
+    .vegfest-vendor-category-highlight-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+
+    .vegfest-vendor-benefit-highlight-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vegfest-vendors-content-grid-container {
+        gap: 40px;
+    }
+
+    .vegfest-vendors-decorative-banner {
+        padding: 7.5px 12.5px;
+    }
+
+    .vegfest-vendors-main-heading::after {
+        right: -30px;
+        font-size: 30px;
+    }
+
+    .vegfest-vendors-introduction-content-area,
+    .vegfest-vendors-application-content-area {
+        padding: 30px 25px;
+    }
+
+    .vegfest-vendors-application-button {
+        padding: 18px 35px;
+        font-size: 16px;
+        gap: 12px;
+    }
+
+    .vegfest-vendor-category-icon-container,
+    .vegfest-vendor-benefit-icon-display {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+/* VegFest Guests Speakers Section Main Container */
+.vegfest-guests-speakers-section-main-container {
+    height: max-content;
+    background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+    position: relative;
+    padding: 150px 0;
+    overflow: hidden;
+}
+
+/* Animated Speaker Energy Field */
+.vegfest-guests-animated-speaker-energy-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-guests-animated-speaker-energy-field::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: 
+        radial-gradient(ellipse at 30% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 70%, rgba(129, 199, 132, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 10%, rgba(255, 255, 255, 0.05) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(165, 214, 167, 0.07) 0%, transparent 55%);
+    animation: vegfest-guests-speaker-energy-field-anticipation-flow 24s ease-in-out infinite;
+}
+
+@keyframes vegfest-guests-speaker-energy-field-anticipation-flow {
+    0%, 100% { 
+        transform: translate(0px, 0px) rotate(0deg) scale(1);
+        opacity: 0.6;
+    }
+    25% { 
+        transform: translate(20px, -15px) rotate(2deg) scale(1.05);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translate(-15px, 25px) rotate(-1deg) scale(0.98);
+        opacity: 0.5;
+    }
+    75% { 
+        transform: translate(30px, 10px) rotate(3deg) scale(1.02);
+        opacity: 0.7;
+    }
+}
+
+/* Floating Speaker Celebration Elements */
+.vegfest-guests-floating-speaker-celebration-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.vegfest-speaker-celebration-element {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    backdrop-filter: blur(15px);
+    animation: vegfest-speaker-celebration-element-anticipation-float 16s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.vegfest-speaker-celebration-element:nth-child(1) {
+    top: 10%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.vegfest-speaker-celebration-element:nth-child(2) {
+    top: 25%;
+    right: 10%;
+    animation-delay: 2.5s;
+}
+
+.vegfest-speaker-celebration-element:nth-child(3) {
+    bottom: 30%;
+    left: 12%;
+    animation-delay: 5s;
+}
+
+.vegfest-speaker-celebration-element:nth-child(4) {
+    bottom: 20%;
+    right: 15%;
+    animation-delay: 7.5s;
+}
+
+.vegfest-speaker-celebration-element:nth-child(5) {
+    top: 60%;
+    left: 5%;
+    animation-delay: 10s;
+}
+
+.vegfest-speaker-celebration-element:nth-child(6) {
+    top: 80%;
+    right: 20%;
+    animation-delay: 12.5s;
+}
+
+@keyframes vegfest-speaker-celebration-element-anticipation-float {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+        opacity: 0.6;
+    }
+    25% { 
+        transform: translateY(-30px) translateX(20px) rotate(90deg) scale(1.2);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(-45px) translateX(-15px) rotate(180deg) scale(0.9);
+        opacity: 0.7;
+    }
+    75% { 
+        transform: translateY(-15px) translateX(35px) rotate(270deg) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Main Content Wrapper */
+.vegfest-guests-main-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Section Heading Container */
+.vegfest-guests-section-heading-container {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.vegfest-guests-decorative-banner {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+    border-radius: 50px;
+    padding: 35px 70px;
+    display: inline-block;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(25px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.2);
+}
+
+.vegfest-guests-decorative-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: vegfest-guests-banner-anticipation-shine-effect 5s ease-in-out infinite;
+}
+
+@keyframes vegfest-guests-banner-anticipation-shine-effect {
+    0%, 100% { left: -100%; }
+    50% { left: 100%; }
+}
+
+.vegfest-guests-main-heading {
+    font-size: clamp(2.5rem, 6vw, 8rem);
+    font-weight: 900;
+    color: white;
+    line-height: 1;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Coming Soon Content Container */
+.vegfest-guests-coming-soon-content-container {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 248, 248, 0.9));
+    border-radius: 40px;
+    padding: 80px 60px;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.vegfest-guests-coming-soon-content-container::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: conic-gradient(from 0deg at 50% 50%, 
+        transparent 0deg, 
+        rgba(76, 175, 80, 0.05) 60deg,
+        rgba(129, 199, 132, 0.05) 120deg,
+        rgba(165, 214, 167, 0.05) 180deg,
+        rgba(76, 175, 80, 0.05) 240deg,
+        rgba(129, 199, 132, 0.05) 300deg,
+        transparent 360deg);
+    animation: vegfest-guests-coming-soon-content-anticipation-rotation 25s linear infinite;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.vegfest-guests-coming-soon-content-container:hover::before {
+    opacity: 1;
+}
+
+@keyframes vegfest-guests-coming-soon-content-anticipation-rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Coming Soon Announcement Area */
+.vegfest-guests-coming-soon-announcement-area {
+    position: relative;
+    z-index: 10;
+}
+
+.vegfest-guests-anticipation-icon-display {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 40px;
+    color: white;
+    font-size: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.3);
+    animation: vegfest-guests-anticipation-icon-countdown-pulse 2.5s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.vegfest-guests-anticipation-icon-display::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    background: conic-gradient(from 0deg, 
+        rgba(76, 175, 80, 0.8) 0deg, 
+        rgba(129, 199, 132, 0.6) 90deg,
+        rgba(165, 214, 167, 0.6) 180deg,
+        rgba(76, 175, 80, 0.6) 270deg,
+        rgba(76, 175, 80, 0.8) 360deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: vegfest-guests-anticipation-icon-orbital-glow 8s linear infinite;
+}
+
+@keyframes vegfest-guests-anticipation-icon-countdown-pulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 15px 40px rgba(76, 175, 80, 0.3), 0 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+    50% { 
+        transform: scale(1.1);
+        box-shadow: 0 20px 60px rgba(76, 175, 80, 0.5), 0 0 0 20px rgba(76, 175, 80, 0);
+    }
+}
+
+@keyframes vegfest-guests-anticipation-icon-orbital-glow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.vegfest-guests-coming-soon-heading {
+    font-size: 48px;
+    font-weight: 900;
+    color: #2E7D32;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.vegfest-guests-coming-soon-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4CAF50, #66BB6A);
+    border-radius: 3px;
+    animation: vegfest-guests-coming-soon-heading-anticipation-expansion 2s ease-out 1s forwards;
+}
+
+@keyframes vegfest-guests-coming-soon-heading-anticipation-expansion {
+    0% { width: 0; }
+    100% { width: 180px; }
+}
+
+.vegfest-guests-coming-soon-description-text {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Social Media Follow Container */
+.vegfest-guests-social-follow-container {
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 30px;
+    padding: 40px;
+    border: 3px solid rgba(76, 175, 80, 0.2);
+    margin-bottom: 40px;
+}
+
+.vegfest-guests-social-follow-text {
+    font-size: 18px;
+    color: #2E7D32;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.vegfest-guests-social-platform-highlight {
+    color: #4CAF50;
+    font-weight: 700;
+    position: relative;
+}
+
+.vegfest-guests-social-platform-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #4CAF50;
+    border-radius: 1px;
+}
+
+/* Social Links Showcase */
+.vegfest-guests-social-links-showcase {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.vegfest-guests-social-link-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.vegfest-guests-social-link-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.vegfest-guests-social-link-button:hover::before {
+    left: 100%;
+}
+
+.vegfest-facebook-link {
+    background: linear-gradient(135deg, #1877F2, #42A5F5);
+}
+
+.vegfest-facebook-link:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(24, 119, 242, 0.4);
+}
+
+.vegfest-instagram-link {
+    background: linear-gradient(135deg, #E4405F, #F56040, #FFDC80);
+}
+
+.vegfest-instagram-link:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(228, 64, 95, 0.4);
+}
+
+/* Floating Anticipation Elements */
+.vegfest-guests-floating-anticipation-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-guest-anticipation-element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(76, 175, 80, 0.8);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    backdrop-filter: blur(10px);
+    animation: vegfest-guest-anticipation-element-countdown-orbit 12s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.vegfest-guests-coming-soon-content-container:hover .vegfest-guest-anticipation-element {
+    opacity: 1;
+}
+
+.vegfest-guest-anticipation-element:nth-child(1) {
+    top: 15%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.vegfest-guest-anticipation-element:nth-child(2) {
+    bottom: 20%;
+    left: 8%;
+    animation-delay: 3s;
+}
+
+.vegfest-guest-anticipation-element:nth-child(3) {
+    top: 65%;
+    right: 5%;
+    animation-delay: 6s;
+}
+
+.vegfest-guest-anticipation-element:nth-child(4) {
+    bottom: 60%;
+    left: 15%;
+    animation-delay: 9s;
+}
+
+@keyframes vegfest-guest-anticipation-element-countdown-orbit {
+    0%, 100% { 
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1);
+    }
+    25% { 
+        transform: translateX(-20px) translateY(-15px) rotate(90deg) scale(1.2);
+    }
+    50% { 
+        transform: translateX(15px) translateY(20px) rotate(180deg) scale(0.9);
+    }
+    75% { 
+        transform: translateX(-10px) translateY(-25px) rotate(270deg) scale(1.1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .vegfest-guests-coming-soon-content-container {
+        padding: 60px 40px;
+    }
+
+    .vegfest-guests-social-links-showcase {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vegfest-guests-speakers-section-main-container {
+        padding: 120px 0;
+    }
+
+    .vegfest-guests-main-content-wrapper {
+        padding: 0 4%;
+    }
+
+    .vegfest-guests-section-heading-container {
+        margin-bottom: 60px;
+    }
+
+    .vegfest-guests-decorative-banner {
+        padding: 25px 50px;
+    }
+
+    .vegfest-guests-coming-soon-content-container {
+        padding: 50px 30px;
+        border-radius: 30px;
+    }
+
+    .vegfest-guests-anticipation-icon-display {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+
+    .vegfest-guests-coming-soon-heading {
+        font-size: 36px;
+    }
+
+    .vegfest-guests-coming-soon-description-text {
+        font-size: 18px;
+    }
+
+    .vegfest-speaker-celebration-element {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vegfest-guests-decorative-banner {
+        padding: 20px 35px;
+    }
+
+    .vegfest-guests-coming-soon-content-container {
+        padding: 40px 25px;
+    }
+
+    .vegfest-guests-coming-soon-heading {
+        font-size: 32px;
+    }
+
+    .vegfest-guests-social-follow-container {
+        padding: 30px 25px;
+    }
+
+    .vegfest-guests-social-link-button {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+.vegfest-schedule-calendar-section-main-container {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #F1F8E9 0%, #FFFFFF 50%, #E8F5E9 100%);
+    overflow: hidden;
+}
+
+/* Animated Background Elements */
+.vegfest-schedule-animated-calendar-energy-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 50%, rgba(76, 175, 80, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(129, 199, 132, 0.05) 0%, transparent 50%);
+    animation: vegfest-schedule-energy-pulse 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes vegfest-schedule-energy-pulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Floating Calendar Elements */
+.vegfest-schedule-floating-calendar-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vegfest-calendar-element {
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.15;
+    animation: vegfest-calendar-element-float 20s ease-in-out infinite;
+}
+
+.vegfest-calendar-element:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.vegfest-calendar-element:nth-child(2) {
+    top: 20%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.vegfest-calendar-element:nth-child(3) {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.vegfest-calendar-element:nth-child(4) {
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 6s;
+}
+
+.vegfest-calendar-element:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 8s;
+}
+
+@keyframes vegfest-calendar-element-float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+/* Main Content Wrapper */
+.vegfest-schedule-main-content-wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Schedule Header */
+.vegfest-schedule-header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.vegfest-schedule-text-content-area {
+    animation: vegfest-schedule-fade-in-left 1s ease-out;
+}
+
+@keyframes vegfest-schedule-fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.vegfest-schedule-main-heading {
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #2E7D32, #4CAF50, #66BB6A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.vegfest-schedule-description-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+/* Schedule Visual Content */
+.vegfest-schedule-visual-content-area {
+    animation: vegfest-schedule-fade-in-right 1s ease-out;
+}
+
+@keyframes vegfest-schedule-fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.vegfest-schedule-image-showcase-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(76, 175, 80, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.vegfest-schedule-image-showcase-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 70px rgba(76, 175, 80, 0.3);
+}
+
+.vegfest-schedule-main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.vegfest-schedule-planning-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+    animation: vegfest-schedule-badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes vegfest-schedule-badge-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* PDF Container Styles */
+.vegfest-schedule-pdf-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(76, 175, 80, 0.15);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.vegfest-schedule-pdf-viewer-wrapper {
+    width: 100%;
+    height: 800px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f5f5;
+    border: 2px solid rgba(76, 175, 80, 0.1);
+}
+
+.vegfest-schedule-pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.vegfest-schedule-pdf-download-container {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(76, 175, 80, 0.1);
+}
+
+.vegfest-schedule-pdf-download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+}
+
+.vegfest-schedule-pdf-download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(76, 175, 80, 0.4);
+    background: linear-gradient(135deg, #66BB6A, #4CAF50);
+}
+
+.vegfest-schedule-pdf-download-button i {
+    font-size: 18px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .vegfest-schedule-header-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .vegfest-schedule-main-heading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vegfest-schedule-calendar-section-main-container {
+        padding: 60px 0;
+    }
+
+    .vegfest-schedule-main-heading {
+        font-size: 32px;
+    }
+
+    .vegfest-schedule-description-text {
+        font-size: 16px;
+    }
+
+    .vegfest-schedule-pdf-viewer-wrapper {
+        height: 600px;
+    }
+
+    .vegfest-schedule-pdf-download-button {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+
+    .vegfest-calendar-element {
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------- Navigation ------------------- */
+/* VegFest Floating Section Navigation */
+.vegfest-floating-section-navigation {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.vegfest-floating-nav-toggle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.vegfest-floating-nav-toggle::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: conic-gradient(from 0deg, 
+        rgba(76, 175, 80, 0.8) 0deg, 
+        rgba(129, 199, 132, 0.6) 90deg,
+        rgba(165, 214, 167, 0.6) 180deg,
+        rgba(76, 175, 80, 0.6) 270deg,
+        rgba(76, 175, 80, 0.8) 360deg);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    animation: vegfest-floating-nav-toggle-orbital-glow 8s linear infinite;
+    transition: opacity 0.4s ease;
+}
+
+.vegfest-floating-nav-toggle:hover::before {
+    opacity: 1;
+}
+
+@keyframes vegfest-floating-nav-toggle-orbital-glow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.vegfest-floating-nav-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(76, 175, 80, 0.5);
+}
+
+.vegfest-floating-nav-menu {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 248, 248, 0.9));
+    border-radius: 20px;
+    padding: 15px;
+    border: 3px solid rgba(76, 175, 80, 0.2);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vegfest-floating-nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px) scale(1);
+}
+
+.vegfest-floating-nav-menu::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 25px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 248, 248, 0.9));
+    border-right: 3px solid rgba(76, 175, 80, 0.2);
+    border-bottom: 3px solid rgba(76, 175, 80, 0.2);
+    transform: rotate(45deg);
+}
+
+.vegfest-floating-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: #2E7D32;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.vegfest-floating-nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(76, 175, 80, 0.1), 
+        rgba(129, 199, 132, 0.05), 
+        rgba(76, 175, 80, 0.1));
+    transition: left 0.5s ease;
+}
+
+.vegfest-floating-nav-link:hover::before {
+    left: 100%;
+}
+
+.vegfest-floating-nav-link:hover {
+    background: rgba(76, 175, 80, 0.1);
+    transform: translateX(5px);
+    color: #1B5E20;
+}
+
+.vegfest-floating-nav-link.active {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(129, 199, 132, 0.1));
+    color: #1B5E20;
+    font-weight: 700;
+    box-shadow: inset 3px 0 0 #4CAF50;
+}
+
+.vegfest-floating-nav-link.active::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: #4CAF50;
+    border-radius: 50%;
+    animation: vegfest-floating-nav-active-pulse 2s ease-in-out infinite;
+}
+
+@keyframes vegfest-floating-nav-active-pulse {
+    0%, 100% { 
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(-50%) scale(1.3);
+        opacity: 0.7;
+    }
+}
+
+.vegfest-floating-nav-link i {
+    width: 18px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Enhanced main navigation active states */
+.vvoa-nav-link-primary.active,
+.vvoa-mobile-nav-link.active {
+    color: #4CAF50 !important;
+    transform: translateY(-2px);
+}
+
+.vvoa-nav-link-primary.active::after {
+    transform: translateX(-50%) scale(120%) !important;
+    background: linear-gradient(90deg, #4CAF50, #E91E63) !important;
+}
+
+/* Smooth scrolling enhancement */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section transition animations */
+.vegfest-edmonton-hero-section-main-container,
+.vegfest-feature-cards-section-main-container,
+.vegfest-volunteer-section-main-container,
+.vegfest-sponsors-section-main-container,
+.vegfest-team-behind-festival-section-main-container,
+.vegfest-vendors-exhibitors-section-main-container,
+.vegfest-guests-speakers-section-main-container,
+.vegfest-schedule-calendar-section-main-container {
+    scroll-margin-top: 100px;
+}
+
+
+/* Calendar PDF Actions */
+.vegfest-calendar-header-wrapper {
+    margin-bottom: 30px;
+}
+
+.vegfest-calendar-pdf-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.vegfest-calendar-pdf-viewer-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+}
+
+.vegfest-calendar-pdf-viewer-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(76, 175, 80, 0.4);
+    background: linear-gradient(135deg, #66BB6A, #4CAF50);
+}
+
+.vegfest-calendar-pdf-viewer-button i {
+    font-size: 20px;
+}
+
+/* PDF Modal Styles */
+.vegfest-calendar-pdf-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+    animation: vegfest-pdf-modal-fade-in 0.3s ease;
+}
+
+.vegfest-calendar-pdf-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes vegfest-pdf-modal-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.vegfest-calendar-pdf-modal-content {
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: vegfest-pdf-modal-slide-up 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes vegfest-pdf-modal-slide-up {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.vegfest-calendar-pdf-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 2px solid rgba(76, 175, 80, 0.2);
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05), rgba(129, 199, 132, 0.05));
+}
+
+.vegfest-calendar-pdf-modal-header h3 {
+    margin: 0;
+    color: var(--primary-green);
+    font-size: 24px;
+}
+
+.vegfest-calendar-pdf-modal-close-button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.vegfest-calendar-pdf-modal-close-button:hover {
+    background: rgba(76, 175, 80, 0.1);
+    color: var(--primary-green);
+    transform: rotate(90deg);
+}
+
+.vegfest-calendar-pdf-modal-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.vegfest-calendar-pdf-viewer-container {
+    flex: 1;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.vegfest-calendar-pdf-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+.vegfest-calendar-pdf-download-section {
+    padding: 20px 30px;
+    text-align: center;
+    border-top: 2px solid rgba(76, 175, 80, 0.2);
+}
+
+.vegfest-calendar-pdf-download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.vegfest-calendar-pdf-download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+@media (max-width: 768px) {
+    .vegfest-calendar-pdf-modal-content {
+        width: 95%;
+        height: 95vh;
+    }
+
+    .vegfest-calendar-pdf-modal-header h3 {
+        font-size: 18px;
+    }
+
+    .vegfest-calendar-pdf-viewer-button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}
+
+
+
+
+/* Navigation scroll indicators */
+.vegfest-navigation-scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #66BB6A, #E91E63, #FF9800);
+    z-index: 999;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive floating navigation */
+@media (max-width: 768px) {
+    .vegfest-floating-section-navigation {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .vegfest-floating-nav-toggle {
+        width: 55px;
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .vegfest-floating-nav-menu {
+        min-width: 180px;
+        padding: 12px;
+    }
+
+    .vegfest-floating-nav-link {
+        padding: 10px 12px;
+        font-size: 13px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vegfest-floating-section-navigation {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .vegfest-floating-nav-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .vegfest-floating-nav-menu {
+        min-width: 160px;
+        right: -10px;
+    }
+}
+
+/* Accessibility improvements */
+.vegfest-floating-nav-link:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+.vegfest-floating-nav-toggle:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 4px;
+}
+
+/* Navigation performance optimizations */
+.vegfest-floating-section-navigation * {
+    will-change: transform, opacity;
+}
+
+/* Hide floating nav on very small screens */
+@media (max-width: 320px) {
+    .vegfest-floating-section-navigation {
+        display: none;
+    }
+}
